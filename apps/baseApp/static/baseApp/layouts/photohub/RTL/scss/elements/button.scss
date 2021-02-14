@@ -1,0 +1,141 @@
+@import "../variables";
+@import "../mixins";
+/*======= Button Styles =======*/
+
+a.pt-button, button.pt-button, .pt-button{
+	display: inline-block;
+	padding: 0 35px;
+	height: 40px;
+	line-height: 38px;
+	color: #ffffff;
+	font-weight: 500;
+	text-transform: uppercase;
+	border: 1px solid #ffffff;
+	@include transition(all 0.3s ease-in-out 0s);
+	cursor: pointer;
+	&:hover{
+		@include box-shadow(0 0 20px rgba(0,0,0,0.2));
+		background: #ffffff;
+		color: #000000;
+	}
+
+	// Grey button
+	&.pt-button--grey{
+		color: #d7d7d7;
+		border-color: #d7d7d7;
+		&:hover{
+			color: #000000;
+		}
+	}
+
+	// Button theme
+	&.pt-button--theme{
+		background: $theme-color;
+		border-color: $theme-color;
+		color: #ffffff;
+		&:hover{
+			background: #ffffff;
+			color: #000000;
+			border-color: #ffffff;
+		}
+	}
+
+
+	// Button large
+	&.pt-button--lg{
+		height: 50px;
+		line-height: 50px;
+		padding: 0 50px;
+		font-size: 16px;
+	}
+
+	// Button large
+	&.pt-button--md{
+		height: 45px;
+		line-height: 45px;
+		padding: 0 40px;
+		font-size: 14px;
+	}
+
+	// Button large
+	&.pt-button--xs{
+		height: 30px;
+		line-height: 30px;
+		padding: 0 20px;
+		font-size: 12px;
+	}
+}
+
+
+// Read more button
+a.read-more{
+	display: inline-block;
+	font-size: 16px;
+	line-height: 35px;
+	color: $body-color;
+	letter-spacing: 0.1px;
+	text-transform: uppercase;
+	position: relative;
+	font-weight: 500;
+	&:after{
+		position: absolute;
+		left: calc(100% + 5px);
+		content: "";
+		top: 50%;
+		height: 2px;
+		width: 10px;
+		background: $body-color;
+		@include transition(all 0.3s ease-in-out 0s);
+	}
+	&:hover{
+		color: $theme-color;
+		&:after{
+			background: $theme-color;
+			left: calc(100% + 10px);
+		}
+	}
+}
+
+
+
+
+// Vodeo play button
+a.video-play-button{
+	display: inline-block;
+	height: 45px;
+	width: 45px;
+	line-height: 45px;
+	border: 2px solid #ffffff;
+	text-align: center;
+	@include border-radius(100%);
+	font-size: 28px;
+	color: #ffffff;
+	span{
+		padding-left: 3px;
+	}
+	&:hover{
+		color: $theme-color;
+		border-color: $theme-color;
+	}
+}
+
+
+
+// Reply button
+a.reply-button, button.reply-button{
+	font-size: 12px;
+	height: 24px;
+	line-height: 22px;
+	padding: 0 10px;
+	display: inline-block;
+	text-transform: uppercase;
+	color: #d7d7d7;
+	border: 1px solid #ffffff;
+	@include border-radius($theme-radius);
+	&:hover{
+		color: #ffffff;
+		background: $theme-color;
+		border-color: $theme-color;
+	}
+}
+

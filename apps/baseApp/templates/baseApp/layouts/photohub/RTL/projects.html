@@ -1,0 +1,55 @@
+{% extends "baseApp/layouts/photohub/RTL/base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block lang_switcher %}
+<!-- Language Switcher -->
+<div class="col-8 order-1 col-lg-3 order-lg-3 col-md-5 col-sm-6 order-md-2 order-sm-2 line-bottom">
+  <form id="language-form" class="form-inline" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+      <input name="next" type="hidden" value="{{redirect_to}}">
+      <div class="form-group">
+        <select id="language-select" name="language">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+                <option class="language-option" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                    {{ language.name_local }} ({{ language.code }})
+                </option>
+            {% endfor %}
+        </select>
+        <input id="language-btn" class="btn btn-outline-info form-control" type="submit" value="Go">
+      </div>
+  </form>
+</div>
+{% endblock lang_switcher %}
+
+
+{% block body_content %}
+<!-- START MAIN CONTENT -->
+<main class="main-content">
+
+ <section id="project-section" class="projects portfolio-wrap pt-30 pb-120 bg--light-grey">
+     <div class="container">
+         <div class="row">
+             <div class="section-head col-md-12 text-center wow animate__animated animate__fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
+                 <h4 class="pt-50 pb-80">پروژه ها</h4>
+             </div>
+             {% for project in Projects %}
+             <div class="col-md-4 wow animate__animated animate__fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.7s">
+                 <div class="item">
+                    <div class="position-re o-hidden">
+                      <img src="{{project.image_thumb.url}}" alt="">
+                    </div>
+                    <div class="con">
+                      <h5><a href="{% url "baseApp:project_detail" slug=project.slug %}">{{project.title_fa}}</a></h5> <a href="{% url "baseApp:project_detail" slug=project.slug %}"><i class="fa fa-long-arrow-left"></i></a>
+                    </div>
+                 </div>
+             </div>
+             {% endfor %}
+         </div>
+     </div>
+ </section>
+</main><!-- END MAIN CONTENT -->
+{% endblock body_content %}

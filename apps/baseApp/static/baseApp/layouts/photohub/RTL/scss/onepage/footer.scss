@@ -1,0 +1,27 @@
+@import "../variables";
+@import "../mixins";
+/*======= Onepage Footer =======*/
+
+.onepage-footer{
+	.footer{
+		.footer__copyright{
+			p.footer__copyright__text{
+				margin-top: 10px;
+			}
+		}
+		.footer__contact ul li a{
+			line-height: 30px;
+		}
+	}
+}
+
+
+@media #{$md-layout}{
+	.onepage-footer{
+		.footer{
+			.footer__copyright{
+				text-align: left;
+			}
+		}
+	}
+}

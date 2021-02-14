@@ -1,0 +1,53 @@
+@import "../variables";
+@import "../mixins";
+/*======= Breadcrumb Styles =======*/
+
+.breadcrumb-area{
+	background: url(../../../images/bg/small/1.jpg) no-repeat scroll center center;
+}
+
+.pt-breadcrumb{
+	h3{
+		font-size: 40px;
+		letter-spacing: 12px;
+		font-weight: 500;
+	}
+}
+
+// Large Layout
+@media #{$lg-layout}{
+	.pt-breadcrumb[class*="ptb-"]{
+		padding-top: 0;
+	}
+}
+
+
+// Medium Layout
+@media #{$md-layout}{
+	.pt-breadcrumb{
+		h3{
+			font-size: 32px;
+			letter-spacing: 7px;
+		}
+	}
+}
+
+// Medium Layout
+@media #{$sm-layout}{
+	.pt-breadcrumb{
+		h3{
+			font-size: 32px;
+			letter-spacing: 7px;
+		}
+	}
+}
+
+// Medium Layout
+@media #{$xs-layout}{
+	.pt-breadcrumb{
+		h3{
+			font-size: 30px;
+			letter-spacing: 5px;
+		}
+	}
+}

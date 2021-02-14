@@ -1,0 +1,174 @@
+<!doctype html>
+{% load static %}
+{% load i18n %}
+
+<html class="no-js" lang="zxx">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	{% block head_title %}
+		<title>Photohub - Creative Photography Template</title>
+		<meta name="description" content="">
+	{% endblock head_title %}
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="{% static "baseApp/layouts/photohub/LTR/images/favicon.ico" %}">
+	<link rel="apple-touch-icon" href="{% static "baseApp/layouts/photohub/LTR/images/icon.png" %}">
+
+	<!-- Google font (font-family: 'Ubuntu', sans-serif;) -->
+	<link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700|Playfair+Display:400,500,600,700&display=swap" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{% static "baseApp/layouts/photohub/LTR/css/imports/bootstrap.min.css" %}">
+	<link rel="stylesheet" href="{% static "baseApp/layouts/photohub/LTR/css/plugins.css" %}">
+	<link rel="stylesheet" href="{% static "baseApp/layouts/photohub/RTL/css/main.css" %}">
+
+
+	<!-- Cusom css -->
+   <link rel="stylesheet" href="{% static "baseApp/layouts/photohub/RTL/css/custom.css" %}">
+
+	<!-- Modernizer js -->
+	<script src="{% static "baseApp/layouts/photohub/LTR/js/vendor/modernizr-3.5.0.min.js" %}"></script>
+
+	{% block head_extra %}
+
+	{% endblock head_extra %}
+</head>
+<body>
+
+	{% block fake_loader %}
+		<!-- for home page -->
+	{% endblock fake_loader %}
+
+	<!-- START WRAPPER -->
+	<div class="wrapper">
+
+		<!-- START HEADER AREA -->
+		<header id="header-area" class="header-area sticky-header">
+			<div class="header bg--white">
+				<div class="container">
+					<div class="row align-items-center">
+						<!-- Menu -->
+						<div class="col-12 order-4 col-lg-5 order-lg-1 col-md-12 col-sm-12 order-md-4 order-sm-4">
+							<!-- START MAIN NAVIGATION -->
+							<nav class="navbar navbar-expand-lg menu">
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+									<span class="ti ti-menu"></span>
+								</button>
+								<div class="collapse navbar-collapse" id="main-navbar">
+									<ul class="navbar-nav ml-auto">
+										<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{% url "baseApp:index" %}">خانه</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url "baseApp:about_us" %}">درباره ما</a></li>
+										<li class="nav-item dropdown"><a class="nav-link" href="{% url "baseApp:projects" %}">پروژه ها</a></li>
+										<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{% url "blogApp:all_posts" %}" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">مقالات</a>
+											<ul class="dropdown-menu">
+												{% for item in blog_categories %}
+												<li class="dropdown-item" ><a href="{% url "blogApp:category_list" category=item.slug %}">{{item.category}}</a></li>
+												{% endfor %}
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</nav><!-- END MAIN NAVIGATION -->
+						</div>
+						<!-- Logo -->
+						<div class="col-6 order-3 col-lg-2 order-lg-2 offset-lg-0 col-md-2 offset-md-12 order-md-1 col-sm-2 offset-sm-5 order-sm-1">
+							<div class="logo text-center">
+								<a href="{% url "baseApp:index" %}">
+									<img id="logo-header" src="{% static "baseApp/layouts/photohub/LTR/images/logo/lavino-header.png" %}" alt="logo">
+								</a>
+							</div>
+						</div>
+						{% block lang_switcher %}
+						<!-- Language Switcher -->
+						<div class="col-8 order-1 col-lg-3 order-lg-3 col-md-5 col-sm-6 order-md-2 order-sm-2 line-bottom">
+							<form id="language-form" class="form-inline" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+									<input name="next" type="hidden" value="{{redirect_to}}">
+									<div class="form-group">
+										<select id="language-select" name="language">
+												{% get_current_language as LANGUAGE_CODE %}
+												{% get_available_languages as LANGUAGES %}
+												{% get_language_info_list for LANGUAGES as languages %}
+												{% for language in languages %}
+														<option class="language-option" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+																{{ language.name_local }} ({{ language.code }})
+														</option>
+												{% endfor %}
+										</select>
+										<input id="language-btn" class="btn btn-outline-info form-control" type="submit" value="Go">
+									</div>
+							</form>
+						</div>
+						{% endblock lang_switcher %}
+						<!-- Social Media -->
+						<div class="col-4 order-2 col-lg-2 order-lg-4 col-md-5 col-sm-6 order-md-3 order-sm-3 line-bottom">
+							<div class="social-icons text-left">
+								<ul>
+									<li class="facebook"><a href="https://www.facebook.com/"><span class="ti-facebook"></span></a></li>
+									<li class="twitter"><a href="https://twitter.com/"><span class="ti-twitter-alt"></span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header><!-- END HEADER AREA -->
+		{% block body_content %}
+			<!-- MAIN CONTENT -->
+		{% endblock body_content %}
+
+		<!-- START FOOTER AREA -->
+		<footer id="footer" class="footer-area bg--dark-grey ptb-50">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="footer">
+							<div class="footer__copyright">
+								<div id="foorter-logo">
+									<a href="{% url "baseApp:index" %}">
+										<img src="{% static "baseApp/layouts/photohub/LTR/images/logo/lavino-footer.png" %}" alt="Lavino Mood Studio">
+									</a>
+								</div>
+								<p class="footer__copyright__text">&copy; 2017 <a href="https://hastech.company">Hastech</a> All Right Reserved.</p>
+							</div>
+							<nav class="footer__menu text-center">
+								<ul>
+									<li><a href="{% url "baseApp:index" %}">home</a></li>
+									<li><a href="{% url "baseApp:about_us" %}">about us</a></li>
+									<li><a href="{% url "baseApp:projects" %}">projects</a></li>
+									<li><a href="#">blog</a></li>
+								</ul>
+							</nav>
+							<div class="footer__contact">
+								<ul>
+									<li>Email :<a href="mailto:contact@lavinomood.com"> contact@lavinomood.com</a></li>
+									<li>Phone :<a href="callto:+000258028364"> (+00) 012 032 21</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer><!-- END FOOTER AREA -->
+
+	</div><!-- END WRAPPER -->
+
+
+
+	<!-- JS Files -->
+	<script src="{% static "baseApp/layouts/photohub/LTR/js/vendor/jquery-3.2.1.min.js" %}"></script>
+	<script src="{% static "baseApp/layouts/photohub/LTR/js/popper.min.js" %}"></script>
+	<script src="{% static "baseApp/layouts/photohub/LTR/js/bootstrap.min.js" %}"></script>
+	<script src="{% static "baseApp/layouts/photohub/LTR/js/plugins.js" %}"></script>
+	<script src="{% static "baseApp/layouts/photohub/LTR/js/active.js" %}"></script>
+	<script src="{% static "baseApp/layouts/photohub/LTR/js/scripts.js" %}"></script>
+	<script src="{% static "baseApp/layouts/photohub/LTR/js/slider-active.js" %}"></script>
+	{% block body_JS %}
+
+	{% endblock body_JS %}
+
+</body>
+</html>

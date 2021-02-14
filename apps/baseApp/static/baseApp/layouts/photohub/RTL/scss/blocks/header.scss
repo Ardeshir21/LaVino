@@ -1,0 +1,148 @@
+@import "../variables";
+@import "../mixins";
+/*======= Header Styles =======*/
+.header{
+	padding: 0;
+	.logo{
+		a{
+			display: inline-block;
+		}
+	}
+}
+
+.header-area{
+	// Transparent Header
+	&.transparent--header{
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: auto;
+		width: 100%;
+		background: transparent;
+		color: #ffffff;
+		z-index: 5;
+	}
+
+	// Light header
+	&.header--light{
+		nav.menu.navbar{
+			ul.navbar-nav{
+				li{
+					a{
+						color: #ffffff;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.header-area.sticky-header{
+	@include transition(none);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+	&.sticky{
+		background: #ffffff;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 999;
+		@include box-shadow(0 1px 3px rgba(0,0,0,0.3));
+		@include animation(fadeInDown 0.3s ease-in-out);
+		nav.menu.navbar ul.navbar-nav li{
+			a{
+				padding: 22px 0;
+
+			}
+			ul.dropdown-menu{
+				li{
+					a{
+						padding: 5px 15px;
+					}
+				}
+			}
+		}
+	}
+	&.header--light{
+		&.sticky{
+			background: #000;
+		}
+	}
+}
+
+// Medium Layout
+@media #{$md-layout}{
+	.header{
+		padding-top: 23px;
+		padding-bottom: 0;
+	}
+}
+
+
+// Small Layouts
+@media #{$sm-layout}{
+	.header{
+		padding-top: 23px;
+		padding-bottom: 0;
+	}
+}
+
+
+
+// Extra Small Layouts
+@media #{$xs-layout}{
+	.header{
+		.logo.text-center{
+			text-align: left !important;
+		}
+		.social-icons{
+			padding-bottom: 15px;
+			margin-bottom: 15px;
+			border-bottom: 1px solid #e1e1e1;
+			ul{
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+
+@-webkit-keyframes fadeInDown{
+	from{ 
+		@include transform(translateY(-100%));
+	}
+	to{  
+		@include transform(translateY(0));
+	}
+}
+@-o-keyframes fadeInDown{
+	from{ 
+		@include transform(translateY(-100%));
+	}
+	to{  
+		@include transform(translateY(0));
+	}
+}
+@-moz-keyframes fadeInDown{
+	from{ 
+		@include transform(translateY(-100%));
+	}
+	to{  
+		@include transform(translateY(0));
+	}
+}
+@keyframes fadeInDown{
+	from{ 
+		@include transform(translateY(-100%));
+	}
+	to{  
+		@include transform(translateY(0));
+	}
+}
+

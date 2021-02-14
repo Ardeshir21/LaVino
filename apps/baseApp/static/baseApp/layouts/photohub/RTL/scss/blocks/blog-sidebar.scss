@@ -1,0 +1,452 @@
+@import "../variables";
+@import "../mixins";
+/*======= Breadcrumb Styles =======*/
+
+.blog-sidebar{
+	.sidebar__block{
+		margin-top: 50px;
+		&:first-child{
+			margin-top: 0;
+		}
+		h5.sidebar__title{
+			margin-top: -5px;
+			font-size: 18px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-weight: 500;
+			padding-bottom: 10px;
+			position: relative;
+			margin-bottom: 30px;
+			line-height: 22px;
+			&:before{
+				position: absolute;
+				content: "";
+				left: 0;
+				bottom: 0;
+				height: 2px;
+				width: 30px;
+				background: $theme-color;
+			}
+			&.text-center{
+				&:before{
+					left: 50%;
+					margin-left: -15px;
+				}
+			}
+			&.text-right{
+				&:before{
+					left: auto;
+					right: 0;
+					margin-left: 0px;
+				}
+			}
+		}
+
+		// Sidebar about
+		&.sidebar__about{
+			.sidebar__about__image{
+				img{
+					width: 100%;
+				}
+			}
+			.sidebar__about__content{
+				h6{
+					font-size: 18px;
+					letter-spacing: 1px;
+					margin-top: 15px;
+					font-weight: 400;
+				}
+				p{
+					font-size: 16px;
+					line-height: 27px;
+				}
+				img{
+					margin-top: 10px;
+				}
+			}
+		}
+
+		// Sidebar instagram
+		&.sidebar__instagram{
+			.instagram-feed{
+				ul{
+					margin-left: -10px;
+					margin-right: -10px;
+					@include flexbox;
+					@include flex-wrap(wrap);
+					li{
+						width: 33.33%;
+						a{
+							margin: 10px;
+							display: inline-block;
+							position: relative;
+							&:before{
+								position: absolute;
+								content: "";
+								width: 100%;
+								height: 100%;
+								left: 0;
+								top: 0;
+								background: $theme-color;
+								opacity: 0;
+								visibility: hidden;
+								@include transition(all 0.3s ease-in-out 0s);
+							}
+							&:after{
+								position: absolute;
+								content: "\e62d";
+								font-family: "themify";
+								left: 50%;
+								top: 50%;
+								opacity: 0;
+								color: #ffffff;
+								font-size: 18px;
+								visibility: hidden;
+								margin-top: 10px;
+								@include transform(translate(-50%, -50%));
+								@include transition(all 0.3s ease-in-out 0s);
+							}
+							&:hover{
+								&:before{
+									visibility: visible;
+									opacity: 0.3;
+								}
+								&:after{
+									margin-top: 0;
+									visibility: visible;
+									opacity: 1;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// Sidebar newsletter
+		&.sidebar__newsletter{
+			.sidebar__newsletter__inner{
+				form{
+					@include flexbox;
+					input{
+						background: transparent;
+						border: 1px solid #ffffff;
+						height: 50px;
+						line-height: 50px;
+						color: $body-color;
+					}
+					button{
+						display: block;
+						height: 50px;
+						line-height: 50px;
+						border: 1px solid #ffffff;
+						outline: none;
+						color: #ffffff;
+						font-size: 24px;
+						background: $theme-color;
+						padding: 0 30px;
+						border-left: none;
+						span{
+							display: inline-block;
+							@include transform(rotate(133deg));
+						}
+						&:hover{
+							color: #000000;
+							background: #ffffff;
+						}
+						&:focus{
+							outline: none;
+						}
+					}
+				}
+			}
+		}
+
+		// Sidebar video
+		&.sidebar__video{
+			padding-top: 10px;
+			.sidebar__video__inner{
+				background: url(../../../images/others/sidebar-video-bg.jpg) no-repeat scroll center center;
+				background-size: cover;
+				position: relative;
+				@include flexbox;
+				@include align-items(center);
+				@include justify-content(center);
+				min-height: 210px;
+				&:before{
+					background: #000000;
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 0;
+					height: 100%;
+					width: 100%;
+					z-index: 1;
+					opacity: 0.6;
+				}
+				& > *{
+					position: relative;
+					z-index: 2;
+				}
+			}
+		}
+
+		// Sidebar popular
+		&.sidebar__popular{
+			.popular-post{
+				.row > .col-lg-6:nth-child(1),  .col-lg-6:nth-child(2){
+					.single-post{
+						margin-top: 0;
+					}
+				}
+				.single-post{
+					margin-top: 30px;
+					.single-post__thumb{
+						a{
+							display: inline-block;
+						}
+					}
+					.single-post__conent{
+						a{
+							color: #ffffff;
+							&:hover{
+								color: $theme-color;
+							}
+						}
+						h5{
+							font-size: 16px;
+							line-height: 26px;
+							font-weight: 400;
+							margin-top: 12px;
+							margin-bottom: 10px;
+						}
+						span{
+							text-transform: uppercase;
+							font-size: 12px;
+							font-weight: 500;
+						}
+					}
+				}
+			}
+		}
+
+		// Sidebar post carousel
+		&.sidebar__post__carousel{
+			padding-bottom: 30px;
+			.sidebar__posts{
+				.single__post{
+					position: relative;
+					overflow: hidden;
+					.single__post__content{
+						padding: 30px;
+						position: absolute;
+						left: 0;
+						top: 100%;
+						height: 100%;
+						width: 100%;
+						visibility: hidden;
+						opacity: 0;
+						@include flexbox;
+						@include justify-content(center);
+						@include align-items(center);
+						@include flex-wrap(wrap);
+						@include transition(all 0.3s ease-in-out 0s);
+						text-align: center;
+						background: rgba(0,0,0,0.5);
+						a{
+							color: #ffffff;
+							&:hover{
+								color: $theme-color;
+							}
+						}
+						h5{
+							display: block;
+						    font-weight: 400;
+						    line-height: 24px;
+						    font-size: 16px;
+						    margin-bottom: 5px;
+						}
+						span{
+							display: block;
+						}
+					}
+
+					&:hover{
+						.single__post__content{
+							top: 0;
+							visibility: visible;
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+
+		// Sidebar tags
+		&.sidebar__tags{
+			ul{
+				margin-left: -8px;
+				@include flexbox();
+				@include flex-wrap(wrap);
+				@include justify-content(space-between);
+				li{
+					display: inline-block;
+					margin-left: 8px;
+					margin-bottom: 17px;
+					a{
+						display: inline-block;
+						height: 35px;
+						line-height: 35px;
+						padding: 0 15px;
+						background: transparent;
+						border: 1px solid #ffffff;
+						color: #ffffff;
+						font-size: 12px;
+						letter-spacing: 0.3px;
+						text-transform: uppercase;
+						&:hover{
+							background: $theme-color;
+							border-color: $theme-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+// Medium layout
+@media #{$md-layout}{
+	.blog-sidebar{
+		padding-top: 30px;
+		border-top: 1px solid $border-color-light;
+		margin-top: 40px;
+		.sidebar__block{
+			&.sidebar__instagram{
+				.instagram-feed{
+					ul{
+						li{
+							width: 20%;
+							&:last-child{
+								display: none;
+							}
+						}
+					}
+				}
+			}
+
+			&.sidebar__video{
+				.sidebar__video__inner{
+					min-height: 350px;
+				}
+			}
+
+			&.sidebar__popular{
+				.popular-post{
+					.row > .col-lg-6{
+						.single-post{
+							margin-top: 0;
+						}
+					}
+				}
+			}
+
+			&.sidebar__post__carousel{
+				margin-left: 120px;
+				margin-right: 120px;
+			}
+		}
+	}
+}
+
+
+// Small layout
+@media #{$sm-layout}{
+	.blog-sidebar{
+		padding-top: 30px;
+		border-top: 1px solid $border-color-light;
+		margin-top: 40px;
+		.sidebar__block{
+			&.sidebar__instagram{
+				.instagram-feed{
+					ul{
+						li{
+							width: 20%;
+							&:last-child{
+								display: none;
+							}
+						}
+					}
+				}
+			}
+
+			&.sidebar__popular{
+				.popular-post{
+					.row > .col-lg-6{
+						.single-post{
+							margin-top: 30px !important;
+						}
+					}
+				}
+			}
+
+			&.sidebar__post__carousel{
+				margin-left: 80px;
+				margin-right: 80px;
+			}
+
+			&.sidebar__tags{
+				ul{
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+// Small layout
+@media #{$xs-layout}{
+	.blog-sidebar{
+		.sidebar__block{
+			&.sidebar__instagram{
+				.instagram-feed{
+					ul{
+						li{
+							width: 33.33%;
+							&:last-child{
+								display: block;
+							}
+						}
+					}
+				}
+			}
+
+			&.sidebar__popular{
+				.popular-post{
+					.row > .col-lg-6{
+						.single-post{
+							@include flexbox;
+							.single-post__thumb{
+
+							}
+							.single-post__conent{
+								padding-left: 20px;
+								line-height: 21px;
+								h5{
+									margin-top: -8px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.sidebar__post__carousel{
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+		}
+	}
+}

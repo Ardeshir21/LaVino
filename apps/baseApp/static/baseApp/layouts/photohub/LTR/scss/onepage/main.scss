@@ -1,0 +1,180 @@
+@import "../variables";
+@import "../mixins";
+/*======= Onepage Main Styles =======*/
+
+.wrapper{
+	&.onepage--fluid{
+		margin: 0 85px;
+	}
+}
+
+
+
+
+.single-banner__video{
+	width: 100%;
+	height: 100%;
+	.youtube-bg{
+		height: 100%;
+		width: 100%;
+	}
+}
+.slider-map{
+	width: 100%;
+	height: 100vh;
+	.google-map{
+		height: 100%;
+		width: 100%;
+	}
+}
+
+@media #{$lg-layout}{
+	.wrapper{
+		&.onepage--fluid{
+			margin: 0 15px;
+		}
+	}
+}
+
+@media #{$md-layout}{
+	.wrapper{
+		&.onepage--fluid{
+			margin: 0 15px;
+		}
+	}
+}
+
+@media #{$sm-layout}{
+	.wrapper{
+		&.onepage--fluid{
+			margin: 0;
+		}
+	}
+}
+
+
+// Pagepiling styles
+
+.pagepiling{
+	height: 100%;
+	min-height: 100vh;
+	position: relative;
+	.pp-section{
+		min-height: 100vh;
+	}
+}
+
+.section-menu{
+	left: 50%;
+	bottom: 60px;
+	@include transform(translateX(-50%));
+	position: absolute;
+	z-index: 21;
+	ul{
+		margin-bottom: 0;
+		@include flexbox;
+		li{
+			a{
+				display: inline-block;
+				border: 1px solid transparent;
+				position: relative;
+				&:before{
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 0;
+					height: 100%;
+					width: 100%;
+					background: rgba(255,255,255,0.15);
+					@include transition(all 0.3s ease-in-out 0s);
+				}
+			}
+			&.active{
+				a{
+					border: 1px solid #ffffff;
+					&:before{
+						background: transparent;
+					}
+				}
+			}
+			&:hover{
+				a{
+					&:before{
+						background: transparent;
+					}
+				}
+			}
+			&.home{
+				a{
+					&:after{
+						content: "\e69b";
+						font-family: 'themify';
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						font-size: 20px;
+						@include transform(translate(-50%, -50%));
+						color: #ffffff !important;
+					}
+				}
+			}
+			&.video{
+				a{
+					&:after{
+						content: "\e6cf";
+						font-family: 'themify';
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						font-size: 20px;
+						@include transform(translate(-50%, -50%));
+						color: #ffffff !important;
+					}
+				}
+			}
+			&.map{
+				a{
+					&:after{
+						content: "\e665";
+						font-family: 'themify';
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						font-size: 20px;
+						@include transform(translate(-50%, -50%));
+						color: #ffffff !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.map-section{
+	min-height: 100vh;
+	width: 100%;
+	.google-map{
+		height: 100%;
+		width: 100%;
+		min-height: 100vh;
+	}
+}
+
+.video-section{
+	min-height: 100vh;
+	width: 100%;
+	.youtube-bg{
+		height: 100%;
+		width: 100%;
+		min-height: 100vh;
+	}
+}
+
+
+
+@media #{$xs-layout}{
+	.section-menu{
+		display: none;
+	}
+}

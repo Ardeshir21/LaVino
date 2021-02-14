@@ -1,0 +1,16 @@
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+letsencrypt/
+media/
+migrations/
+venv
+staticfiles
+/static
+.env
+.vs
+db.sqlite3
+LavinoKEYS.txt
+maintenance_mode_state.txt

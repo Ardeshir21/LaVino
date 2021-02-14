@@ -1,0 +1,47 @@
+@import "../variables";
+@import "../mixins";
+/*======= Section Title Styles =======*/
+
+.section-title{
+	margin-top: -12px;
+	padding: 0 50px;
+	margin-bottom: 30px;
+	h2{
+		text-transform: uppercase;
+		color: #ffffff;
+		font-weight: 700;
+		font-size: 36px;
+		span{
+			color: $theme-color;
+		}
+	}
+	p{
+		font-size: 16px;
+		line-height: 27px;
+		font-weight: 400;
+	}
+}
+
+
+// Medium layout
+@media #{$md-layout}{
+	.section-title{
+		padding: 0;
+	}
+}
+
+
+// Small layout
+@media #{$sm-layout}{
+	.section-title{
+		padding: 0;
+		margin-top: -8px;
+		h2{
+			font-size: 30px;
+		}
+		p{
+			font-size: 14px;
+			line-height: 24px;
+		}
+	}
+}

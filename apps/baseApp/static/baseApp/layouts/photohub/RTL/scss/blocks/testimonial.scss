@@ -1,0 +1,54 @@
+@import "../variables";
+@import "../mixins";
+/*======= Testimoial & Partners Styles =======*/
+
+.testimonials{
+	.testimonial{
+		.testimonial__text{
+			font-size: 20px;
+			line-height: 38px;
+			font-weight: 400;
+			margin-bottom: 24px;
+		}
+		.testimonial__author{
+			h4{
+				font-weight: 500;
+				font-size: 20px;
+				line-height: 26px;
+				margin-bottom: 0;
+			}
+			h5{
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 26px;
+				font-weight: 400;
+				margin-bottom: 0;
+				a{
+					color: $body-color;
+					&:hover{
+						color: $theme-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// Partners
+.partners{
+	.partner{
+		min-height: 150px;
+		@include flexbox;
+		@include align-items(center);
+		@include justify-content(center);
+		a{
+			img{
+				width: auto !important;
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+

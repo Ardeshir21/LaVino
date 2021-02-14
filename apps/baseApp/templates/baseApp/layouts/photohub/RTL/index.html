@@ -1,0 +1,449 @@
+{% extends "baseApp/layouts/photohub/RTL/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block head_title %}
+	<title>HomePage</title>
+	<meta name="description" content="">
+{% endblock head_title %}
+
+
+{% block fake_loader %}
+	<div class="fakeloader"></div>
+{% endblock fake_loader %}
+
+
+{% block lang_switcher %}
+<!-- Language Switcher -->
+<div class="col-8 order-1 col-lg-3 order-lg-3 col-md-5 col-sm-6 order-md-2 order-sm-2 line-bottom pr-30">
+	<form id="language-form" class="form-inline" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+			<input name="next" type="hidden" value="{{redirect_to}}">
+			<div class="form-group">
+				<select id="language-select" name="language">
+						{% get_current_language as LANGUAGE_CODE %}
+						{% get_available_languages as LANGUAGES %}
+						{% get_language_info_list for LANGUAGES as languages %}
+						{% for language in languages %}
+								<option class="language-option" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+										{{ language.name_local }} ({{ language.code }})
+								</option>
+						{% endfor %}
+				</select>
+				<input id="language-btn" class="btn btn-outline-info form-control" type="submit" value="Go">
+			</div>
+	</form>
+</div>
+{% endblock lang_switcher %}
+
+
+{% block body_content %}
+	<!-- START SLIDER AREA -->
+	<div class="banner">
+		<div class="banner__inner banner-slider-active owl-carousel slider-navigtion-style-1">
+			{% for banner in bannerImages %}
+			<!-- START SINGLE BANNER -->
+			<div data-hash="banner-{{banner.id}}" class="single__banner" style="background: url({{banner.image.url}}) no-repeat scroll center center;">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="banner__content text-center">
+								<h3>{{banner.sub_title}}</h3>
+								<h1>{{banner.title}}</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END SINGLE BANNER -->
+			{% endfor %}
+		</div>
+		<div class="banner__hash-wrapper hidden-md hidden-xs hidden-sm">
+			<div class="banner__hash owl-carousel">
+				{% for banner in bannerImages %}
+				<div class="banner__hash__single">
+					<img src="{{banner.image_thumbnail.url}}" alt="small thumb">
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div><!-- END SLIDER AREA -->
+
+	<!-- START MAIN CONTENT -->
+	<main class="main-content">
+
+		<!-- START ABOUT US AREA -->
+		<section id="about-area" class="pt-section about pt-120 bg--light-grey">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-12">
+						<div class="about__image wow animate__animated animate__fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.5s">
+							<img src="{% static "baseApp/layouts/photohub/LTR/images/about/studio-01.jpg" %}" alt="about image">
+						</div>
+					</div>
+					<div class="col-lg-6 col-12 wow animate__animated animate__fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.5s">
+						<div class="about__content">
+							<h3 class="text-uppercase">چگونه یک صفحه درباره ما بنویسیم؟</h3>
+							<p>در صفحه درباره ما صاحبان وبسایت باید بگونه‌ای در مورد محصولات و یا خدمات خود توضیح دهند که برتری‌های خود را نسبت به رقبا بیشتر بیان کرده و بتوانند کاربران را از کیفیت خدمات یا محصولات مطمئن سازند. همچنین مطالب موجود در صفحه درباره ما باید بگونه‌ای بیان شود که باعث جلب توجه خوانندگان شود و احساس کنند به درستی به وبسایت مراجعه کرده‌اند.</p>
+							<p>در صفحه «درباره ما» می‌توانید مستنداتی را در مورد رضایت کاربران و معتبر بودن تجارت خود قرار دهید و بدین طریق اعتماد خوانندگان را جلب کنید و به آنها نشان دهید که وبسایت شما از اعتبار بالایی برخوردار است.</p>
+							<!-- <img class="signature" src="{% static "baseApp/layouts/photohub/LTR/images/about/signature.png" %}" alt="signature"> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- END ABOUT US AREA -->
+
+		<!-- START PORTFOLIO AREA -->
+		<section id="portfolio-area" class="portfolio-wrap pt-120 bg--light-grey">
+			<div class="portfolios layout-2">
+				{% for item in featuredImages %}
+				<!-- START SINGLE PORTFOLIO -->
+				<div class="portfolio wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">
+					<div class="portfolio__inner">
+						<div class="portfolio__image">
+							<img src="{{item.image.url}}" alt="{{item.title_fa}}">
+						</div>
+						<div class="portfolio__content">
+							<span class="portfolio-zoom-trigger">
+								<a href="{{item.image.url}}"><span class="ti-eye"></span></a>
+							</span>
+							<div class="portfolio__content__text">
+								<div class="share__content__wrap">
+									<a class="share-toggle" href="#"><span class="ti-sharethis"></span> اشتراک</a>
+									<div class="share__content">
+										<a href="https://www.facebook.com/"><span class="ti-facebook"></span></a>
+										<a href="https://twitter.com/"><span class="ti-twitter-alt"></span></a>
+										<a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a>
+									</div>
+								</div>
+								<h5>{{item.title_fa}}</h5>
+							</div>
+						</div>
+					</div>
+				</div><!-- END SINGLE PORTFOLIO -->
+				{% endfor %}
+			</div>
+		</section><!-- END PORTFOLIO AREA -->
+
+		<!-- START SERVICE AREA -->
+		<section id="service" class="pt-section service-area ptb-120 bg--light-grey">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 offset-sm-0">
+						<div class="section-title text-center wow animate__animated animate__fadeInUp">
+							<h2>خدمات <span> ما</span></h2>
+							<p>اگر کسب و کار شما دارای حساب‌های شبکه‌ اجتماعی مانند فیسبوک، ایسنتاگرام، لینکدین و دیگر شبکه‌های اجتماعی است، آیکون آنها در صفحه درباره ما قرار دهید تا خوانندگان بتوانند براحتی عضو آنها شوند. </p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="services">
+							<!-- START SINGLE SERVICE -->
+							<div class="service wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">
+								<div class="service__inner">
+									<div class="service__icon">
+										<span class="icon-printer"></span>
+										<span class="icon-printer"></span>
+									</div>
+									<div class="service__content">
+										<h4>چاپ عکس</h4>
+										<p>خیلی راحت از آلبوم شخصی تون هر عکسی رو میخواهید سفارش چاپ عکس و شاسی بدید و دم در خونه تحویل بگیرید.</p>
+									</div>
+								</div>
+							</div><!-- END SINGLE SERVICE -->
+							<!-- START SINGLE SERVICE -->
+							<div class="service wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">
+								<div class="service__inner">
+									<div class="service__icon">
+										<span class="icon-camera"></span>
+										<span class="icon-camera"></span>
+									</div>
+									<div class="service__content">
+										<h4>عکاسی</h4>
+										<p>می تونید عکسها رو در محل از عکاس بگیرید و همه عکسها رو از روی دوربین عکاس پاک کنید.</p>
+									</div>
+								</div>
+							</div><!-- END SINGLE SERVICE -->
+							<!-- START SINGLE SERVICE -->
+							<div class="service wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">
+								<div class="service__inner">
+									<div class="service__icon">
+										<span class="icon-video"></span>
+										<span class="icon-video"></span>
+									</div>
+									<div class="service__content">
+										<h4>تدوین ویدیو</h4>
+										<p>متناسب با نیاز خودتون، هم میتونید عکاس خانم رزرو کنید هم عکاس آقا، همه چیز با خودتونه</p>
+									</div>
+								</div>
+							</div><!-- END SINGLE SERVICE -->
+							<!-- START SINGLE SERVICE -->
+							<div class="service wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">
+								<div class="service__inner">
+									<div class="service__icon">
+										<span class="icon-lightbulb"></span>
+										<span class="icon-lightbulb"></span>
+									</div>
+									<div class="service__content">
+										<h4>عکاسی محصول</h4>
+										<p>تا ۷ روز بعد از دریافت عکسها، می توانید در صورت عدم رضایت کل مبلغ را بازپس بگیرید.</p>
+									</div>
+								</div>
+							</div><!-- END SINGLE SERVICE -->
+							<!-- START SINGLE SERVICE -->
+							<div class="service wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">
+								<div class="service__inner">
+									<div class="service__icon">
+										<span class="icon-paintbrush"></span>
+										<span class="icon-paintbrush"></span>
+									</div>
+									<div class="service__content">
+										<h4>ادیت نور و رنگ</h4>
+										<p>همه عکسهای شما توسط عکاس ادیت نور و رنگ می شود. در همه پکیج ها و همه رشته ها</p>
+									</div>
+								</div>
+							</div><!-- END SINGLE SERVICE -->
+							<!-- START SINGLE SERVICE -->
+							<div class="service wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">
+								<div class="service__inner">
+									<div class="service__icon">
+										<span class="icon-tools"></span>
+										<span class="icon-tools"></span>
+									</div>
+									<div class="service__content">
+										<h4>فیلمبرداری</h4>
+										<p>عکسها فقط توسط شما و عکاس تون قابل مشاهده است و در صورت نیاز، کارشناس خانم کادرو عکسها را برای کنترل کیفیت چک میکند.</p>
+									</div>
+								</div>
+							</div><!-- END SINGLE SERVICE -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- END SERVICE AREA -->
+
+		<!-- START PRICING AREA -->
+		<div id="pricing-area" class="pt-section pricing-area ptb-120 bg--light-grey">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 offset-sm-0">
+						<div class="section-title text-center">
+							<h2>پکیج <span>قیمت</span></h2>
+							<p>ما سعی کردیم بهترین مدل قیمت گذاری را برای عکاسی در هر کدام ازشهرهای ایران تنظیم کنیم که واقعا مقرون به صرفه باشد. </p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- START SINGLE PRICEBOX -->
+					<div class="col-lg-4 col-md-6">
+						<article class="pricebox text-center">
+							<header class="pricebox__header">
+								<h3 class="pricebox__title">Basic</h3>
+								<span class="ti ti-package"></span>
+								<h3 class="pricebox__price">4$</h3>
+							</header>
+							<div class="pricebox__body">
+								<ul>
+									<li>Half Day Event</li>
+									<li>10 Printed High-res Images</li>
+									<li>1 Framed Images</li>
+									<li>Up to 100 High-res Images</li>
+								</ul>
+							</div>
+							<footer class="pricebox__footer">
+								<a href="index.html" class="pt-button">GET START</a>
+							</footer>
+						</article>
+					</div><!-- END SINGLE PRICEBOX -->
+					<!-- START SINGLE PRICEBOX -->
+					<div class="col-lg-4 col-md-6">
+						<article class="pricebox text-center suggest">
+							<header class="pricebox__header">
+								<h3 class="pricebox__title">Premium</h3>
+								<span class="ti ti-server"></span>
+								<h3 class="pricebox__price">6$</h3>
+							</header>
+							<div class="pricebox__body">
+								<ul>
+									<li>Half Day Event</li>
+									<li>10 Printed High-res Images</li>
+									<li>1 Framed Images</li>
+									<li>Up to 100 High-res Images</li>
+								</ul>
+							</div>
+							<footer class="pricebox__footer">
+								<a href="index.html" class="pt-button">GET START</a>
+							</footer>
+						</article>
+					</div><!-- END SINGLE PRICEBOX -->
+					<!-- START SINGLE PRICEBOX -->
+					<div class="col-lg-4 col-md-6">
+						<article class="pricebox text-center">
+							<header class="pricebox__header">
+								<h3 class="pricebox__title">Business</h3>
+								<span class="ti ti-pie-chart"></span>
+								<h3 class="pricebox__price">8$</h3>
+							</header>
+							<div class="pricebox__body">
+								<ul>
+									<li>Half Day Event</li>
+									<li>10 Printed High-res Images</li>
+									<li>1 Framed Images</li>
+									<li>Up to 100 High-res Images</li>
+								</ul>
+							</div>
+							<footer class="pricebox__footer">
+								<a href="index.html" class="pt-button">GET START</a>
+							</footer>
+						</article>
+					</div><!-- END SINGLE PRICEBOX -->
+				</div>
+			</div>
+		</div><!-- END PRICING AREA -->
+
+		<!-- START TESTIMONIAL PARTNERS AREA -->
+		<div class="pt-section testimonial-pertners-area" style="background: url({% static "baseApp/layouts/photohub/LTR/images/bg/1-1.jpg" %}) no-repeat scroll center center;">
+			<!-- START TESTIMONIAL AREA -->
+			<div class="testimonial-area ptb-120">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-10 offset-lg-1">
+							<div class="testimonials owl-carousel">
+								<!-- START SINGLE TESTIMONIAL -->
+								<article class="testimonial text-center">
+									<p  class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+									<div class="testimonial__author">
+										<h4>Axelle Segers</h4>
+										<h5><a href="index.html">Photohub</a></h5>
+									</div>
+								</article><!-- END SINGLE TESTIMONIAL -->
+								<!-- START SINGLE TESTIMONIAL -->
+								<article class="testimonial text-center">
+									<p  class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+									<div class="testimonial__author">
+										<h4>Akcent Chester</h4>
+										<h5><a href="index.html">HasTech</a></h5>
+									</div>
+								</article><!-- END SINGLE TESTIMONIAL -->
+								<!-- START SINGLE TESTIMONIAL -->
+								<article class="testimonial text-center">
+									<p  class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+									<div class="testimonial__author">
+										<h4>Jonathon Doe</h4>
+										<h5><a href="index.html">Photohub</a></h5>
+									</div>
+								</article><!-- END SINGLE TESTIMONIAL -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END TESTIMONIAL AREA -->
+			<!-- START PARTNERS AREA -->
+			<div class="partners-area ptb-10" data-white-overlay="1">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="partners owl-carousel d-flex align-items-center">
+								<div class="partner text-center">
+									<a href="index.html"><img src="{% static "baseApp/layouts/photohub/LTR/images/partners/1.png" %}" alt="partner"></a>
+								</div>
+								<div class="partner text-center">
+									<a href="index.html"><img src="{% static "baseApp/layouts/photohub/LTR/images/partners/2.png" %}" alt="partner"></a>
+								</div>
+								<div class="partner text-center">
+									<a href="index.html"><img src="{% static "baseApp/layouts/photohub/LTR/images/partners/3.png" %}" alt="partner"></a>
+								</div>
+								<div class="partner text-center">
+									<a href="index.html"><img src="{% static "baseApp/layouts/photohub/LTR/images/partners/4.png" %}" alt="partner"></a>
+								</div>
+								<div class="partner text-center">
+									<a href="index.html"><img src="{% static "baseApp/layouts/photohub/LTR/images/partners/5.png" %}" alt="partner"></a>
+								</div>
+								<div class="partner text-center">
+									<a href="index.html"><img src="{% static "baseApp/layouts/photohub/LTR/images/partners/1.png" %}" alt="partner"></a>
+								</div>
+								<div class="partner text-center">
+									<a href="index.html"><img src="{% static "baseApp/layouts/photohub/LTR/images/partners/2.png" %}" alt="partner"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END PARTNERS AREA -->
+		</div><!-- END TESTIMONIAL PARTNERS AREA -->
+
+		<!-- START TEAM AREA -->
+		<section id="team-area" class="pt-section team-area ptb-120 bg--light-grey">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 offset-sm-0">
+						<div class="section-title text-center">
+							<h2>Team <span>Member</span></h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmo tempor incididun ut labore et dolore magna aliqua. </p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- START TEAM MEMBER -->
+					<div class="col-lg-4 col-12 col-md-6 offset-md-0 col-sm-8 offset-sm-2">
+						<article class="team">
+							<div class="team__image">
+								<img src="{% static "baseApp/layouts/photohub/LTR/images/team/1.jpg" %}" alt="team image">
+							</div>
+							<div class="team__content text-center">
+								<h4>Juan Pablo Soto</h4>
+								<div class="social-icons social-icons--white">
+									<ul>
+										<li class="facebook"><a href="https://www.facebook.com/"><span class="ti-facebook"></span></a></li>
+										<li class="twitter"><a href="https://twitter.com/"><span class="ti-twitter-alt"></span></a></li>
+										<li class="vimeo"><a href="https://vimeo.com/"><span class="ti-vimeo-alt"></span></a></li>
+										<li class="pinterest"><a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a></li>
+									</ul>
+								</div>
+							</div>
+						</article>
+					</div><!-- END TEAM MEMBER -->
+					<!-- START TEAM MEMBER -->
+					<div class="col-lg-4 col-12 col-md-6 offset-md-0 col-sm-8 offset-sm-2">
+						<article class="team">
+							<div class="team__image">
+								<img src="{% static "baseApp/layouts/photohub/LTR/images/team/2.jpg" %}" alt="team image">
+							</div>
+							<div class="team__content text-center">
+								<h4>Patricia Ledesma</h4>
+								<div class="social-icons social-icons--white">
+									<ul>
+										<li class="facebook"><a href="https://www.facebook.com/"><span class="ti-facebook"></span></a></li>
+										<li class="twitter"><a href="https://twitter.com/"><span class="ti-twitter-alt"></span></a></li>
+										<li class="vimeo"><a href="https://vimeo.com/"><span class="ti-vimeo-alt"></span></a></li>
+										<li class="pinterest"><a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a></li>
+									</ul>
+								</div>
+							</div>
+						</article>
+					</div><!-- END TEAM MEMBER -->
+					<!-- START TEAM MEMBER -->
+					<div class="col-lg-4 col-12 col-md-6 offset-md-0 col-sm-8 offset-sm-2">
+						<article class="team">
+							<div class="team__image">
+								<img src="{% static "baseApp/layouts/photohub/LTR/images/team/3.jpg" %}" alt="team image">
+							</div>
+							<div class="team__content text-center">
+								<h4>Thiago Leguizamon</h4>
+								<div class="social-icons social-icons--white">
+									<ul>
+										<li class="facebook"><a href="https://www.facebook.com/"><span class="ti-facebook"></span></a></li>
+										<li class="twitter"><a href="https://twitter.com/"><span class="ti-twitter-alt"></span></a></li>
+										<li class="vimeo"><a href="https://vimeo.com/"><span class="ti-vimeo-alt"></span></a></li>
+										<li class="pinterest"><a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a></li>
+									</ul>
+								</div>
+							</div>
+						</article>
+					</div><!-- END TEAM MEMBER -->
+				</div>
+			</div>
+		</section><!-- END TEAM AREA -->
+
+	</main><!-- END MAIN CONTENT -->
+{% endblock body_content %}

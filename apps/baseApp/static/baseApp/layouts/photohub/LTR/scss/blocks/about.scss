@@ -1,0 +1,71 @@
+@import "../variables";
+@import "../mixins";
+/*======= About =======*/
+
+.about{
+	.about__image{
+		padding-right: 30px;
+		img{
+			max-width: 100%;
+		}
+	}
+	.about__content{
+		h3{
+			margin-top: -10px;
+			font-weight: 400;
+			font-size: 24px;
+			letter-spacing: 1.3px;
+			padding-bottom: 10px;
+		}
+		.signature{
+			margin-top: 10px;
+		}
+	}
+}
+
+
+// Large layout
+@media #{$lg-layout}{
+	.about{
+		.about__image{
+			padding-right: 0;
+		}
+	}
+}
+
+
+// Medium layout
+@media #{$md-layout}{
+	.about{
+		.about__image{
+			padding-right: 0;
+			img{
+				width: 100%;
+			}
+		}
+		.about__content{
+			padding-top: 30px;
+			h3{
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+// Medium layout
+@media #{$sm-layout}{
+	.about{
+		.about__image{
+			padding-right: 0;
+			img{
+				width: 100%;
+			}
+		}
+		.about__content{
+			padding-top: 30px;
+			h3{
+				margin-top: 0;
+			}
+		}
+	}
+}

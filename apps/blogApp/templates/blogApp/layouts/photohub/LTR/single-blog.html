@@ -1,0 +1,303 @@
+{% extends "baseApp/layouts/photohub/LTR/base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block lang_switcher %}
+<!-- Language Switcher -->
+<div class="col-8 order-1 col-lg-3 order-lg-3 col-md-5 col-sm-6 order-md-2 order-sm-2 line-bottom">
+	<form id="language-form" class="form-inline" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+			<input name="next" type="hidden" value="{{redirect_to}}">
+			<div class="form-group">
+				<select id="language-select" name="language">
+						{% get_current_language as LANGUAGE_CODE %}
+						{% get_available_languages as LANGUAGES %}
+						{% get_language_info_list for LANGUAGES as languages %}
+						{% for language in languages %}
+								<option class="language-option" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+										{{ language.name_local }} ({{ language.code }})
+								</option>
+						{% endfor %}
+				</select>
+				<input id="language-btn" class="btn btn-outline-info form-control" type="submit" value="Go">
+			</div>
+	</form>
+</div>
+{% endblock lang_switcher %}
+
+
+{% block body_content %}
+		<!-- START BREADCRUMB AREA -->
+		<div class="breadcrumb-area" data-black-overlay="7">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="pt-breadcrumb text-center ptb-110">
+							<h3>Single Blog</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- END BREADCRUMB AREA -->
+
+		<!-- START MAIN CONTENT -->
+		<main class="main-content">
+
+			<!-- START BLOG LIST PAGE CONTENT -->
+			<div class="blog-single-page-content ptb-120 bg--light-grey">
+				<div class="container">
+					<div class="row">
+						<!-- Post Content -->
+						<div class="col-lg-8 col-md-12 col-sm-12 col-12">
+							<div class="bp-blog">
+								<div class="bp-blog__titleline text-center">
+									<h5>{{the_post.title}}</h5>
+									<span class="text-uppercase"><a href="blog-list-right-sidebar.html">{{the_post.updated}}</a></span>
+								</div>
+								<div class="bp-blog__content">
+									{{the_post.content|safe}}
+								</div>
+								<!-- Categories and Share -->
+								<div class="bp-blog__bottomline">
+									<div class="bp-blog__tags">
+										<h5>Tags:</h5>
+										<ul>
+											{% for item in the_post.categories.all %}
+											<li><a href="blog-list-right-sidebar.html">{{item.category}}</a></li>
+											{% endfor %}
+										</ul>
+									</div>
+									<div class="bp-blog__share">
+										<div class="share__content__wrap">
+											<a class="share-toggle" href="#"><span class="ti-sharethis"></span> share</a>
+										 	<div class="share__content">
+										 		<a href="https://www.facebook.com/"><span class="ti-facebook"></span></a>
+	 											<a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a>
+										 	</div>
+									 	</div>
+										<a href="single-blog.html"><span class="ti ti-comments-smiley"></span>{{the_post.view}}</a>
+									</div>
+								</div>
+								<!-- Author -->
+								<div class="bp-blog__author">
+									<div class="single-author">
+										<div class="single-author__image">
+											<img src="images/blog-author/small/1.png" alt="blog-author">
+										</div>
+										<div class="single-author__content">
+											<h5>King Siddikee</h5>
+											<p>Unde omnis iste natus error sit volu accusantium doloremque </p>
+											<div class="social-icons social-icons--white">
+												<ul>
+													<li class="facebook"><a href="https://www.facebook.com/"><span class="ti-facebook"></span></a></li>
+													<li class="twitter"><a href="https://twitter.com/"><span class="ti-twitter-alt"></span></a></li>
+													<li class="vimeo"><a href="https://vimeo.com/"><span class="ti-vimeo-alt"></span></a></li>
+													<li class="pinterest"><a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Sidebar -->
+						<div class="col-lg-4 col-md-12 col-sm-12 col-12">
+							<div class="blog-sidebar">
+								<!-- Categories -->
+								<div class="sidebar__tags sidebar__block">
+									<h5 class="sidebar__title text-center">Tags</h5>
+									<ul>
+										{% for item in blog_categories %}
+										<li><a href="{% url "blogApp:category_list" category=item.slug %}">{{item.category}}</a></li>
+										{% endfor %}
+									</ul>
+								</div>
+								<!-- Socials-->
+								<div class="sidebar__social sidebar__block">
+									<h5 class="sidebar__title text-center">Subscribe & Follow</h5>
+									<div class="social-icons social-icons--rounded text-center">
+										<ul>
+											<li><a href="https://www.facebook.com/"><span class="ti-facebook"></span></a></li>
+											<li><a href="https://twitter.com/"><span class="ti-twitter-alt"></span></a></li>
+											<li><a href="https://www.linkedin.com/"><span class="ti-linkedin"></span></a></li>
+											<li><a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a></li>
+										</ul>
+									</div>
+								</div>
+								<!-- Instagram Feed -->
+								<!-- <div class="sidebar__instagram sidebar__block">
+									<h5 class="sidebar__title text-center">Instagram</h5>
+									<div class="instagram-feed">
+										<ul>
+											<li><a href="https://www.instagram.com/"><img src="images/instafeed/1.png" alt="insta image"></a></li>
+											<li><a href="https://www.instagram.com/"><img src="images/instafeed/2.png" alt="insta image"></a></li>
+											<li><a href="https://www.instagram.com/"><img src="images/instafeed/3.png" alt="insta image"></a></li>
+											<li><a href="https://www.instagram.com/"><img src="images/instafeed/4.png" alt="insta image"></a></li>
+											<li><a href="https://www.instagram.com/"><img src="images/instafeed/5.png" alt="insta image"></a></li>
+											<li><a href="https://www.instagram.com/"><img src="images/instafeed/6.png" alt="insta image"></a></li>
+										</ul>
+									</div>
+								</div> -->
+								<!-- Newsletter -->
+								<div class="sidebar__newsletter sidebar__block">
+									<h5 class="sidebar__title text-center">Newsletter</h5>
+									<div class="sidebar__newsletter__inner">
+										<form action="#">
+											<input type="text" placeholder="Your mail...">
+											<button class="pt-button pt-button--theme" type="submit"><span class="ti ti-location-arrow"></span></button>
+										</form>
+									</div>
+								</div>
+								<!-- Video -->
+								<div class="sidebar__video sidebar__block">
+									<div class="sidebar__video__inner">
+										<a class="video-play-button sidebar__video__play" href="https://www.youtube.com/watch?v=M6fw2NrK3ks"><span class="ti ti-control-play"></span></a>
+									</div>
+								</div>
+								<!-- Slider -->
+								<div class="sidebar__block sidebar__post__carousel">
+									<div class="sidebar__posts sidebar-post-carousel-active owl-carousel slider-dots-style-1">
+										<!-- START SINGLE POST -->
+										<div class="single__post">
+											<div class="single__post__thumb">
+												<img src="images/blog/md-thumbnail/1.jpg" alt="carousel post">
+											</div>
+											<div class="single__post__content">
+												<div class="single__post__content__inner">
+													<h5><a href="single-blog.html">Pork loin chuck ham atl pork capicola</a></h5>
+													<span><a href="blog-grid-right-sidebar.html">September 14, 2017</a></span>
+												</div>
+											</div>
+										</div><!-- END SINGLE POST -->
+										<!-- START SINGLE POST -->
+										<div class="single__post">
+											<div class="single__post__thumb">
+												<img src="images/blog/md-thumbnail/2.jpg" alt="carousel post">
+											</div>
+											<div class="single__post__content">
+												<div class="single__post__content__inner">
+													<h5><a href="single-blog.html">Pork loin chuck ham atl pork capicola</a></h5>
+													<span><a href="blog-grid-right-sidebar.html">September 14, 2017</a></span>
+												</div>
+											</div>
+										</div><!-- END SINGLE POST -->
+										<!-- START SINGLE POST -->
+										<div class="single__post">
+											<div class="single__post__thumb">
+												<img src="images/blog/md-thumbnail/3.jpg" alt="carousel post">
+											</div>
+											<div class="single__post__content">
+												<div class="single__post__content__inner">
+													<h5><a href="single-blog.html">Pork loin chuck ham atl pork capicola</a></h5>
+													<span><a href="blog-grid-right-sidebar.html">September 14, 2017</a></span>
+												</div>
+											</div>
+										</div><!-- END SINGLE POST -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Related Posts -->
+					<div class="row">
+						<div class="bp-blog__related-post">
+							<h5 class="blog__title text-center">Related Posts</h5>
+							<div class="row">
+								<!-- START SINGLE BLOG -->
+								<div class="col-lg-4 col-md-6 col-sm-12 col-12">
+									<div class="blog">
+										<div class="blog__thumbnail">
+											<a href="single-blog.html">
+												<img src="images/blog/1.jpg" alt="blog thumbnail">
+											</a>
+										</div>
+										<div class="blog__content">
+											<h5 class="blog__content__title"><a href="single-blog.html">Lorem ipsum dolor sit amet consec.</a></h5>
+											<span class="blog__content__date"><a href="blog-list-right-sidebar.html">September 14, 2017</a></span>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore.</p>
+											<div class="blog__content__more">
+												<a href="single-blog.html" class="read-more">Read more</a>
+												<div class="blog__content__comments">
+													<div class="share__content__wrap">
+														<a class="share-toggle" href="#"><span class="ti-sharethis"></span> share</a>
+													 	<div class="share__content">
+													 		<a href="https://www.facebook.com/"><span class="ti-facebook"></span></a>
+				 											<a href="https://twitter.com/"><span class="ti-twitter-alt"></span></a>
+				 											<a href="https://vimeo.com/"><span class="ti-vimeo-alt"></span></a>
+				 											<a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a>
+													 	</div>
+												 	</div>
+													<a href="single-blog.html"><span class="ti ti-comments-smiley"></span>16</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- END SINGLE BLOG -->
+								<!-- START SINGLE BLOG -->
+								<div class="col-lg-4 col-md-6 col-sm-12 col-12">
+									<div class="blog">
+										<div class="blog__thumbnail">
+											<a href="single-blog.html">
+												<img src="images/blog/2.jpg" alt="blog thumbnail">
+											</a>
+										</div>
+										<div class="blog__content">
+											<h5 class="blog__content__title"><a href="single-blog.html">Lorem ipsum dolor sit amet consec.</a></h5>
+											<span class="blog__content__date"><a href="blog-list-right-sidebar.html">September 14, 2017</a></span>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore.</p>
+											<div class="blog__content__more">
+												<a href="single-blog.html" class="read-more">Read more</a>
+												<div class="blog__content__comments">
+													<div class="share__content__wrap">
+														<a class="share-toggle" href="#"><span class="ti-sharethis"></span> share</a>
+													 	<div class="share__content">
+													 		<a href="https://www.facebook.com/"><span class="ti-facebook"></span></a>
+				 											<a href="https://twitter.com/"><span class="ti-twitter-alt"></span></a>
+				 											<a href="https://vimeo.com/"><span class="ti-vimeo-alt"></span></a>
+				 											<a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a>
+													 	</div>
+												 	</div>
+													<a href="single-blog.html"><span class="ti ti-comments-smiley"></span>16</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- END SINGLE BLOG -->
+								<!-- START SINGLE BLOG -->
+								<div class="col-lg-4 col-md-6 col-sm-12 col-12 hidden-md">
+									<div class="blog">
+										<div class="blog__thumbnail">
+											<a href="single-blog.html">
+												<img src="images/blog/3.jpg" alt="blog thumbnail">
+											</a>
+										</div>
+										<div class="blog__content">
+											<h5 class="blog__content__title"><a href="single-blog.html">Lorem ipsum dolor sit amet consec.</a></h5>
+											<span class="blog__content__date"><a href="blog-list-right-sidebar.html">September 14, 2017</a></span>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore.</p>
+											<div class="blog__content__more">
+												<a href="single-blog.html" class="read-more">Read more</a>
+												<div class="blog__content__comments">
+													<div class="share__content__wrap">
+														<a class="share-toggle" href="#"><span class="ti-sharethis"></span> share</a>
+													 	<div class="share__content">
+													 		<a href="https://www.facebook.com/"><span class="ti-facebook"></span></a>
+				 											<a href="https://twitter.com/"><span class="ti-twitter-alt"></span></a>
+				 											<a href="https://vimeo.com/"><span class="ti-vimeo-alt"></span></a>
+				 											<a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a>
+													 	</div>
+												 	</div>
+													<a href="single-blog.html"><span class="ti ti-comments-smiley"></span>16</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- END SINGLE BLOG -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END BLOG LIST PAGE CONTENT -->
+
+		</main><!-- END MAIN CONTENT -->
+{% endblock body_content %}

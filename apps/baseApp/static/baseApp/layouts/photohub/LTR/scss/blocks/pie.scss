@@ -1,0 +1,90 @@
+@import "../variables";
+@import "../mixins";
+/*======= Pie Styles =======*/
+
+.pies{
+	@include flexbox;
+	@include justify-content(space-between);
+	.pie{
+		.pie-chart{
+			position: relative;
+			canvas{
+				height: 175px;
+				width: 175px;
+			}
+			span{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				@include transform(translate(-50%, -50%));
+				font-size: 22px;
+				color: #ffffff;
+				font-weight: 300;
+			}
+		}
+		.pie__content{
+			text-align: center;
+			h5{
+				text-transform: uppercase;
+				margin-top: 35px;
+				margin-bottom: 0;
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+// Medium Layout
+@media #{$md-layout}{
+	.pies{
+		@include flex-wrap(wrap);
+		.pie{
+			width: 50%;
+			text-align: center;
+			margin-top: 30px;
+			&:first-child{
+				margin-top: 0;
+			}
+			&:nth-child(2){
+				margin-top: 0;
+			}
+			.pie__content{
+				h5{
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
+
+// Medium Layout
+@media #{$sm-layout}{
+	.pies{
+		@include flex-wrap(wrap);
+		.pie{
+			width: 50%;
+			text-align: center;
+			margin-top: 30px;
+			&:first-child{
+				margin-top: 0;
+			}
+			&:nth-child(2){
+				margin-top: 0;
+			}
+			.pie__content{
+				h5{
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
+
+// Medium Layout
+@media #{$xs-layout}{
+	.pies{
+		.pie{
+			width: 100%;
+		}
+	}
+}

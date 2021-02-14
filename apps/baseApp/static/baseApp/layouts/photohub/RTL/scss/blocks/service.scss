@@ -1,0 +1,131 @@
+@import "../variables";
+@import "../mixins";
+/*======= Service Styles =======*/
+
+.services{
+	@include flexbox;
+	@include flex-wrap(wrap);
+	margin: 0 35px;
+	.service{
+		padding: 0 30px;
+		padding-top: 30px;
+		@include flex(0 0 33.33%);
+		.service__inner{
+			padding: 30px 35px;
+			@include transition(all 0.3s ease-in-out 0s);
+			.service__icon{
+				margin-bottom: 25px;
+				position: relative;
+				span{
+					position: relative;
+					font-size: 52px;
+					@include transition(all 0.5s ease-in-out 0s);
+					&:first-child{
+						opacity: 1;
+					}
+					&:last-child{
+						opacity: 0;
+						position: absolute;
+						left: 0;
+						top: 0;
+					}
+				}
+			}
+			.service__content{
+				h4{
+					font-size: 22px;
+					font-weight: 400;
+					display: block;
+					position: relative;
+					padding-bottom: 13px;
+					@include transition(all 0.3s ease-in-out 0s);
+					&:before{
+						content: "";
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						height: 2px;
+						width: 30px;
+						background: #ffffff;
+						@include transition(all 0.3s ease-in-out 0s);
+					}
+				}
+				p{
+					margin-top: 12px;
+					margin-bottom: 0;
+				}
+			}
+			&:hover{
+				@include box-shadow(0 1px 20px rgba(0,0,0,0.2));
+				.service__icon{
+					span{
+						@include gradient-color(90);
+						&:first-child{
+							opacity: 0;
+						} 
+						&:last-child{
+							opacity: 1;
+						}
+					}
+				}
+				.service__content{
+					h4{
+						color: $theme-color;
+						&:before{
+							width: 100%;
+							background: $theme-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+// Large Layout
+@media #{$lg-layout}{
+	.services{
+		margin: 0;
+		.service{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+
+// Large Layout
+@media #{$md-layout}{
+	.services{
+		margin: 0;
+		.service{
+			padding-left: 0;
+			padding-right: 0;
+			@include flex(0 0 50%);
+		}
+	}
+}
+
+
+// Medium Layout
+@media #{$sm-layout}{
+	.services{
+		margin: 0;
+		.service{
+			padding-left: 0;
+			padding-right: 0;
+			@include flex(0 0 50%);
+		}
+	}
+}
+
+// Medium Layout
+@media #{$xs-layout}{
+	.services{
+		.service{
+			@include flex(0 0 100%);
+		}
+	}
+}

@@ -1,0 +1,148 @@
+/*********************************************************************************
+
+	Template Name: Photohub - Creative Photography Template
+	Template URI: https://themeforest.net/user/plus-theme
+	Description: Photohub is a awesome, creative, and unique phptography template which mekes you build a beautiful template easily
+	Author: Plus-Theme
+	Author URI: https://hastech.company
+	Version: 1.0
+
+	Note: This is main css. All plugins css files import here.
+
+**********************************************************************************/
+
+#foorter-logo img{
+  max-width: 60%;
+}
+/* Language Switcher */
+#language-select {
+  height: 30px;
+  width: auto;
+}
+
+#language-select .language-option {
+  background-color: #eddedd;
+  font-size: 12px;
+}
+
+#language-form {
+  float: right;
+}
+
+#language-btn {
+  margin-left: 5px;
+  width: auto;
+  height: 30px;
+  font-size: 11px;
+}
+
+@media only screen and (max-width: 575px) {
+  #language-select {
+    height: 30px;
+    width: auto;
+    font-size: 10px;
+  }
+
+  #header-area  #logo-header {
+      width: 50%;
+    }
+
+  #language-form {
+    float: left;
+  }
+
+  #header-area .line-bottom {
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 5px;
+  }
+}
+
+/* ======= Projects Style  ======= */
+.projects .item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.projects .item:hover img {
+    -webkit-filter: none;
+    filter: none;
+    -webkit-transform: scale(1.09, 1.09);
+    transform: scale(1.09, 1.09);
+    -webkit-filter: brightness(40%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.projects .item:hover .con {
+    bottom: 0;
+}
+.projects .item img {
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -webkit-filter: brightness(100%);
+}
+.projects .item .con {
+    padding: 30px;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    text-align: center;
+}
+.projects .item .con .category {
+    color: #9c5451;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+}
+.projects .item .con .category a {
+    margin-right: 5px;
+    position: relative;
+    color: #fff;
+    font-weight: 300;
+}
+.projects .item .con .category a:last-child {
+    margin-right: 0;
+}
+.projects .item .con .category a:last-child:after {
+    display: none;
+}
+.projects .item .con h5 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: none;
+}
+.projects .item .con h5 a {
+    color: #fff;
+}
+.projects .item .con p {
+    color: #fff;
+    font-size: 14px;
+}
+.projects .item .con i {
+    color: #9c5451;
+    font-size: 20px;
+}
+.projects .item .con .btn {
+    margin-left: 0;
+    border-radius: 30px;
+    border-color: #999;
+    padding: 11px 30px;
+}
+.projects .item .con .btn:hover {
+    border-color: #9c5451;
+}
+
+.section-head h4 {
+    font-size: 35px;
+    font-weight: 400;
+    position: relative;
+    margin: 0;}
