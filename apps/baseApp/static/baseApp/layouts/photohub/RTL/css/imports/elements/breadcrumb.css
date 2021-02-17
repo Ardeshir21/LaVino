@@ -1,11 +1,17 @@
 /*======= Breadcrumb Styles =======*/
 .breadcrumb-area {
-  background: url(../../../images/bg/about-us.jpg) no-repeat scroll center center;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 400px;
+  height: 100%;
+  position: relative;
 }
 
 .pt-breadcrumb h3 {
   font-size: 40px;
-  letter-spacing: 12px;
   font-weight: 500;
 }
 
@@ -17,19 +23,16 @@
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .pt-breadcrumb h3 {
     font-size: 32px;
-    letter-spacing: 7px;
   }
 }
 @media only screen and (max-width: 767px) {
   .pt-breadcrumb h3 {
     font-size: 32px;
-    letter-spacing: 7px;
   }
 }
 @media only screen and (max-width: 575px) {
   .pt-breadcrumb h3 {
     font-size: 30px;
-    letter-spacing: 5px;
   }
 }
 

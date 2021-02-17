@@ -11,9 +11,22 @@
 
 **********************************************************************************/
 
-#foorter-logo img{
-  max-width: 60%;
+#foorter-logo {
+  text-align: left;
 }
+
+#foorter-logo img{
+  max-width: 40%;
+}
+
+#header-area  #logo-header {
+    width: 100%;
+  }
+
+#header-area.sticky  #logo-header {
+    width: 50%;
+  }
+
 /* Language Switcher */
 #language-select {
   height: 30px;
@@ -21,7 +34,7 @@
 }
 
 #language-select .language-option {
-  background-color: #eddedd;
+  /* background-color: #eddedd; */
   font-size: 12px;
 }
 

@@ -58,7 +58,7 @@
 		span.blog__content__date{
 			display: block;
 			margin-bottom: 15px;
-			a{	
+			a{
 				font-size: 16px;
 				color: $body-color;
 				&:hover{
@@ -82,7 +82,7 @@
 						color: $body-color;
 						font-size: 16px;
 						span{
-							padding-right: 5px;
+							padding-left: 5px;
 						}
 						text-transform: capitalize;
 					}
@@ -94,7 +94,7 @@
 					color: $body-color;
 					font-size: 16px;
 					span{
-						padding-right: 5px;
+						padding-left: 5px;
 					}
 					&:hover{
 						color: $theme-color;

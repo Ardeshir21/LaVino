@@ -76,6 +76,8 @@ nav.menu.navbar {
     margin-top: -1px;
     padding: 15px 15px;
     right: 0;
+    direction: rtl;
+    text-align: right;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
@@ -121,6 +123,8 @@ nav.menu.navbar {
     nav.menu.navbar ul.navbar-nav li.dropdown ul.dropdown-menu.show {
       visibility: visible;
       opacity: 1;
+      direction: rtl;
+      text-align: right;
       -webkit-transform: translateY(0);
       -moz-transform: translateY(0);
       -ms-transform: translateY(0);

@@ -22,6 +22,8 @@
 .footer .footer__copyright p.footer__copyright__text {
   margin-top: 15px;
   margin-bottom: 0;
+  direction: rtl;
+  text-align: right;
 }
 .footer .footer__copyright p.footer__copyright__text a {
   color: #ffffff;
@@ -70,6 +72,8 @@
 }
 .bg--white .footer .footer__copyright p.footer__copyright__text {
   font-size: 16px;
+  direction: rtl;
+  text-align: center;
 }
 .bg--white .footer .footer__copyright p.footer__copyright__text a {
   color: #000;

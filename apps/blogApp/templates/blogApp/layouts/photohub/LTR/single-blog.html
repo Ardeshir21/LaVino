@@ -28,12 +28,12 @@
 
 {% block body_content %}
 		<!-- START BREADCRUMB AREA -->
-		<div class="breadcrumb-area" data-black-overlay="7">
+		<div class="breadcrumb-area" data-black-overlay="7" style="background-image: url({{categoryObject.image.url}});">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="pt-breadcrumb text-center ptb-110">
-							<h3>Single Blog</h3>
+							<h3>{{the_post.title}}</h3>
 						</div>
 					</div>
 				</div>

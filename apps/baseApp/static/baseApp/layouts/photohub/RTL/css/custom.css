@@ -10,10 +10,18 @@
 	Note: This is main css. All plugins css files import here.
 
 **********************************************************************************/
+#footer {
+  direction: rtl;
+}
+
+#foorter-logo {
+  text-align: right;
+}
 
 #foorter-logo img{
-  max-width: 60%;
+  max-width: 40%;
 }
+
 /* Language Switcher */
 #language-select {
   height: 30px;
@@ -21,7 +29,7 @@
 }
 
 #language-select .language-option {
-  background-color: #eddedd;
+  /* background-color: #eddedd; */
   font-size: 12px;
   direction: rtl;
 }
@@ -41,9 +49,13 @@
     width: 100%;
   }
 
-  #header-area.sticky  #logo-header {
-      width: 50%;
-    }
+#header-area.sticky  #logo-header {
+    width: 50%;
+  }
+
+.blog-grid {
+  direction: rtl;
+}
 
 @media only screen and (max-width: 575px) {
   #language-select {

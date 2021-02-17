@@ -37,7 +37,7 @@ class IndexView(generic.TemplateView):
 
         # It must be checked in the method not in attributes
         current_lang = translation.get_language()
-        # Categories based on current language
+        # Categories based on current language Navbar
         context['blog_categories'] = blogAppModels.PostCategories.objects.filter(category_lang=current_lang)
 
         # Banner
@@ -66,13 +66,11 @@ class AboutUsView(generic.TemplateView):
 
         # It must be checked in the method not in attributes
         current_lang = translation.get_language()
-        # Categories based on current language
+        # Categories based on current language Navbar
         context['blog_categories'] = blogAppModels.PostCategories.objects.filter(category_lang=current_lang)
 
-        # Banner
-        context['bannerImages'] = models.Banner.objects.filter(useFor__exact='HOME', active__exact=True)
-        # Featured images
-        context['featuredImages'] = models.FeaturedImages.objects.filter(active__exact=True)
+        # Banner Image
+        context['breadcumb'] = models.Banner.objects.get(useFor__exact='ABOUT_US', active__exact=True)
         return context
 
 # Project Portfolio
@@ -91,7 +89,7 @@ class ProjectsView(generic.TemplateView):
         context.update(get_extra_context())
         # It must be checked in the method not in attributes
         current_lang = translation.get_language()
-        # Categories based on current language
+        # Categories based on current language Navbar
         context['blog_categories'] = blogAppModels.PostCategories.objects.filter(category_lang=current_lang)
 
         # Projects
@@ -124,9 +122,9 @@ class ProjectDetailView(generic.DetailView):
 
         # It must be checked in the method not in attributes
         current_lang = translation.get_language()
-        # Categories based on current language
+        # Categories based on current language Navbar
         context['blog_categories'] = blogAppModels.PostCategories.objects.filter(category_lang=current_lang)
-        
+
         # This view have no pageTitle
         # Get the first PostCategories object of the current post
         context['slideContent'] = "AAAA"

@@ -4,7 +4,9 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy, reverse
 from django.utils.translation import gettext as _
 from django.utils import translation
+from apps.baseApp import models as baseAppModels
 from . import models
+
 
 
 # Here is the Extra Context ditionary which is used in get_context_data of Views classes
@@ -53,8 +55,8 @@ class PostList(generic.ListView):
         current_lang = translation.get_language()
         # Categories based on current language
         context['blog_categories'] = models.PostCategories.objects.filter(category_lang=current_lang)
-        # This title is different for this view
-        # context['slideContent'] = baseAppModel.Slide.objects.get(useFor__exact='BLOG_HOME', active__exact=True)
+        # Banner Image
+        context['breadcumb'] = baseAppModels.Banner.objects.get(useFor__exact='BLOG_HOME', active__exact=True)
 
         return context
 
@@ -105,12 +107,11 @@ class CategoryListView(generic.ListView):
 
         # It must be checked in the method not in attributes
         current_lang = translation.get_language()
-        # Categories based on current language
+        # Categories based on current language Navbar
         context['blog_categories'] = models.PostCategories.objects.filter(category_lang=current_lang)
 
-        # This title is different for this view
-        # context['slideContent'] = models.PostCategories.objects.get(slug=self.kwargs['category'])
-        context['pageTitle'] = models.PostCategories.objects.get(slug=self.kwargs['category']).category
+        # The category object itself
+        context['categoryObject'] = models.PostCategories.objects.get(slug=self.kwargs['category'])
 
         # result counte
         context['resultCount'] = len(self.get_queryset())
@@ -161,7 +162,7 @@ class PostDetail(generic.DetailView):
         context['blog_categories'] = models.PostCategories.objects.filter(category_lang=current_lang)
 
         # Get the first PostCategories object of the current post
-        # context['slideContent'] = self.get_object().categories.first()
+        context['categoryObject'] = self.get_object().categories.first()
 
         return context
 

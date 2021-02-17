@@ -20,6 +20,7 @@
 }
 .pies .pie .pie-chart span {
   position: absolute;
+  font-family: IranSans-Medium;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);

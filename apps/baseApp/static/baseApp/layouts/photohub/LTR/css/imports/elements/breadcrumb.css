@@ -1,6 +1,13 @@
 /*======= Breadcrumb Styles =======*/
 .breadcrumb-area {
-  background: url(../../../images/bg/about-us.jpg) no-repeat scroll center center;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 400px;
+  height: 100%;
+  position: relative;
 }
 
 .pt-breadcrumb h3 {

@@ -6,6 +6,7 @@ a.pt-button, button.pt-button, .pt-button {
   line-height: 38px;
   color: #ffffff;
   font-weight: 500;
+  font-family: IranSans-UltraLight;
   text-transform: uppercase;
   border: 1px solid #ffffff;
   -webkit-transition: all 0.3s ease-in-out 0s;
@@ -63,6 +64,7 @@ a.pt-button.pt-button--xs, button.pt-button.pt-button--xs, .pt-button.pt-button-
 a.read-more {
   display: inline-block;
   font-size: 16px;
+  font-family: IranSans-UltraLight;
   line-height: 35px;
   color: #ffffff;
   letter-spacing: 0.1px;
@@ -72,7 +74,7 @@ a.read-more {
 }
 a.read-more:after {
   position: absolute;
-  left: calc(100% + 5px);
+  right: calc(100% + 5px);
   content: "";
   top: 50%;
   height: 2px;

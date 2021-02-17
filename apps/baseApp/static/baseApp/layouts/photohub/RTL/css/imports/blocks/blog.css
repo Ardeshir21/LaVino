@@ -21,6 +21,8 @@
   .blog .blog__content {
     padding-top: 20px;
     border-bottom: 1px solid #999999;
+    direction: rtl;
+    text-align: right;
     -webkit-transition: border 0.3s ease-in-out 0s;
     -moz-transition: border 0.3s ease-in-out 0s;
     -ms-transition: border 0.3s ease-in-out 0s;
@@ -35,6 +37,7 @@
           color: #e51515; }
     .blog .blog__content span.blog__content__date {
       display: block;
+      font-family: IranSans-UltraLight;
       margin-bottom: 15px; }
       .blog .blog__content span.blog__content__date a {
         font-size: 16px;
@@ -71,7 +74,7 @@
           font-size: 16px;
           text-transform: capitalize; }
           .blog .blog__content .blog__content__more .blog__content__comments .share__content__wrap a.share-toggle span {
-            padding-right: 5px; }
+            padding-left: 5px; }
         .blog .blog__content .blog__content__more .blog__content__comments > a {
           display: -webkit-box;
           display: -webkit-flex;

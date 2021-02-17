@@ -6,14 +6,14 @@ from django.utils import timezone
 YES_NO_CHOICES = [(True, 'Yes'), (False, 'No')]
 
 PAGE_CHOICES = [('HOME', 'Homepage'),
-                ('PROPERTY_SEARCH', 'Property Search'),
+                ('ABOUT_US', 'About Us'),
                 ('BLOG_HOME', 'Blog Homepage'),
                 ('BLOG_SEARCH', 'Blog Search'),]
 
 
 class Banner(models.Model):
     image = models.ImageField(upload_to='baseApp/banners/', blank=True, null=True,
-                                help_text='HOME: 1920x850, ')
+                                help_text='HOME: 1920x850, Breadcrumb: 1920x400')
     # navigator of the slider
     image_thumbnail = models.ImageField(upload_to='baseApp/banners/thumbnail', blank=True, null=True,
                                 help_text='HOME: 100x60')
