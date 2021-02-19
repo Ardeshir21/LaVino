@@ -126,7 +126,6 @@
   }
   .banner .single__banner .banner__content h1 {
     font-size: 80px;
-    letter-spacing: 30px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -140,7 +139,6 @@
   .banner .single__banner .banner__content h1 {
     padding-top: 15px;
     font-size: 60px;
-    letter-spacing: 18px;
   }
 
   .banner-slider-active.slider-navigtion-style-1 .owl-nav > div {
@@ -175,7 +173,6 @@
   .banner .single__banner .banner__content h1 {
     padding-top: 15px;
     font-size: 60px;
-    letter-spacing: 18px;
   }
 
   .banner-slider-active.slider-navigtion-style-1 .owl-nav > div {
@@ -210,7 +207,6 @@
   .banner .single__banner .banner__content h1 {
     padding-top: 15px;
     font-size: 42px;
-    letter-spacing: 8px;
   }
 }
 

@@ -73,6 +73,9 @@
   }
 }
 @media only screen and (max-width: 575px) {
+  .header-area.sticky-header.sticky {
+    position: absolute;
+  }
   .header .logo.text-center {
     text-align: left !important;
   }

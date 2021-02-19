@@ -257,7 +257,8 @@ h5.blog__title {
 .bp-blog__related-post {
   margin-top: 55px; }
   .bp-blog__related-post .blog {
-    margin-top: 30px; }
+    margin-top: 30px;
+    padding: 15px;}
 
 .blog .blog__content .blog__content__more .blog__content__comments .share__content__wrap a.share-toggle {
   font-family: IranSans-UltraLight;

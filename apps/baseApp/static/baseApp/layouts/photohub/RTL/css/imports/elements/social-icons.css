@@ -15,11 +15,11 @@
 }
 .social-icons ul li:first-child {
   padding-right: 0;
-  font-size: 24px;
+  font-size: 25px;
 }
 .social-icons ul li:last-child {
   padding-left: 0;
-  font-size: 24px;
+  font-size: 25px;
 }
 .social-icons ul li.facebook:hover a {
   color: #3B5998;

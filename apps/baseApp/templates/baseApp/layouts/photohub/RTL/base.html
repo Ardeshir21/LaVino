@@ -70,6 +70,20 @@
 												{% endfor %}
 											</ul>
 										</li>
+										<!-- languages for mobile screen -->
+										<form id="mobile-lang" class="form-inline" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+									      <input name="next" type="hidden" value="{{redirect_to}}">
+									        <select id="language-select" name="language" onchange="this.form.submit()">
+									            {% get_current_language as LANGUAGE_CODE %}
+									            {% get_available_languages as LANGUAGES %}
+									            {% get_language_info_list for LANGUAGES as languages %}
+									            {% for language in languages %}
+									                <option class="language-option" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+									                    {{ language.name_local }} ({{ language.code }})
+									                </option>
+									            {% endfor %}
+									        </select>
+									  </form>
 									</ul>
 								</div>
 							</nav><!-- END MAIN NAVIGATION -->
@@ -82,33 +96,15 @@
 								</a>
 							</div>
 						</div>
-						{% block lang_switcher %}
-						<!-- Language Switcher -->
-						<div class="col-8 order-1 col-lg-3 order-lg-3 col-md-5 col-sm-6 order-md-2 order-sm-2 line-bottom">
-							<form id="language-form" class="form-inline" action="{% url 'set_language' %}" method="post">{% csrf_token %}
-									<input name="next" type="hidden" value="{{redirect_to}}">
-									<div class="form-group">
-										<select id="language-select" name="language">
-												{% get_current_language as LANGUAGE_CODE %}
-												{% get_available_languages as LANGUAGES %}
-												{% get_language_info_list for LANGUAGES as languages %}
-												{% for language in languages %}
-														<option class="language-option" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-																{{ language.name_local }} ({{ language.code }})
-														</option>
-												{% endfor %}
-										</select>
-										<input id="language-btn" class="btn btn-outline-info form-control" type="submit" value="Go">
-									</div>
-							</form>
-						</div>
-						{% endblock lang_switcher %}
+
+						<!-- languages -->
+						{% include "baseApp/layouts/photohub/RTL/include/language-switcher.html" %}
+
 						<!-- Social Media -->
-						<div class="col-4 order-2 col-lg-2 order-lg-4 col-md-5 col-sm-6 order-md-3 order-sm-3 line-bottom">
+						<div id="social-header" class="col-4 order-2 col-lg-2 order-lg-4 col-md-5 col-sm-6 order-md-3 order-sm-3 line-bottom">
 							<div class="social-icons text-left">
 								<ul>
-									<li class="facebook"><a href="https://www.facebook.com/"><span class="ti-facebook"></span></a></li>
-									<li class="twitter"><a href="https://twitter.com/"><span class="ti-twitter-alt"></span></a></li>
+									<li id="instagram"><a href="https://www.instagram.com/lavinomood/" target="_blank"><i class="fab fa-instagram"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -127,10 +123,17 @@
 					<div class="col-lg-12">
 						<div class="footer">
 							<div class="footer__copyright">
-								<div id="foorter-logo">
-									<a href="{% url "baseApp:index" %}">
-										<img src="{% static "baseApp/layouts/photohub/LTR/images/logo/lavino-footer.png" %}" alt="Lavino Mood Studio">
-									</a>
+								<div class="row">
+									<div class="col-lg-12 col-7">
+										<div id="foorter-logo">
+											<a href="{% url "baseApp:index" %}">
+												<img src="{% static "baseApp/layouts/photohub/LTR/images/logo/lavino-footer.png" %}" alt="Lavino Mood Studio">
+											</a>
+										</div>
+									</div>
+									<div class="col-lg-12 col-4">
+										<a id="instagram-footer" href="https://www.instagram.com/lavinomood/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+									</div>
 								</div>
 								<p class="footer__copyright__text">&copy; <script>document.write(new Date().getFullYear());</script> کپی رایت تمامی حقوق مادی و معنوی این وب سایت متعلق به گروه LaVino است. </p>
 								<p class="footer__copyright__text">توسعه دهنده: <a href="https://wa.me/905356832320?text=Hi%20Ardeshir">اردشیر</a></p>

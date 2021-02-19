@@ -248,7 +248,8 @@ h5.blog__title {
 .bp-blog__related-post {
   margin-top: 55px; }
   .bp-blog__related-post .blog {
-    margin-top: 30px; }
+    margin-top: 30px;
+    padding: 15px;}
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .bp-blog {

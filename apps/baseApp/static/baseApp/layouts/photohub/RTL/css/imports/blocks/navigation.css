@@ -169,6 +169,7 @@ nav.menu.navbar {
     margin-top: -50px; }
     nav.menu.navbar ul.navbar-nav {
       margin-bottom: 30px;
+      text-align: right;
       border-top: 1px solid #e1e1e1;
       padding: 0;
       background-color: #f1f1f1;
