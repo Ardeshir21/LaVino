@@ -31,7 +31,7 @@
 #language-select .language-option {
   /* background-color: #eddedd; */
   font-size: 12px;
-  direction: rtl;
+  direction: ltr;
 }
 
 #language-form {
