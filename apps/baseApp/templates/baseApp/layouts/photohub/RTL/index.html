@@ -25,8 +25,12 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="banner__content text-center">
-								<h3>{{banner.sub_title_fa}}</h3>
-								<h1>{{banner.title_fa}}</h1>
+								{% if banner.sub_title %}
+									<h3>{{banner.sub_title_fa}}</h3>
+								{% endif %}
+								{% if banner.title %}
+									<h1>{{banner.title_fa}}</h1>
+								{% endif %}
 							</div>
 						</div>
 					</div>

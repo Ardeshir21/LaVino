@@ -1,0 +1,91 @@
+<!-- SIDEBAR -->
+<div class="col-12 col-lg-4">
+  <div class="blog-sidebar">
+    <!-- Categories -->
+    <div class="sidebar__tags sidebar__block">
+      <h5 class="sidebar__title text-center">دسته ها</h5>
+      <ul>
+        {% for item in blog_categories %}
+        <li><a href="{% url "blogApp:category_list" category=item.slug %}">{{item.category}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <!-- Socials-->
+    <div class="sidebar__social sidebar__block">
+      <h5 class="sidebar__title text-center">شبکه های اجتماعی</h5>
+      <div class="social-icons social-icons--rounded text-center">
+        <ul>
+          <li><a href="https://www.facebook.com/"><span class="ti-facebook"></span></a></li>
+          <li><a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Instagram Feed -->
+    <!-- <div class="sidebar__instagram sidebar__block">
+      <h5 class="sidebar__title text-center">Instagram</h5>
+      <div class="instagram-feed">
+        <ul>
+          <li><a href="https://www.instagram.com/"><img src="images/instafeed/1.png" alt="insta image"></a></li>
+          <li><a href="https://www.instagram.com/"><img src="images/instafeed/2.png" alt="insta image"></a></li>
+          <li><a href="https://www.instagram.com/"><img src="images/instafeed/3.png" alt="insta image"></a></li>
+          <li><a href="https://www.instagram.com/"><img src="images/instafeed/4.png" alt="insta image"></a></li>
+          <li><a href="https://www.instagram.com/"><img src="images/instafeed/5.png" alt="insta image"></a></li>
+          <li><a href="https://www.instagram.com/"><img src="images/instafeed/6.png" alt="insta image"></a></li>
+        </ul>
+      </div>
+    </div> -->
+    <!-- Search -->
+    <div class="sidebar__newsletter sidebar__block">
+      <h5 class="sidebar__title text-center">جستجو</h5>
+      <div class="sidebar__newsletter__inner">
+        <form action="#">
+          <input type="text" placeholder="کلید واژه...">
+          <button class="pt-button pt-button--theme" type="submit"><span class="ti ti-location-arrow"></span></button>
+        </form>
+      </div>
+    </div>
+    <!-- Video -->
+    <!-- <div class="sidebar__video sidebar__block">
+      <div class="sidebar__video__inner">
+        <a class="video-play-button sidebar__video__play" href="https://www.youtube.com/watch?v=M6fw2NrK3ks"><span class="ti ti-control-play"></span></a>
+      </div>
+    </div> -->
+    <!-- Popular Posts -->
+    <!-- <div class="sidebar__popular sidebar__block">
+      <h5 class="sidebar__title text-center">مقالات پر بیننده</h5>
+      <div class="popular-post">
+        <div class="row"> -->
+          <!-- START SINGLE POST -->
+          <!-- <div class="col-lg-6 col-md-3 col-sm-4 col-12">
+            <div class="single-post">
+              <div class="single-post__thumb">
+                <a href="single-blog.html"><img src="images/blog/sm-thumbnail/1.jpg" alt="post thumb"></a>
+              </div>
+              <div class="single-post__conent">
+                <h5><a href="single-blog.html">Pork loin chuck ham atl pork capicola</a></h5>
+                <span><a href="blog-grid-right-sidebar.html">September 14, 2017</a></span>
+              </div>
+            </div>
+          </div> -->
+        <!-- </div>
+      </div>
+    </div> -->
+    <!-- Slider -->
+    <!-- <div class="sidebar__block sidebar__post__carousel">
+      <div class="sidebar__posts sidebar-post-carousel-active owl-carousel slider-dots-style-1"> -->
+        <!-- START SINGLE POST -->
+        <!-- <div class="single__post">
+          <div class="single__post__thumb">
+            <img src="images/blog/md-thumbnail/1.jpg" alt="carousel post">
+          </div>
+          <div class="single__post__content">
+            <div class="single__post__content__inner">
+              <h5><a href="single-blog.html">Pork loin chuck ham atl pork capicola</a></h5>
+              <span><a href="blog-grid-right-sidebar.html">September 14, 2017</a></span>
+            </div>
+          </div>
+        </div> -->
+      <!-- </div>
+    </div> -->
+  </div>
+</div>

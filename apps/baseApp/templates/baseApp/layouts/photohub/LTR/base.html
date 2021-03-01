@@ -60,10 +60,10 @@
 								</button>
 								<div class="collapse navbar-collapse" id="main-navbar">
 									<ul class="navbar-nav mr-auto">
-										<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{% url "baseApp:index" %}">home</a></li>
-										<li class="nav-item"><a class="nav-link" href="{% url "baseApp:about_us" %}">about us</a></li>
-										<li class="nav-item dropdown"><a class="nav-link" href="{% url "baseApp:projects" %}">projects</a></li>
-										<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{% url "blogApp:all_posts" %}" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">blog</a>
+										<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{% url "baseApp:index" %}">{% trans "home" %}</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url "baseApp:about_us" %}">{% trans "about us" %}</a></li>
+										<li class="nav-item dropdown"><a class="nav-link" href="{% url "baseApp:projects" %}">{% trans "projects" %}</a></li>
+										<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{% url "blogApp:all_posts" %}" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "blog" %}</a>
 											<ul class="dropdown-menu">
 												{% for item in blog_categories %}
 												<li class="dropdown-item" ><a href="{% url "blogApp:category_list" category=item.slug %}">{{item.category}}</a></li>
@@ -140,16 +140,16 @@
 							</div>
 							<nav class="footer__menu text-center">
 								<ul>
-									<li><a href="{% url "baseApp:index" %}">home</a></li>
-									<li><a href="{% url "baseApp:about_us" %}">about us</a></li>
-									<li><a href="{% url "baseApp:projects" %}">projects</a></li>
-									<li><a href="#">blog</a></li>
+									<li><a href="{% url "baseApp:index" %}">{% trans "home" %}</a></li>
+									<li><a href="{% url "baseApp:about_us" %}">{% trans "about us" %}</a></li>
+									<li><a href="{% url "baseApp:projects" %}">{% trans "projects" %}</a></li>
+									<li><a href="#">{% trans "blog" %}</a></li>
 								</ul>
 							</nav>
 							<div class="footer__contact">
 								<ul>
-									<li>Email :<a href="mailto:contact@lavinomood.com"> contact@lavinomood.com</a></li>
-									<li>Phone :<a href="callto:+000258028364"> (+00) 012 032 21</a></li>
+									<li>{% trans "Email" %} :<a href="mailto:contact@lavinomood.com"> contact@lavinomood.com</a></li>
+									<li>{% trans "Phone" %} :<a href="callto:+000258028364"> (+00) 012 032 21</a></li>
 								</ul>
 							</div>
 						</div>

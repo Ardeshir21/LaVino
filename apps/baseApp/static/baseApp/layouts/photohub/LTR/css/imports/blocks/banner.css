@@ -74,6 +74,7 @@
   transform: translateY(0);
 }
 .banner .banner__hash-wrapper {
+  display: none;
   position: absolute;
   right: 3.65%;
   z-index: 1;

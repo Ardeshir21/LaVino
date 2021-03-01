@@ -5,14 +5,14 @@
 	function multipageBanner(){
 		var sync1 = $('.banner-slider-active');
 		var sync2 = $('.banner__hash');
-		var slidesPerPage = 3; //globaly define number of elements per page
+		var slidesPerPage = 10; //globaly define number of elements per page
 	  	var syncedSecondary = true;
 
 		sync1.owlCarousel({
 			items : 1,
 			slideSpeed : 2000,
 			nav: true,
-			autoplay: false,
+			autoplay: true,
 			dots: false,
 			loop: true,
 			responsiveRefreshRate : 200,
@@ -65,7 +65,7 @@
 			  sync2.data('owl.carousel').to(current - onscreen, 100, true);
 			}
 		}
-	  
+
 		function syncPosition2(el) {
 			if(syncedSecondary) {
 				var number = el.item.index;

@@ -64,10 +64,10 @@
 												<span class="blog__content__date"><a href="{% url "blogApp:post_detail" slug=post.slug %}">September 14, 2017</a></span>
 												<p>{{post.shortContent}}</p>
 												<div class="blog__content__more">
-													<a href="single-blog.html" class="read-more">Read more</a>
+													<a href="single-blog.html" class="read-more">{% trans "Read more" %}</a>
 													<div class="blog__content__comments">
 														<div class="share__content__wrap">
-															<a class="share-toggle" href="#"><span class="ti-sharethis"></span> share</a>
+															<a class="share-toggle" href="#"><span class="ti-sharethis"></span> {% trans "share" %}</a>
 														 	<div class="share__content">
 														 		<a href="https://www.facebook.com/"><span class="ti-facebook"></span></a>
 					 											<a href="https://twitter.com/"><span class="ti-twitter-alt"></span></a>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-11 18:00+0300\n"
+"POT-Creation-Date: 2021-02-20 16:03+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,16 +18,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\apps\baseApp\templates\baseApp\layouts\photohub\LTR\projects.html:16
-msgid "Projects"
+#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:63
+#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:143
+msgid "home"
+msgstr "Ana Sayfa"
+
+#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:64
+#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:144
+msgid "about us"
 msgstr ""
 
-#: .\apps\baseApp\views.py:14
-msgid "SOMETHING"
-msgstr "bir şey"
+#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:65
+#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:145
+msgid "projects"
+msgstr ""
 
-#~ msgid "This is the title."
-#~ msgstr "Bu başlık."
+#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:66
+#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:146
+msgid "blog"
+msgstr ""
 
-#~ msgid "This is a new title."
-#~ msgstr "Bu yeni bir başlık."
+#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:151
+msgid "Email"
+msgstr "Eposta"
+
+#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:152
+msgid "Phone"
+msgstr "Telefonlar"
+
+#: .\baseApp\templates\baseApp\layouts\photohub\LTR\projects.html:15
+msgid "Projects"
+msgstr ""
