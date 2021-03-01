@@ -10,7 +10,7 @@
 
 		sync1.owlCarousel({
 			items : 1,
-			slideSpeed : 4000,
+			slideSpeed : 8000,
 			nav: true,
 			autoplay: true,
 			dots: false,
