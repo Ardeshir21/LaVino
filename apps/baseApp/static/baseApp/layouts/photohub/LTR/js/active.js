@@ -39,12 +39,6 @@
 			[ END INDEX ]
 ================================================================================*/
 /*====== Fake Loader ======*/
-$('.fakeloader').fakeLoader({
-		timeToHide:2200,
-		bgColor:'#000000',
-		spinner:'spinner2'
-});
-
 
 (function($) {
 	'use strict';
@@ -267,6 +261,15 @@ $('.fakeloader').fakeLoader({
        });
 
    });
+
+
+	 // :: Preloader Active Code
+	 var $window = $(window);
+	 $window.on('load', function () {
+	 		$('#preloader').fadeOut('slow', function () {
+	 					$(this).remove();
+	 			});
+	 });
 
 	// WOW initial
 	new WOW().init();
