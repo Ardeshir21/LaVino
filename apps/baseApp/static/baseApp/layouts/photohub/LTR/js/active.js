@@ -263,12 +263,12 @@
 
 
 	 // :: Preloader Active Code
-	 // var $window = $(window);
-	 // $window.on('load', function () {
-	 // 		$('#preloader').fadeOut('slow', function () {
-	 // 					$(this).remove();
-	 // 			});
-	 // });
+	 var $window = $(window);
+	 $window.on('load', function () {
+	 		$('#preloader').fadeOut('slow', function () {
+	 					$(this).remove();
+	 			});
+	 });
 
 	// WOW initial
 	new WOW().init();
