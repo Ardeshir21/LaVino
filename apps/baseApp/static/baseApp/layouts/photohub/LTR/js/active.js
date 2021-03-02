@@ -38,6 +38,13 @@
 =================================================================================
 			[ END INDEX ]
 ================================================================================*/
+/*====== Fake Loader ======*/
+$('.fakeloader').fakeLoader({
+		timeToHide:2200,
+		bgColor:'#000000',
+		spinner:'spinner2'
+});
+
 
 (function($) {
 	'use strict';
@@ -213,8 +220,6 @@
 
 
 
-
-
 	/*====== ScrollUp ======*/
 	$.scrollUp({
 	    scrollText: '<span class="ti ti-angle-up"></span>',
@@ -262,14 +267,6 @@
        });
 
    });
-
-
-	/*====== Fake Loader ======*/
-	$('.fakeloader').fakeLoader({
-	    timeToHide:1000,
-	    bgColor:'#000000',
-	    spinner:'spinner2'
-	});
 
 	// WOW initial
 	new WOW().init();
