@@ -264,7 +264,7 @@
 
 	 // :: Preloader Active Code
 	 var $window = $(window);
-	 $window.on('load', function () {
+	 $window.on('DOMContentLoaded', function () {
 	 		$('#preloader').fadeOut('slow', function () {
 	 					$(this).remove();
 	 			});
