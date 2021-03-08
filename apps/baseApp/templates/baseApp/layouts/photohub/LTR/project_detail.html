@@ -2,6 +2,11 @@
 {% load static %}
 {% load i18n %}
 
+{% block head_extra %}
+  <!-- CSS BE-THEME -->
+  <link rel='stylesheet' href="{% static "baseApp/layouts/BE-THEME/css/structure.css" %}">
+	<link rel='stylesheet' href="{% static "baseApp/layouts/BE-THEME/css/jquery.fancybox.min.css" %}">
+{% endblock head_extra %}
 
 
 {% block body_content %}
@@ -22,43 +27,29 @@
 
 		<!-- START MAIN CONTENT -->
 	<main class="main-content">
-
-		<!-- START PAGE PORTFOLIO -->
-		<div class="portfolio-wrap ptb-80 bg--light-grey">
-			<div class="portfolios layout-2">
-				{% for item in project.images.all %}
-				<!-- START SINGLE PORTFOLIO -->
-				<div class="portfolio pf-fashion pf-lifestyle wow animate__animated animate__fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-					<div class="portfolio__inner">
-						<!-- Image -->
-						<div class="portfolio__image">
-							<img src="{{item.image.url}}" alt="portfolio image">
-						</div>
-						<div class="portfolio__content">
-							<!-- EYE -->
-		 					<span class="portfolio-zoom-trigger">
-			 					<a href="{{item.image.url}}"><span class="ti-eye"></span></a>
-			 				</span>
-
-							<div class="portfolio__content__text">
-								<h5>
-									<!-- No title -->
-								</h5>
-								<!-- Share Button -->
-								<div class="share__content__wrap">
-									<a class="share-toggle" href="#"><span class="ti-sharethis"></span> {% trans "share" %}</a>
-									<div class="share__content">
-								 		<a href="https://www.facebook.com/"><span class="ti-facebook"></span></a>
-											<a href="https://vimeo.com/"><span class="ti-vimeo-alt"></span></a>
-											<a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a>
-								 	</div>
-							 	</div>
-							</div>
-						</div>
-					</div>
-				</div><!-- END SINGLE PORTFOLIO -->
-				{% endfor %}
-			</div>
-		</div><!-- END PAGE PORTFOLIO -->
+		<div class="container">
+			<!-- START PAGE PORTFOLIO -->
+			<div class="portfolio-wrap ptb-80 bg--light-grey">
+					{% include "baseApp/layouts/photohub/LTR/include/mansonry-gallery.html" %}
+			</div><!-- END PAGE PORTFOLIO -->
+		</div>
 	</main><!-- END MAIN CONTENT -->
 {% endblock body_content %}
+
+
+{% block body_JS %}
+
+  <!-- BE-THEME for Mansonry Gallery section -->
+  <script src="{% static "baseApp/layouts/BE-THEME/js/jquery.plugins.js" %}"></script>
+	<script src="{% static "baseApp/layouts/BE-THEME/js/jquery.fancybox.min.js" %}"></script>
+	<script src="{% static "baseApp/layouts/BE-THEME/js/scripts-limited.js" %}"></script>
+
+  <script type="text/javascript">
+
+    $('[data-fancybox="images"]').fancybox({
+    	protect: true,
+      loop: true,
+    });
+
+  </script>
+{% endblock body_JS %}

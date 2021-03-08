@@ -1,0 +1,17 @@
+{% load static %}
+
+<div class="portfolio_wrapper isotope_wrapper">
+    <ul class="portfolio_group isotope masonry masonry-hover">
+      {% for item in project.images.all %}
+        <li class="portfolio-item isotope-item category-masonry-hover has-thumbnail animate-box" data-animate-effect="fadeInUp">
+            <div class="masonry-hover-wrapper">
+                <div class="image-wrapper scale-with-grid">
+                    <a data-fancybox="images" href="{{item.image.url}}" data-caption="">
+                      <img src="{{item.image.url}}" class="scale-with-grid wp-post-image" alt="">
+                    </a>
+                </div>
+            </div>
+        </li>
+      {% endfor %}
+    </ul>
+</div>

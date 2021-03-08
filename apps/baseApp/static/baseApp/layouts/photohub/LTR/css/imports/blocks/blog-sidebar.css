@@ -1,4 +1,7 @@
 /*======= Breadcrumb Styles =======*/
+.blog-sidebar {
+  padding-top: 300px;
+}
 .blog-sidebar .sidebar__block {
   margin-top: 50px; }
   .blog-sidebar .sidebar__block:first-child {

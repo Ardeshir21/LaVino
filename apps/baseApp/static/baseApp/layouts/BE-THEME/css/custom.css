@@ -1,0 +1,34 @@
+/*
+|--------------------------------------------------------------------------
+|  Custom Styles
+|
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+/* If you want to add your own CSS code, please do it in this file */
+/*
+@media only screen and (max-width: 767px)
+{
+	.no-margin-h .one-fourth.column{ width: 50% !important;clear:none; }
+	.one-fourth.column{ width: 50% !important;clear:none;  }
+}*/
+
+
+#slide-150-layer-3, #slide-150-layer-4 {
+  text-align: center;
+  border-width: 15px;
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+
+@media only screen and (max-width: 767px){
+
+
+}

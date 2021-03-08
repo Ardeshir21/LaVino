@@ -1,5 +1,5 @@
 /*======= Breadcrumb Styles =======*/
-h5.blog__title {
+h1.blog__title {
   margin-top: -5px;
   font-size: 18px;
   text-transform: uppercase;
@@ -9,7 +9,7 @@ h5.blog__title {
   position: relative;
   margin-bottom: 30px;
   line-height: 22px; }
-  h5.blog__title:before {
+  h1.blog__title:before {
     position: absolute;
     content: "";
     left: 0;
@@ -17,10 +17,10 @@ h5.blog__title {
     height: 2px;
     width: 30px;
     background: #e51515; }
-  h5.blog__title.text-center:before {
+  h1.blog__title.text-center:before {
     left: 50%;
     margin-left: -15px; }
-  h5.blog__title.text-right:before {
+  h1.blog__title.text-right:before {
     left: auto;
     right: 0;
     margin-left: 0px; }
@@ -39,11 +39,20 @@ h5.blog__title {
       .bp-blog .bp-blog__titleline span a:hover {
         color: #e51515; }
   .bp-blog .bp-blog__content {
-    padding-top: 45px; }
+    padding-top: 45px;
+    margin-bottom: 45px;
+    background-color: rgba(255, 255, 255, 0.05)}
+    .bp-blog .bp-blog__content h2, .bp-blog .bp-blog__content h3,
+    .bp-blog .bp-blog__content h4, .bp-blog .bp-blog__content h5 {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
     .bp-blog .bp-blog__content p {
       font-size: 16px;
       margin-bottom: 38px;
-      line-height: 27px; }
+      line-height: 27px;
+      padding-left: 25px;
+      padding-right: 25px;}
     .bp-blog .bp-blog__content blockquote {
       margin-bottom: 38px; }
     .bp-blog .bp-blog__content .bp-blog__content__image {

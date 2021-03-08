@@ -1,7 +1,7 @@
 /*======= Breadcrumb Styles =======*/
-h5.blog__title {
+h1.blog__title {
   margin-top: -5px;
-  font-size: 18px;
+  font-size: 19px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
@@ -9,7 +9,7 @@ h5.blog__title {
   position: relative;
   margin-bottom: 30px;
   line-height: 22px; }
-  h5.blog__title:before {
+  h1.blog__title:before {
     position: absolute;
     content: "";
     left: 0;
@@ -17,16 +17,16 @@ h5.blog__title {
     height: 2px;
     width: 30px;
     background: #e51515; }
-  h5.blog__title.text-center:before {
+  h1.blog__title.text-center:before {
     left: 50%;
     margin-left: -15px; }
-  h5.blog__title.text-right:before {
+  h1.blog__title.text-right:before {
     left: auto;
     right: 0;
     margin-left: 0px; }
 
 .bp-blog {
-  margin-right: 30px; }
+  margin-right: 30px;}
   .bp-blog .bp-blog__titleline {
     padding-bottom: 25px;
     margin-top: -8px; }
@@ -40,15 +40,42 @@ h5.blog__title {
         color: #e51515; }
   .bp-blog .bp-blog__content {
     padding-top: 45px;
+    margin-bottom: 45px;
     direction: rtl;
+    background-color: rgba(255, 255, 255, 0.05);
     text-align: right; }
+    .bp-blog .bp-blog__content h2 {
+      font-size: 18px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    .bp-blog .bp-blog__content h3 {
+      font-size: 16px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    .bp-blog .bp-blog__content h4 {
+      font-size: 15px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    .bp-blog .bp-blog__content h5 {
+      font-size: 13px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
     .bp-blog .bp-blog__content p {
       font-size: 16px;
       font-family: IranSans-UltraLight;
+      text-align: right;
       margin-bottom: 38px;
-      line-height: 27px; }
+      line-height: 27px;
+      padding-left: 25px;
+      padding-right: 25px; }
     .bp-blog .bp-blog__content ul li {
       font-family: IranSans-UltraLight;
+      padding-left: 25px;
+      padding-right: 25px;
     }
     .bp-blog .bp-blog__content blockquote {
       margin-bottom: 38px; }
