@@ -165,7 +165,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-# This seeting is for scss files
+# This setting is for scss files
 # STATICFILES_FINDERS = ['django.contrib.staticfiles.finders.FileSystemFinder',
 #                         'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #                         # other finders
@@ -183,9 +183,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # This is for production use only.
 # https://docs.djangoproject.com/en/1.10/ref/contrib/staticfiles/#manifeststaticfilesstorage
-# if DEBUG == True:
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
-
+if DEBUG == False:
+    # STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+    pass
 
 # The root for uploaded files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
