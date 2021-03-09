@@ -197,12 +197,7 @@ website:   	http://www.themepunch.com
 
 
 /* CAROUSEL FUNCTIONS */
-.tp-carousel-wrapper {
-	cursor:url(openhand.cur), move;
-}
-.tp-carousel-wrapper.dragged {
-	cursor:url(closedhand.cur), move;
-}
+
 
 /* ADDED FOR SLIDELINK MANAGEMENT */
 .tp-caption {
