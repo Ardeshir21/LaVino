@@ -22,9 +22,6 @@
   visibility: visible;
   opacity: 1;
 }
-.wrapper.overlay-active .body-overlay:hover {
-  cursor: url(../../../images/icons/cross-icon.png), auto;
-}
 
 .onepage-sidebar-area {
   position: fixed;
