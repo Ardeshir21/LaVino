@@ -183,8 +183,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # This is for production use only.
 # https://docs.djangoproject.com/en/1.10/ref/contrib/staticfiles/#manifeststaticfilesstorage
-if DEBUG == False:
-    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+# if DEBUG == True:
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 
 # The root for uploaded files
