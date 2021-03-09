@@ -142,8 +142,9 @@
   .blog-sidebar .sidebar__block.sidebar__video {
     padding-top: 10px; }
     .blog-sidebar .sidebar__block.sidebar__video .sidebar__video__inner {
-      background: url(../../../images/others/sidebar-video-bg.jpg) no-repeat scroll center center;
+      background: url(../../../../LTR/images/others/sidebar-video-bg.jpg) no-repeat scroll center center;
       background-size: cover;
+
       position: relative;
       display: -webkit-box;
       display: -webkit-flex;
