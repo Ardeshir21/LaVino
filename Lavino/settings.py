@@ -190,3 +190,6 @@ if DEBUG == False:
 # The root for uploaded files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+DEBUG_PROPAGATE_EXCEPTIONS = True
