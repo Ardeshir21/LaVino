@@ -21,11 +21,16 @@ class Banner(models.Model):
     sub_title = models.CharField(max_length=110, null=True, blank=True)
     title_fa = models.CharField(max_length=110, null=True, blank=True)
     sub_title_fa = models.CharField(max_length=110, null=True, blank=True)
+    description = models.TextField(max_length=200, null=True, blank=True)
+    display_order = models.PositiveIntegerField(null=True, blank=True)
     useFor = models.CharField(max_length=50, choices=PAGE_CHOICES, null=True, blank=True)
     active = models.BooleanField(choices=YES_NO_CHOICES, default=False)
 
     def __str__(self):
             return "{}: banner for {}".format(self.id, self.useFor)
+
+    class Meta():
+        ordering = ['display_order']
 
 class ProjectCategory(models.Model):
     name = models.CharField(max_length=150, unique=True)
@@ -49,6 +54,7 @@ class Project(models.Model):
     slug = models.SlugField(max_length=150, unique=True, blank=True, null=True, allow_unicode=True)
     featured = models.BooleanField(choices=YES_NO_CHOICES, default=False)
     active = models.BooleanField(choices=YES_NO_CHOICES, default=True)
+    display_order = models.PositiveIntegerField(null=True, blank=True)
 
     created = models.DateField(editable=False)
     updated = models.DateField(editable=False, null=True)
@@ -58,7 +64,7 @@ class Project(models.Model):
         return self.title
 
     class Meta():
-        ordering  = ['-created']
+        ordering = ['display_order']
 
     def save(self, *args, **kwargs):
         ''' On save, update timestamps '''

@@ -18,8 +18,8 @@ class ProjectImagesInline(admin.TabularInline):
 class ProjectAdmin(admin.ModelAdmin):
 
     list_filter = ['title', 'category']
-    list_display = ['id', 'category', 'title', 'active', 'featured']
-    list_editable = ['active', 'featured']
+    list_display = ['id', 'category', 'title', 'active', 'featured', 'display_order']
+    list_editable = ['active', 'featured', 'display_order']
     prepopulated_fields = {'slug': ('title',)}
 
     # other Inlines
@@ -28,8 +28,8 @@ class ProjectAdmin(admin.ModelAdmin):
     ]
 
 class BannerAdmin(admin.ModelAdmin):
-    list_display = ['id', 'title', 'useFor', 'active']
-    list_editable = ['useFor', 'active']
+    list_display = ['id', 'sub_title', 'description', 'useFor', 'active', 'display_order']
+    list_editable = ['useFor', 'active', 'display_order']
 
 class FeaturedImagesAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'display_order', 'active']
