@@ -8,13 +8,13 @@
     margin-top: 0; }
   .blog-sidebar .sidebar__block h5.sidebar__title {
     margin-top: -5px;
-    font-size: 18px;
+    font-size: 15px;
+    font-family: IranSans-Medium;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
     padding-bottom: 10px;
     position: relative;
-    margin-bottom: 30px;
     line-height: 22px; }
     .blog-sidebar .sidebar__block h5.sidebar__title:before {
       position: absolute;
@@ -113,19 +113,21 @@
     .blog-sidebar .sidebar__block.sidebar__newsletter .sidebar__newsletter__inner form input {
       background: transparent;
       border: 1px solid #ffffff;
-      height: 50px;
-      line-height: 50px;
+      height: 40px;
+      direction: rtl;
+      font-family: IranSans-UltraLight;
+      line-height: 40px;
       color: #ffffff; }
     .blog-sidebar .sidebar__block.sidebar__newsletter .sidebar__newsletter__inner form button {
       display: block;
-      height: 50px;
-      line-height: 50px;
+      height: 40px;
+      line-height: 40px;
       border: 1px solid #ffffff;
       outline: none;
       color: #ffffff;
-      font-size: 24px;
+      font-size: 22px;
       background: #16bbb4;
-      padding: 0 30px;
+      padding: 0 10px 0 10px;
       border-left: none; }
       .blog-sidebar .sidebar__block.sidebar__newsletter .sidebar__newsletter__inner form button span {
         display: inline-block;

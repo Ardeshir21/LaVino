@@ -6,7 +6,7 @@ a.pt-button, button.pt-button, .pt-button {
   line-height: 38px;
   color: #ffffff;
   font-weight: 500;
-  font-family: IranSans-UltraLight;
+  /* font-family: IranSans-UltraLight; */
   text-transform: uppercase;
   border: 1px solid #ffffff;
   -webkit-transition: all 0.3s ease-in-out 0s;
