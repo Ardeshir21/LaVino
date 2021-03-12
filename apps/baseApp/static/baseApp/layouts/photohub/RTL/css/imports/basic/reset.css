@@ -23,9 +23,15 @@ a {
 
 html {
   color: #ffffff;
+  overflow-x: hidden;
   font-size: 14px;
   line-height: 21px;
   font-size: 87.5%;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative
 }
 
 ::-moz-selection {

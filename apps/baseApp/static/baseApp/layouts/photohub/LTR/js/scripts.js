@@ -80,7 +80,7 @@
 
     /*====== Banner Padding ======*/
     function bannerPadding(){
-        var headerHeight = $('.header-area.sticky-header').height();
+        var headerHeight = $('.header-area.sticky-header').height() + 20;
         $($('.header-area:not(.transparent--header)').next()).css({
             'padding-top' : headerHeight
         });
