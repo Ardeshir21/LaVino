@@ -56,7 +56,7 @@ body:not(.template-slider) #Content {
     position: relative;
 }
 
-.section_wrapper,.container {
+.section_wrapper, {
     width: 1200px;
     margin: 0 auto;
     position: relative;
@@ -6017,7 +6017,7 @@ html,body {
         width: 960px;
     }
 
-    .section_wrapper,.container,.with_aside .content_wrapper {
+    .section_wrapper,.with_aside .content_wrapper {
         width: 940px;
     }
 
@@ -6083,7 +6083,7 @@ html,body {
         width: 960px;
     }
 
-    .header-open .section_wrapper,.header-open .container,.header-open.with_aside .content_wrapper {
+    .header-open .section_wrapper,.header-open,.header-open.with_aside .content_wrapper {
         width: 940px;
     }
 
@@ -6169,7 +6169,7 @@ body {
         width: 728px;
     }
 
-    .section_wrapper,.container,.with_aside .content_wrapper {
+    .section_wrapper,.with_aside .content_wrapper {
         width: 708px;
     }
 
@@ -6519,7 +6519,7 @@ body {
         margin: 0 auto !important;
     }
 
-    .section_wrapper,.container,.four.columns {
+    .section_wrapper,.four.columns {
         width: 260px !important;
     }
 
@@ -7395,7 +7395,7 @@ body {
         width: 420px;
     }
 
-    .section_wrapper,.container,.four.columns {
+    .section_wrapper,.four.columns {
         width: calc( 100% - 67px ) !important;
     }
 
