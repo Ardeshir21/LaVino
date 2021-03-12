@@ -61,7 +61,7 @@
       .contact .contact__info .contact__info__content .single__info .single__info__text a {
         color: #ffffff; }
         .contact .contact__info .contact__info__content .single__info .single__info__text a:hover {
-          color: #e51515; }
+          color: #16bbb4; }
 .contact .contact__form {
   padding-top: 80px; }
   .contact .contact__form .contact__form__title {
@@ -75,7 +75,7 @@
       outline: none;
       border: 1px solid #999999; }
       .contact .contact__form .single__input input:focus, .contact .contact__form .single__input textarea:focus {
-        border: 1px solid #e51515;
+        border: 1px solid #16bbb4;
         outline: none; }
     .contact .contact__form .single__input.contact-button {
       margin-top: 45px; }

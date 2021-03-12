@@ -32,8 +32,8 @@ a.pt-button.pt-button--grey:hover, button.pt-button.pt-button--grey:hover, .pt-b
   color: #000000;
 }
 a.pt-button.pt-button--theme, button.pt-button.pt-button--theme, .pt-button.pt-button--theme {
-  background: #e51515;
-  border-color: #e51515;
+  background: #16bbb4;
+  border-color: #16bbb4;
   color: #ffffff;
 }
 a.pt-button.pt-button--theme:hover, button.pt-button.pt-button--theme:hover, .pt-button.pt-button--theme:hover {
@@ -85,10 +85,10 @@ a.read-more:after {
   transition: all 0.3s ease-in-out 0s;
 }
 a.read-more:hover {
-  color: #e51515;
+  color: #16bbb4;
 }
 a.read-more:hover:after {
-  background: #e51515;
+  background: #16bbb4;
   left: calc(100% + 10px);
 }
 
@@ -111,8 +111,8 @@ a.video-play-button span {
   padding-left: 3px;
 }
 a.video-play-button:hover {
-  color: #e51515;
-  border-color: #e51515;
+  color: #16bbb4;
+  border-color: #16bbb4;
 }
 
 a.reply-button, button.reply-button {
@@ -132,8 +132,8 @@ a.reply-button, button.reply-button {
 }
 a.reply-button:hover, button.reply-button:hover {
   color: #ffffff;
-  background: #e51515;
-  border-color: #e51515;
+  background: #16bbb4;
+  border-color: #16bbb4;
 }
 
 /*# sourceMappingURL=button.css.map */

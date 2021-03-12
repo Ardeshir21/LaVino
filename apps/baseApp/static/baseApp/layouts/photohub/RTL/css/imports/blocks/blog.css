@@ -34,7 +34,7 @@
       .blog .blog__content h5.blog__content__title a {
         color: #ffffff; }
         .blog .blog__content h5.blog__content__title a:hover {
-          color: #e51515; }
+          color: #16bbb4; }
     .blog .blog__content span.blog__content__date {
       display: block;
       font-family: IranSans-UltraLight;
@@ -43,7 +43,7 @@
         font-size: 16px;
         color: #ffffff; }
         .blog .blog__content span.blog__content__date a:hover {
-          color: #e51515; }
+          color: #16bbb4; }
     .blog .blog__content .blog__content__more {
       display: -webkit-box;
       display: -webkit-flex;
@@ -92,7 +92,7 @@
           .blog .blog__content .blog__content__more .blog__content__comments > a span {
             padding-right: 5px; }
           .blog .blog__content .blog__content__more .blog__content__comments > a:hover {
-            color: #e51515; }
+            color: #16bbb4; }
 
 .blog-grid-blogs {
   margin-top: -30px; }

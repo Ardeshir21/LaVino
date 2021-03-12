@@ -29,7 +29,7 @@
   color: #ffffff;
 }
 .footer .footer__copyright p.footer__copyright__text a:hover {
-  color: #e51515;
+  color: #16bbb4;
 }
 .footer nav.footer__menu {
   width: 50%;
@@ -47,7 +47,7 @@
   color: #ffffff;
 }
 .footer nav.footer__menu ul li a:hover {
-  color: #e51515;
+  color: #16bbb4;
 }
 .footer .footer__contact {
   width: 25%;
@@ -64,7 +64,7 @@
   line-height: 34px;
 }
 .footer .footer__contact ul li a:hover {
-  color: #e51515;
+  color: #16bbb4;
 }
 
 .bg--white .footer {
@@ -79,7 +79,7 @@
   color: #000;
 }
 .bg--white .footer .footer__copyright p.footer__copyright__text a:hover {
-  color: #e51515;
+  color: #16bbb4;
 }
 .bg--white .footer .footer__contact ul li {
   color: #000;
@@ -88,7 +88,7 @@
   color: #000;
 }
 .bg--white .footer .footer__contact ul li a:hover {
-  color: #e51515;
+  color: #16bbb4;
 }
 
 .onepage-footer .footer .footer__copyright {

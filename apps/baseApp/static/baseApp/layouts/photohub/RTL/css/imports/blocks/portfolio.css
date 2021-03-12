@@ -27,11 +27,11 @@
           height: 100%;
           width: 100%;
           z-index: 2;
-          background: -webkit-linear-gradient(90deg, #e51515 0%, #c60de1 100%);
-          background: -moz-linear-gradient(90deg, #e51515 0%, #c60de1 100%);
-          background: -ms-linear-gradient(90deg, #e51515 0%, #c60de1 100%);
-          background: -o-linear-gradient(90deg, #e51515 0%, #c60de1 100%);
-          background: linear-gradient(90deg, #e51515 0%, #c60de1 100%);
+          background: -webkit-linear-gradient(90deg, #16bbb4 0%, #c60de1 100%);
+          background: -moz-linear-gradient(90deg, #16bbb4 0%, #c60de1 100%);
+          background: -ms-linear-gradient(90deg, #16bbb4 0%, #c60de1 100%);
+          background: -o-linear-gradient(90deg, #16bbb4 0%, #c60de1 100%);
+          background: linear-gradient(90deg, #16bbb4 0%, #c60de1 100%);
           filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgb(229, 21, 21), endColorstr=rgb(198,13,225));
           -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=rgb(229, 21, 21), endColorstr=rgb(198,13,225))";
           opacity: 0.5;
@@ -211,7 +211,7 @@
       left: 0;
       top: 50%;
       height: 50%;
-      background: #e51515;
+      background: #16bbb4;
       width: 100%;
       -webkit-transform: scaleX(0);
       -moz-transform: scaleX(0);
@@ -348,11 +348,11 @@
         opacity: .5;
         left: 0;
         bottom: 0;
-        background: -webkit-linear-gradient(90deg, #e51515 0%, #c60de1 100%);
-        background: -moz-linear-gradient(90deg, #e51515 0%, #c60de1 100%);
-        background: -ms-linear-gradient(90deg, #e51515 0%, #c60de1 100%);
-        background: -o-linear-gradient(90deg, #e51515 0%, #c60de1 100%);
-        background: linear-gradient(90deg, #e51515 0%, #c60de1 100%);
+        background: -webkit-linear-gradient(90deg, #16bbb4 0%, #c60de1 100%);
+        background: -moz-linear-gradient(90deg, #16bbb4 0%, #c60de1 100%);
+        background: -ms-linear-gradient(90deg, #16bbb4 0%, #c60de1 100%);
+        background: -o-linear-gradient(90deg, #16bbb4 0%, #c60de1 100%);
+        background: linear-gradient(90deg, #16bbb4 0%, #c60de1 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgb(229, 21, 21), endColorstr=rgb(198,13,225));
         -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=rgb(229, 21, 21), endColorstr=rgb(198,13,225))";
         z-index: 1; }

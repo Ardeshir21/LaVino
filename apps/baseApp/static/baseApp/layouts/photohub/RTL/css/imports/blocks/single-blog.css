@@ -16,7 +16,7 @@ h1.blog__title {
     bottom: 0;
     height: 2px;
     width: 30px;
-    background: #e51515; }
+    background: #16bbb4; }
   h1.blog__title.text-center:before {
     left: 50%;
     margin-left: -15px; }
@@ -37,7 +37,7 @@ h1.blog__title {
       font-size: 500;
       color: #ffffff; }
       .bp-blog .bp-blog__titleline span a:hover {
-        color: #e51515; }
+        color: #16bbb4; }
   .bp-blog .bp-blog__content {
     padding-top: 45px;
     margin-bottom: 45px;
@@ -136,7 +136,7 @@ h1.blog__title {
         .bp-blog .bp-blog__bottomline .bp-blog__tags ul li a {
           color: #ffffff; }
           .bp-blog .bp-blog__bottomline .bp-blog__tags ul li a:hover {
-            color: #e51515; }
+            color: #16bbb4; }
     .bp-blog .bp-blog__bottomline .bp-blog__share {
       display: -webkit-box;
       display: -webkit-flex;
@@ -174,7 +174,7 @@ h1.blog__title {
         .bp-blog .bp-blog__bottomline .bp-blog__share > a span {
           padding-right: 5px; }
         .bp-blog .bp-blog__bottomline .bp-blog__share > a:hover {
-          color: #e51515; }
+          color: #16bbb4; }
   .bp-blog .bp-blog__author {
     display: -webkit-box;
     display: -webkit-flex;
@@ -227,7 +227,7 @@ h1.blog__title {
         outline: none;
         border: 1px solid #999999; }
         .bp-blog .bp-blog__comment .bp-comment-box .single-input input:focus, .bp-blog .bp-blog__comment .bp-comment-box .single-input textarea:focus {
-          border: 1px solid #e51515;
+          border: 1px solid #16bbb4;
           outline: none; }
   .bp-blog .bp-blog__comment .bp-comments {
     margin-top: 55px;
@@ -274,7 +274,7 @@ h1.blog__title {
               .bp-blog .bp-blog__comment .bp-comments .bp-comment .bp-comment__content .bp-comment__content__top .bp-comment__content__title h5 a {
                 color: #ffffff; }
                 .bp-blog .bp-blog__comment .bp-comments .bp-comment .bp-comment__content .bp-comment__content__top .bp-comment__content__title h5 a:hover {
-                  color: #e51515; }
+                  color: #16bbb4; }
         .bp-blog .bp-blog__comment .bp-comments .bp-comment .bp-comment__content p {
           font-weight: 400;
           font-size: 14px; }

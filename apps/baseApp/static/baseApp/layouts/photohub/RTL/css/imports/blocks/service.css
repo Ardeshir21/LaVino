@@ -93,11 +93,11 @@
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.2);
 }
 .services .service .service__inner:hover .service__icon span {
-  background: -webkit-linear-gradient(90deg, #e51515 0%, #c60de1 100%);
-  background: -moz-linear-gradient(90deg, #e51515 0%, #c60de1 100%);
-  background: -ms-linear-gradient(90deg, #e51515 0%, #c60de1 100%);
-  background: -o-linear-gradient(90deg, #e51515 0%, #c60de1 100%);
-  background: linear-gradient(90deg, #e51515 0%, #c60de1 100%);
+  background: -webkit-linear-gradient(90deg, #16bbb4 0%, #c60de1 100%);
+  background: -moz-linear-gradient(90deg, #16bbb4 0%, #c60de1 100%);
+  background: -ms-linear-gradient(90deg, #16bbb4 0%, #c60de1 100%);
+  background: -o-linear-gradient(90deg, #16bbb4 0%, #c60de1 100%);
+  background: linear-gradient(90deg, #16bbb4 0%, #c60de1 100%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -ms-background-clip: text;
@@ -118,11 +118,11 @@
   opacity: 1;
 }
 .services .service .service__inner:hover .service__content h4 {
-  color: #e51515;
+  color: #16bbb4;
 }
 .services .service .service__inner:hover .service__content h4:before {
   width: 100%;
-  background: #e51515;
+  background: #16bbb4;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {

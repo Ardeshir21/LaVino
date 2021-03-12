@@ -31,7 +31,7 @@
     -o-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s; }
     input:focus, input:active, select:focus, select:active, textarea:focus, textarea:active {
-      border: 1px solid #e51515;
+      border: 1px solid #16bbb4;
       outline: none; }
 
   textarea {
@@ -124,13 +124,13 @@
     line-height: 31px;
     padding-left: 20px;
     margin: 0 40px;
-    border-left: 3px solid #e51515; }
+    border-left: 3px solid #16bbb4; }
 
   strong {
     font-weight: 600; }
 
   a {
-    color: #e51515;
+    color: #16bbb4;
     -webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     -ms-transition: all 0.3s ease-in-out 0s;

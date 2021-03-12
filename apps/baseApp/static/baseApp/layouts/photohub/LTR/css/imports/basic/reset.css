@@ -29,13 +29,13 @@ html {
 }
 
 ::-moz-selection {
-  background: #e51515;
+  background: #16bbb4;
   color: #ffffff;
   text-shadow: none;
 }
 
 ::selection {
-  background: #e51515;
+  background: #16bbb4;
   color: #ffffff;
   text-shadow: none;
 }

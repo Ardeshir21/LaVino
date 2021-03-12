@@ -11,7 +11,7 @@
   display: inline-block;
 }
 .social-icons ul li:hover a {
-  color: #e51515;
+  color: #16bbb4;
 }
 .social-icons ul li:first-child {
   padding-left: 0;
@@ -82,9 +82,9 @@
   font-size: 14px;
 }
 .social-icons.social-icons--rounded ul li:hover a {
-  background: #e51515;
+  background: #16bbb4;
   color: #ffffff;
-  border-color: #e51515;
+  border-color: #16bbb4;
 }
 
 /*# sourceMappingURL=social-icons.css.map */

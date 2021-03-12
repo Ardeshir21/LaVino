@@ -23,7 +23,7 @@
       bottom: 0;
       height: 2px;
       width: 30px;
-      background: #e51515; }
+      background: #16bbb4; }
     .blog-sidebar .sidebar__block h5.sidebar__title.text-center:before {
       left: 50%;
       margin-left: -15px; }
@@ -68,7 +68,7 @@
           height: 100%;
           left: 0;
           top: 0;
-          background: #e51515;
+          background: #16bbb4;
           opacity: 0;
           visibility: hidden;
           -webkit-transition: all 0.3s ease-in-out 0s;
@@ -124,7 +124,7 @@
       outline: none;
       color: #ffffff;
       font-size: 24px;
-      background: #e51515;
+      background: #16bbb4;
       padding: 0 30px;
       border-left: none; }
       .blog-sidebar .sidebar__block.sidebar__newsletter .sidebar__newsletter__inner form button span {
@@ -184,7 +184,7 @@
     .blog-sidebar .sidebar__block.sidebar__popular .popular-post .single-post .single-post__conent a {
       color: #ffffff; }
       .blog-sidebar .sidebar__block.sidebar__popular .popular-post .single-post .single-post__conent a:hover {
-        color: #e51515; }
+        color: #16bbb4; }
     .blog-sidebar .sidebar__block.sidebar__popular .popular-post .single-post .single-post__conent h5 {
       font-size: 16px;
       line-height: 26px;
@@ -238,7 +238,7 @@
         .blog-sidebar .sidebar__block.sidebar__post__carousel .sidebar__posts .single__post .single__post__content a {
           color: #ffffff; }
           .blog-sidebar .sidebar__block.sidebar__post__carousel .sidebar__posts .single__post .single__post__content a:hover {
-            color: #e51515; }
+            color: #16bbb4; }
         .blog-sidebar .sidebar__block.sidebar__post__carousel .sidebar__posts .single__post .single__post__content h5 {
           display: block;
           font-weight: 400;
@@ -283,8 +283,8 @@
         letter-spacing: 0.3px;
         text-transform: uppercase; }
         .blog-sidebar .sidebar__block.sidebar__tags ul li a:hover {
-          background: #e51515;
-          border-color: #e51515; }
+          background: #16bbb4;
+          border-color: #16bbb4; }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .blog-sidebar {

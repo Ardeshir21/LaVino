@@ -91,7 +91,7 @@
       text-align: center;
       line-height: 42px; }
       .share__content__wrap .share__content a:hover {
-        color: #e51515 !important; }
+        color: #16bbb4 !important; }
     .share__content__wrap .share__content.show {
       visibility: visible;
       opacity: 1;
@@ -132,7 +132,7 @@
   min-height: 50%; }
 
 .color--theme {
-  color: #e51515; }
+  color: #16bbb4; }
 
 .color--light {
   color: #999999; }
@@ -227,7 +227,7 @@
   background-repeat: repeat !important; }
 
 .bg--theme {
-  background: #e51515; }
+  background: #16bbb4; }
 
 .bg--light {
   background: #25282e; }
@@ -301,7 +301,7 @@
   z-index: 1; }
 
 [data-overlay]:before {
-  background-color: #e51515; }
+  background-color: #16bbb4; }
 
 [data-black-overlay]:before {
   background-color: #15161a; }
@@ -345,7 +345,7 @@
   right: 30px;
   bottom: 0;
   border-radius: 3px 3px 0 0;
-  background: #e51515;
+  background: #16bbb4;
   color: #ffffff;
   font-size: 14px;
   height: 35px;
