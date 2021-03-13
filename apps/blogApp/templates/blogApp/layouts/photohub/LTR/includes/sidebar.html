@@ -5,7 +5,7 @@
   <div class="blog-sidebar">
     <!-- Categories -->
     <div class="sidebar__tags sidebar__block">
-      <h5 class="sidebar__title text-center">{% trans "Tags" %}</h5>
+      <h5 class="sidebar__title text-center">{% trans "Categories" %}</h5>
       <ul>
         {% for item in blog_categories %}
         <li><a href="{% url "blogApp:category_list" category=item.slug %}">{{item.category}}</a></li>

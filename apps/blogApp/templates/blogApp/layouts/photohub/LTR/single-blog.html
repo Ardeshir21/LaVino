@@ -52,7 +52,7 @@
 							<div class="bp-blog">
 								<div class="bp-blog__titleline text-center">
 									<h1>{{the_post.title}}</h1>
-									<span class="text-uppercase"><a href="blog-list-right-sidebar.html">{{the_post.updated}}</a></span>
+									<span class="text-uppercase">{{the_post.updated}}</span>
 								</div>
 								<div class="bp-blog__content">
 									{{the_post.content|safe}}
@@ -60,10 +60,10 @@
 								<!-- Categories and Share -->
 								<div class="bp-blog__bottomline">
 									<div class="bp-blog__tags">
-										<h5>Tags:</h5>
+										<h5>Categories:</h5>
 										<ul>
 											{% for item in the_post.categories.all %}
-											<li><a href="blog-list-right-sidebar.html">{{item.category}}</a></li>
+											<li><a href="{% url "blogApp:category_list" category=item.slug %}">{{item.category}}</a></li>
 											{% endfor %}
 										</ul>
 									</div>
@@ -75,70 +75,12 @@
 	 											<a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a>
 										 	</div>
 									 	</div>
-										<a href="single-blog.html"><span class="ti ti-comments-smiley"></span>{{the_post.view}}</a>
-									</div>
-								</div>
-								<!-- Author -->
-								<div class="bp-blog__author">
-									<div class="single-author">
-										<div class="single-author__image">
-											<img src="images/blog-author/small/1.png" alt="blog-author">
-										</div>
-										<div class="single-author__content">
-											<h5>King Siddikee</h5>
-											<p>Unde omnis iste natus error sit volu accusantium doloremque </p>
-											<div class="social-icons social-icons--white">
-												<ul>
-													<li class="facebook"><a href="https://www.facebook.com/"><span class="ti-facebook"></span></a></li>
-													<li class="twitter"><a href="https://twitter.com/"><span class="ti-twitter-alt"></span></a></li>
-													<li class="vimeo"><a href="https://vimeo.com/"><span class="ti-vimeo-alt"></span></a></li>
-													<li class="pinterest"><a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a></li>
-												</ul>
-											</div>
-										</div>
+										<span>{{the_post.view}} <i class="fad fa-eye"></i></span>
 									</div>
 								</div>
 							</div>
 						</div>
 						{% include "blogApp/layouts/photohub/LTR/includes/sidebar.html" %}
-					</div>
-					<!-- Related Posts -->
-					<div class="row">
-						<div class="bp-blog__related-post">
-							<h5 class="blog__title text-center">Related Posts</h5>
-							<div class="row">
-								<!-- START SINGLE BLOG -->
-								<div class="col-lg-4 col-md-6 col-sm-12 col-12">
-									<div class="blog">
-										<div class="blog__thumbnail">
-											<a href="single-blog.html">
-												<img src="images/blog/1.jpg" alt="blog thumbnail">
-											</a>
-										</div>
-										<div class="blog__content">
-											<h5 class="blog__content__title"><a href="single-blog.html">Lorem ipsum dolor sit amet consec.</a></h5>
-											<span class="blog__content__date"><a href="blog-list-right-sidebar.html">September 14, 2017</a></span>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore.</p>
-											<div class="blog__content__more">
-												<a href="single-blog.html" class="read-more">Read more</a>
-												<div class="blog__content__comments">
-													<div class="share__content__wrap">
-														<a class="share-toggle" href="#"><span class="ti-sharethis"></span> share</a>
-													 	<div class="share__content">
-													 		<a href="https://www.facebook.com/"><span class="ti-facebook"></span></a>
-				 											<a href="https://twitter.com/"><span class="ti-twitter-alt"></span></a>
-				 											<a href="https://vimeo.com/"><span class="ti-vimeo-alt"></span></a>
-				 											<a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a>
-													 	</div>
-												 	</div>
-													<a href="single-blog.html"><span class="ti ti-comments-smiley"></span>16</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div><!-- END SINGLE BLOG -->
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>

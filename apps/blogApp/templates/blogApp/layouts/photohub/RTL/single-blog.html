@@ -52,7 +52,7 @@
 							<div class="bp-blog">
 								<div class="bp-blog__titleline text-center">
 									<h1>{{the_post.title}}</h1>
-									<span class="text-uppercase"><a href="blog-list-right-sidebar.html">{{the_post.updated}}</a></span>
+									<span class="text-uppercase">{{the_post.updated}}</span>
 								</div>
 								<div class="bp-blog__content">
 									{{the_post.content|safe}}
@@ -63,7 +63,7 @@
 										<h5> دسته ها: </h5>
 										<ul>
 											{% for item in the_post.categories.all %}
-											<li><a href="blog-list-right-sidebar.html">{{item.category}}</a></li>
+											<li><a href="{% url "blogApp:category_list" category=item.slug %}">{{item.category}}</a></li>
 											{% endfor %}
 										</ul>
 									</div>
@@ -75,7 +75,7 @@
 	 											<a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a>
 										 	</div>
 									 	</div>
-										<a href="single-blog.html"><span class="ti ti-comments-smiley"></span>{{the_post.view}}</a>
+										<span>{{the_post.view}} <i class="fad fa-eye"></i></span>
 									</div>
 								</div>
 							</div>
@@ -84,6 +84,5 @@
 					</div>
 				</div>
 			</div><!-- END BLOG LIST PAGE CONTENT -->
-
 		</main><!-- END MAIN CONTENT -->
 {% endblock body_content %}

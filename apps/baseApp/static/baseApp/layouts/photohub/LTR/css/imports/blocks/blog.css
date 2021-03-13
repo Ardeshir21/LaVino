@@ -21,6 +21,7 @@
   .blog .blog__content {
     padding-top: 20px;
     border-bottom: 1px solid #999999;
+    text-align: justify;
     -webkit-transition: border 0.3s ease-in-out 0s;
     -moz-transition: border 0.3s ease-in-out 0s;
     -ms-transition: border 0.3s ease-in-out 0s;

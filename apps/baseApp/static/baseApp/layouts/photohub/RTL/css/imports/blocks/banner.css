@@ -23,7 +23,7 @@
   text-transform: capitalize;
   font-weight: 500;
   font-size: 40px;
-  letter-spacing: 10px;
+  font-family: IraSans-Meduim;
   visibility: hidden;
   opacity: 0;
   -webkit-transform: translateY(30px);
@@ -41,9 +41,8 @@
   visibility: hidden;
   opacity: 0;
   padding-top: 35px;
-  font-family: "shine_personal_use";
+  font-family: IranSans-Bold;
   font-size: 100px;
-  letter-spacing: 20px;
   -webkit-transform: translateY(30px);
   -moz-transform: translateY(30px);
   -ms-transform: translateY(30px);

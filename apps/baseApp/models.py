@@ -45,8 +45,8 @@ class Project(models.Model):
     category = models.ForeignKey(ProjectCategory, related_name='categories', on_delete=models.CASCADE)
     title = models.CharField(max_length=100, unique=True, null=True, blank=True)
     title_fa = models.CharField(max_length=100, unique=True, null=True, blank=True)
-    description = models.CharField(max_length=500, unique=True, null=True, blank=True)
-    description_fa = models.CharField(max_length=500, unique=True, null=True, blank=True)
+    description = models.TextField(max_length=500, null=True, blank=True)
+    description_fa = models.TextField(max_length=500, null=True, blank=True)
     image_thumb = models.ImageField(upload_to='baseApp/projects/', null=True,
                                 help_text='Image 600x700')
     image_main = models.ImageField(upload_to='baseApp/projects/', null=True,

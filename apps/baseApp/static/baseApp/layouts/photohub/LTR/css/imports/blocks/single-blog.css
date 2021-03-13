@@ -41,9 +41,32 @@ h1.blog__title {
   .bp-blog .bp-blog__content {
     padding-top: 45px;
     margin-bottom: 45px;
+    text-align: justify;
     background-color: rgba(255, 255, 255, 0.05)}
-    .bp-blog .bp-blog__content h2, .bp-blog .bp-blog__content h3,
-    .bp-blog .bp-blog__content h4, .bp-blog .bp-blog__content h5 {
+    .bp-blog .bp-blog__content h1 {
+      font-size: 26px;
+      line-height: 3;
+      margin: 2%;
+      margin-bottom: 35px;
+      margin-top: 35px;
+    }
+    .bp-blog .bp-blog__content h2 {
+      font-size: 18px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    .bp-blog .bp-blog__content h3 {
+      font-size: 16px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    .bp-blog .bp-blog__content h4 {
+      font-size: 15px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    .bp-blog .bp-blog__content h5 {
+      font-size: 13px;
       padding-left: 25px;
       padding-right: 25px;
     }
@@ -51,8 +74,15 @@ h1.blog__title {
       font-size: 17px;
       margin-bottom: 38px;
       line-height: 28px;
+      text-indent: 25px;
       padding-left: 25px;
       padding-right: 25px;}
+      .bp-blog .bp-blog__content ul li {
+        padding-right: 25px;
+        line-height: 32px;
+        font-size: 16px;
+        padding-left: 50px;
+      }
     .bp-blog .bp-blog__content blockquote {
       margin-bottom: 38px; }
     .bp-blog .bp-blog__content .bp-blog__content__image {
