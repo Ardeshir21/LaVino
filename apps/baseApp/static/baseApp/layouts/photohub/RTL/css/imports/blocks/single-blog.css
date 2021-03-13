@@ -82,13 +82,15 @@ h1.blog__title {
       text-indent: 25px;
       padding-left: 25px;
       padding-right: 25px; }
+      .bp-blog .bp-blog__content ul {
+        margin-right: 80px;
+      }
     .bp-blog .bp-blog__content ul li {
       font-family: IranSans-UltraLight;
       padding-left: 25px;
-      line-height: 32px;
       text-align: right;
       font-size: 16px;
-      padding-right: 50px;
+      list-style: disc;
     }
     .bp-blog .bp-blog__content blockquote {
       margin-bottom: 38px; }

@@ -77,11 +77,13 @@ h1.blog__title {
       text-indent: 25px;
       padding-left: 25px;
       padding-right: 25px;}
+      .bp-blog .bp-blog__content ul {
+        margin-left: 80px;
+      }
       .bp-blog .bp-blog__content ul li {
         padding-right: 25px;
-        line-height: 32px;
         font-size: 16px;
-        padding-left: 50px;
+        list-style: disc;
       }
     .bp-blog .bp-blog__content blockquote {
       margin-bottom: 38px; }
