@@ -78,6 +78,7 @@
   transition: all 0.3s ease-in-out 0s;
 }
 .services .service .service__inner .service__content p {
+  font-size: 16px;
   margin-top: 12px;
   margin-bottom: 0;
 }

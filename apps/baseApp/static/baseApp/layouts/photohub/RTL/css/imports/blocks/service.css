@@ -1,5 +1,6 @@
 /*======= Service Styles =======*/
 .services {
+  direction: rtl;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;

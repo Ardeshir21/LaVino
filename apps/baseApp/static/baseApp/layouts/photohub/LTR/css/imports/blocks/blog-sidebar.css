@@ -118,11 +118,12 @@
     .blog-sidebar .sidebar__block.sidebar__newsletter .sidebar__newsletter__inner form button {
       display: block;
       height: 40px;
+      width: 40px;
       line-height: 40px;
       border: 1px solid #ffffff;
       outline: none;
       color: #ffffff;
-      font-size: 22px;
+      font-size: 25px;
       background: #16bbb4;
       padding: 0 10px 0 10px;
       border-left: none; }

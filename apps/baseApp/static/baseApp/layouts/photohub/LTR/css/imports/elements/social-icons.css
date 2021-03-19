@@ -8,6 +8,7 @@
 }
 .social-icons ul li a {
   color: #000;
+  font-size: 38px;
   display: inline-block;
 }
 .social-icons ul li:hover a {

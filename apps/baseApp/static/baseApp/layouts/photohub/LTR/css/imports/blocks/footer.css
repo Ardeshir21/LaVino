@@ -53,11 +53,13 @@
 }
 .footer .footer__contact ul li {
   font-weight: 500;
+  font-size: 17px;
   color: #ffffff;
 }
 .footer .footer__contact ul li a {
   color: #ffffff;
   font-weight: 400;
+  font-size: 17px;
   padding-left: 5px;
   line-height: 34px;
 }

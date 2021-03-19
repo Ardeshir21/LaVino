@@ -6,7 +6,7 @@
   max-width: 100%;
 }
 .about .about__content h3 {
-  margin-top: -10px;
+  margin-top: 10px;
   font-weight: 400;
   font-size: 24px;
   text-align: right;
@@ -15,6 +15,7 @@
 }
 .about .about__content p {
   text-align: right;
+  font-family: IranSans-UltraLight;
 }
 .about .about__content .signature {
   margin-top: 10px;
@@ -37,6 +38,7 @@
   }
   .about .about__content h3 {
     margin-top: 0;
+    font-size: 20px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -51,6 +53,7 @@
   }
   .about .about__content h3 {
     margin-top: 0;
+    font-size: 18px;
   }
 }
 

@@ -136,14 +136,14 @@
 									</div>
 								</div>
 								<p class="footer__copyright__text">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
-								<p class="footer__copyright__text">Developed by: <a href="https://wa.me/905356832320?text=Hi%20Ardeshir">Ardeshir</a></p>
+								<!-- <p class="footer__copyright__text">Developed by: <a href="https://wa.me/905356832320">Ardeshir</a></p> -->
 							</div>
 							<nav class="footer__menu text-center">
 								<ul>
 									<li><a href="{% url "baseApp:index" %}">{% trans "home" %}</a></li>
 									<li><a href="{% url "baseApp:about_us" %}">{% trans "about us" %}</a></li>
 									<li><a href="{% url "baseApp:projects" %}">{% trans "projects" %}</a></li>
-									<li><a href="#">{% trans "blog" %}</a></li>
+									<li><a href="{% url "blogApp:all_posts" %}">{% trans "blog" %}</a></li>
 								</ul>
 							</nav>
 							<div class="footer__contact">
