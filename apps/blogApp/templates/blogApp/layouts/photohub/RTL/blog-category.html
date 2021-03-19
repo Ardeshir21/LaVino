@@ -66,13 +66,7 @@
 												<div class="blog__content__more">
 													<a href="{% url "blogApp:post_detail" slug=post.slug %}" class="read-more">بیشتر بخوانید </a>
 													<div class="blog__content__comments">
-														<div class="share__content__wrap">
-															<a class="share-toggle" href="#">اشتراک<span class="ti-sharethis"></span></a>
-														 	<div class="share__content">
-														 		<a href="https://www.facebook.com/"><span class="ti-facebook"></span></a>
-					 											<a href="https://www.pinterest.com/"><span class="ti-pinterest"></span></a>
-														 	</div>
-													 	</div>
+														{% include "blogApp/layouts/photohub/RTL/includes/share-btn.html" %}
 														<span>{{post.view}} <i class="fad fa-eye"></i></span>
 													</div>
 												</div>

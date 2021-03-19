@@ -1,0 +1,9 @@
+{% load i18n %}
+
+<div class="share__content__wrap">
+  <a class="share-toggle" href="#">اشتراک<span class="ti-sharethis"></span></a>
+  <div class="share__content">
+    <a href="https://t.me/share/url?url={% url "blogApp:post_detail" slug=post.slug %}" target="_blank"><i class="fab fa-telegram-plane fa-lg"></i></a>
+    <a href="https://wa.me/?text={% url "blogApp:post_detail" slug=post.slug %}" target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a>
+  </div>
+</div>

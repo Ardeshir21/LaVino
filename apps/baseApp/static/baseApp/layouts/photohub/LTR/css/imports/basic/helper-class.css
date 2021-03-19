@@ -87,11 +87,12 @@
       color: #ffffff;
       display: inline-block;
       height: 40px;
+      margin: 0 5px 0 5px;
       padding: 0 3px;
       text-align: center;
       line-height: 42px; }
       .share__content__wrap .share__content a:hover {
-        color: #e51515 !important; }
+        color: #16bbb4 !important; }
     .share__content__wrap .share__content.show {
       visibility: visible;
       opacity: 1;

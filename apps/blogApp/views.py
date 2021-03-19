@@ -118,7 +118,7 @@ class CategoryListView(generic.ListView):
         return context
 
 class PostDetail(generic.DetailView):
-    context_object_name = 'the_post'
+    context_object_name = 'post'
     model = models.Post
 
     # Select template based on requested language
