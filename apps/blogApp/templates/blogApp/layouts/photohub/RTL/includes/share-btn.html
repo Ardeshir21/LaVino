@@ -3,7 +3,7 @@
 <div class="share__content__wrap">
   <a class="share-toggle" href="#">اشتراک<span class="ti-sharethis"></span></a>
   <div class="share__content">
-    <a href="https://t.me/share/url?url={{request.build_absolute_uri}}{{post.get_absolute_url}}" target="_blank"><i class="fab fa-telegram-plane fa-lg"></i></a>
-    <a href="https://wa.me/?text={{request.build_absolute_uri}}{{post.get_absolute_url}}" target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a>
+    <a href="https://t.me/share/url?url={% if request.is_secure %}https://{% else %}http://{% endif %}{{ request.get_host }}{{ post.get_absolute_url }}" target="_blank"><i class="fab fa-telegram-plane fa-lg"></i></a>
+    <a href="https://wa.me/?text={% if request.is_secure %}https://{% else %}http://{% endif %}{{ request.get_host }}{{ post.get_absolute_url }}" target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a>
   </div>
 </div>
