@@ -42,7 +42,7 @@
   opacity: 0;
   padding-top: 35px;
   font-family: "shine_personal_use";
-  font-size: 100px;
+  font-size: 90px;
   letter-spacing: 20px;
   -webkit-transform: translateY(30px);
   -moz-transform: translateY(30px);
@@ -127,8 +127,8 @@
     letter-spacing: 3px;
   }
   .banner .single__banner .banner__content h1 {
-    font-size: 80px;
-    letter-spacing: 20px;
+    font-size: 60px;
+    letter-spacing: 18px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -141,7 +141,7 @@
   }
   .banner .single__banner .banner__content h1 {
     padding-top: 15px;
-    font-size: 60px;
+    font-size: 50px;
     letter-spacing: 18px;
   }
 
@@ -211,7 +211,7 @@
   }
   .banner .single__banner .banner__content h1 {
     padding-top: 15px;
-    font-size: 42px;
+    font-size: 35px;
     letter-spacing: 8px;
   }
 }
