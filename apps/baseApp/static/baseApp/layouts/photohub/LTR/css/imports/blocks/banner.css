@@ -124,7 +124,7 @@
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .banner .single__banner .banner__content h3 {
     font-size: 32px;
-    letter-spacing: 8px;
+    letter-spacing: 3px;
   }
   .banner .single__banner .banner__content h1 {
     font-size: 80px;
