@@ -22,6 +22,7 @@
 .banner .single__banner .banner__content h3 {
   text-transform: capitalize;
   font-weight: 500;
+  margin-bottom: 0px;
   font-size: 40px;
   letter-spacing: 3px;
   visibility: hidden;
@@ -40,7 +41,8 @@
 .banner .single__banner .banner__content h1 {
   visibility: hidden;
   opacity: 0;
-  padding-top: 35px;
+  padding-top: 15px;
+  margin-top: 0px;
   font-family: "shine_personal_use";
   font-size: 90px;
   letter-spacing: 20px;
