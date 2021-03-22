@@ -23,7 +23,7 @@
   text-transform: capitalize;
   font-weight: 500;
   font-size: 40px;
-  letter-spacing: 10px;
+  letter-spacing: 3px;
   visibility: hidden;
   opacity: 0;
   -webkit-transform: translateY(30px);
