@@ -18,7 +18,9 @@
              <div class="col-md-4 wow animate__animated animate__fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.7s">
                  <div class="item">
                     <div class="position-re o-hidden">
-                      <img src="{{project.image_thumb.url}}" alt="">
+                      <a href="{% url "baseApp:project_detail" slug=project.slug %}">
+                        <img src="{{project.image_thumb.url}}" alt="">
+                      </a>
                     </div>
                     <div class="con">
                       <h5><a href="{% url "baseApp:project_detail" slug=project.slug %}">{{project.title_fa}}</a></h5> <a href="{% url "baseApp:project_detail" slug=project.slug %}"><i class="fa fa-long-arrow-left"></i></a>
