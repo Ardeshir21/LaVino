@@ -1,9 +1,13 @@
 from django import forms
 from phonenumber_field.formfields import PhoneNumberField
 from django.core.mail import send_mail
+from captcha.fields import ReCaptchaField
+from captcha.widgets import ReCaptchaV2Invisible
+
 
 
 class ContactForm(forms.Form):
+    captcha = ReCaptchaField(widget=ReCaptchaV2Invisible)
     name = forms.CharField(max_length=100,
                             widget=forms.TextInput(attrs={'placeholder': 'Your Name*',
                                                             'class': 'form-control'})
@@ -54,8 +58,9 @@ https://www.lavinomood.com
         send_mail(mail_subject, message_edited, 'contact@lavinomood.com', recipients)
         pass
 
-
+# Form Farsi
 class ContactForm_fa(forms.Form):
+    captcha = ReCaptchaField(widget=ReCaptchaV2Invisible)
     name = forms.CharField(max_length=100,
                             widget=forms.TextInput(attrs={'placeholder': 'نام*',
                                                             'class': 'form-control'})

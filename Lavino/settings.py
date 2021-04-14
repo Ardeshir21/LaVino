@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # This file is different in Server and my local PC
 secret_file = 'LavinoKEYS.txt'
 secrets = ['SECRET_KEY', 'DEBUG' , 'DATABASE_NAME', 'DATABASE_USERNAME', 'DATABASE_PASSWORD',
- 'EMAIL_HOST', 'EMAIL_HOST_USER', 'EMAIL_HOST_PASSWORD']
+ 'EMAIL_HOST', 'EMAIL_HOST_USER', 'EMAIL_HOST_PASSWORD', 'RECAPTCHA_PUBLIC_KEY', 'RECAPTCHA_PRIVATE_KEY']
 SECRETS_DIR = BASE_DIR
 filepath = os.path.join(SECRETS_DIR, secret_file)
 secrets_dict = {}
@@ -41,6 +41,11 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = secrets_dict['SECRET_KEY']
+
+# ReCaptcha Google Keys
+RECAPTCHA_PUBLIC_KEY = secrets_dict['RECAPTCHA_PUBLIC_KEY']
+RECAPTCHA_PRIVATE_KEY = secrets_dict['RECAPTCHA_PRIVATE_KEY']
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(secrets_dict['DEBUG'])
@@ -69,6 +74,9 @@ INSTALLED_APPS = [
 
     # for models phone number field
     'phonenumber_field',
+
+    # Captcha
+    'captcha',
 
     # for models Text editor
     'ckeditor',

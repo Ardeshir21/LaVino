@@ -83,6 +83,9 @@
         outline: none; }
     .contact .contact__form .single__input.contact-button {
       margin-top: 45px; }
+      .contact .contact__form .single__input.contact-button .g-recaptcha{
+        display: none;
+      }
 
 .contact .contact__top {
   padding: 0 85px; }
