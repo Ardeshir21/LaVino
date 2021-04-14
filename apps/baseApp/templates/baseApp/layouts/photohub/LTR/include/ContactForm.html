@@ -8,6 +8,10 @@
         <!-- START CONTACT FORM -->
         <div class="contact__form">
           <form id="contact-form" method="POST"> {% csrf_token %}
+            <!-- reCaptcha -->
+            <script src='https://www.google.com/recaptcha/api.js'></script>
+            <div class="g-recaptcha" data-sitekey="6LctzakaAAAAAMQGoCD_E-8yCDItIkLJ1zE-zoAZ"></div>
+
             <div class="row">
               <div class="col-lg-12">
                 <h5 class="contact__form__title">Interested in LaVino Services?</h5>

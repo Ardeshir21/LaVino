@@ -1,3 +1,6 @@
+
+GOOGLE_RECAPTCHA_SECRET_KEY = '6LctzakaAAAAAGCi3fTTu402qgESZ8WMAVIFyNym'
+
 # The root for uploaded files using CKeditor
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_RESTRICT_BY_DATE = False
