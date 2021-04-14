@@ -1,0 +1,57 @@
+<!-- ##### Not used For loop to customiz each field seperatly. ##### -->
+
+<!-- START CONTACT WRAP -->
+<section class="contact pb-90 bg--light-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 contact__top">
+        <!-- START CONTACT FORM -->
+        <div class="contact__form">
+          <form id="contact-form" method="POST"> {% csrf_token %}
+            <div class="row">
+              <div class="col-lg-12">
+                <h5 class="contact__form__title">Interested in LaVino Services?</h5>
+              </div>
+              <div class="col-lg-6">
+                <div class="single__input">
+                  {{form.name}}
+                  {{form.name.errors}}
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="single__input">
+                  {{form.client_email}}
+                  {{form.client_email.errors}}
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="single__input">
+                  {{form.subject}}
+                  {{form.subject.errors}}
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="single__input">
+                  {{form.client_phone}}
+                  {{form.client_phone.errors}}
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="single__input">
+                  {{form.message}}
+                  {{form.message.errors}}
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="single__input contact-button">
+                  <button type="submit" class="pt-button pt-button--theme pt-button--lg">Send</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <p class="form-message"></p>
+        </div><!-- END CONTACT FORM -->
+      </div>
+    </div>
+  </div>
+</section><!-- END CONTACT WRAP -->

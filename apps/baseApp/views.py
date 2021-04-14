@@ -3,9 +3,9 @@ from django.views import generic
 from django.urls import reverse_lazy
 from django.utils.translation import gettext as _
 from django.utils import translation
-from . import models
+from . import models, forms
 from apps.blogApp import models as blogAppModels
-
+from django.contrib import messages
 
 
 # Here is the Extra Context ditionary which is used in get_context_data of Views classes
@@ -47,7 +47,11 @@ class IndexView(generic.TemplateView):
         return context
 
 # About Us View
-class AboutUsView(generic.TemplateView):
+class AboutUsView(generic.edit.FormView):
+
+    form_class = forms.ContactForm
+    success_url = reverse_lazy('baseApp:about_us')
+
     # Select template based on requested language
     def get_template_names(self):
         current_lang = translation.get_language()
@@ -57,6 +61,14 @@ class AboutUsView(generic.TemplateView):
         # LTR languages
         else:
             return ["baseApp/layouts/photohub/LTR/about_us.html"]
+
+    def form_valid(self, form):
+        # This for success message. See Django Documentation
+        messages.add_message(self.request, messages.SUCCESS, 'Your message has been successfully sent.')
+        # This method is called when valid form data has been POSTed.
+        # current_url = resolve(request.path_info).url_name
+        form.send_email(current_url=self.request.build_absolute_uri())
+        return super().form_valid(form)
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -124,9 +136,4 @@ class ProjectDetailView(generic.DetailView):
         current_lang = translation.get_language()
         # Categories based on current language Navbar
         context['blog_categories'] = blogAppModels.PostCategories.objects.filter(category_lang=current_lang)
-
-        # This view have no pageTitle
-        # Get the first PostCategories object of the current post
-        context['slideContent'] = "AAAA"
-
         return context

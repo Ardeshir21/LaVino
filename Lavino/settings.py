@@ -67,6 +67,9 @@ INSTALLED_APPS = [
     'apps.baseApp',
     'apps.blogApp',
 
+    # for models phone number field
+    'phonenumber_field',
+
     # for models Text editor
     'ckeditor',
     'ckeditor_uploader',
