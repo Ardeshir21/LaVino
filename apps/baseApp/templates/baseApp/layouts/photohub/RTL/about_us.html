@@ -29,6 +29,17 @@
 {% endblock fake_loader %}
 
 {% block body_content %}
+		<!-- Contact Form Sent Message -->
+		{% if messages %}
+				{% for message in messages %}
+					<div class="row">
+						<div id="success-message" class="text-center col-lg-8 offset-lg-2 alert alert-{{message.tags}}" id='success-alert' role="alert">
+								{{message|safe}}
+						</div>
+					</div>
+				{% endfor %}
+		{% endif %}
+
 		<!-- START BREADCRUMB AREA -->
 		<div class="breadcrumb-area" data-black-overlay="7" style="background-image: url({{breadcumb.image.url}});">
 			<div class="container">
@@ -189,6 +200,8 @@
 					</div>
 				</div>
 			</div> -->
+
+			{% include "baseApp/layouts/photohub/RTL/include/ContactForm.html" %}
 
 		</main><!-- END MAIN CONTENT -->
 {% endblock body_content %}

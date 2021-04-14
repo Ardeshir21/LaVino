@@ -49,7 +49,6 @@ class IndexView(generic.TemplateView):
 # About Us View
 class AboutUsView(generic.edit.FormView):
 
-    form_class = forms.ContactForm
     success_url = reverse_lazy('baseApp:about_us')
 
     # Select template based on requested language
@@ -62,9 +61,26 @@ class AboutUsView(generic.edit.FormView):
         else:
             return ["baseApp/layouts/photohub/LTR/about_us.html"]
 
+    # Select the form_class based on requested language
+    def get_form_class(self):
+        current_lang = translation.get_language()
+        # RTL languages
+        if current_lang == 'fa':
+            return forms.ContactForm_fa
+        # LTR languages
+        else:
+            return forms.ContactForm
+
     def form_valid(self, form):
-        # This for success message. See Django Documentation
-        messages.add_message(self.request, messages.SUCCESS, 'Your message has been successfully sent.')
+        # Success Message
+        current_lang = translation.get_language()
+        # RTL languages
+        if current_lang == 'fa':
+            messages.add_message(self.request, messages.SUCCESS, 'پیام شما با موفقیت ارسال شد.')
+        # LTR languages
+        else:
+            messages.add_message(self.request, messages.SUCCESS, 'Your message has been successfully sent.')
+            
         # This method is called when valid form data has been POSTed.
         # current_url = resolve(request.path_info).url_name
         form.send_email(current_url=self.request.build_absolute_uri())

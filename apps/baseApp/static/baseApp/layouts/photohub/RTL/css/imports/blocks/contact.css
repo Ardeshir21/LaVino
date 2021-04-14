@@ -1,4 +1,12 @@
 /*======= Pie Styles =======*/
+#success-message {
+    font-family: 'IranSans-Bold';
+    direction: rtl;
+}
+.contact {
+  direction: rtl;
+  text-align: right;
+}
 .contact .contact__info {
   margin: 30px 0;
   position: relative; }
@@ -68,7 +76,8 @@
     font-size: 24px;
     letter-spacing: 1px; }
   .contact .contact__form .single__input {
-    margin-top: 40px; }
+    margin-top: 40px;
+    font-family: IranSans-Medium;}
     .contact .contact__form .single__input input, .contact .contact__form .single__input textarea {
       background: transparent;
       color: #e3e3e3;
