@@ -21,6 +21,11 @@
 	{% endblock head_title %}
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:site_name" content="LaVino Mood">
+	<meta property="og:title" content="Lavino Mood" />
+	<meta property="og:description" content="استادیو عکاسی" />
+	<meta property="og:image" itemprop="image" content="{% static "baseApp/layouts/photohub/LTR/images/icon.png" %}">
+	<meta property="og:type" content="website" />
 
 	<!-- Favicons -->
 	<link rel="shortcut icon" href="{% static "baseApp/layouts/photohub/LTR/images/favicon.ico" %}">
@@ -51,7 +56,7 @@
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6BRB24"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-	
+
 	{% block fake_loader %}
 		<!-- for home page -->
 	{% endblock fake_loader %}
