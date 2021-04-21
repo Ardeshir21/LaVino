@@ -52,7 +52,7 @@ DEBUG = bool(secrets_dict['DEBUG'])
 
 ALLOWED_HOSTS = ['localhost',
                  '127.0.0.1',
-                 '165.22.92.50',
+                 '161.35.102.245',
                  'www.lavinomood.com',
                  'lavinomood.com',
 ]
