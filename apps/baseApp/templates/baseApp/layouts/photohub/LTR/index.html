@@ -3,8 +3,8 @@
 {% load i18n %}
 
 {% block head_title %}
-	<title>{% trans "HomePage" %}</title>
-	<meta name="description" content="">
+	<title>Photography Studio - LaVino Mood</title>
+	<meta name="description" content="Lavino studio is located in the beautiful city of Istanbul and is specializes in industrial and fashion photography.">
 {% endblock head_title %}
 
 
@@ -84,10 +84,10 @@
 					</div>
 					<div class="col-lg-6 col-12">
 						<div class="about__content">
-							<h3 class="text-uppercase">We believe in high-end photography</h3>
-							<p>Lavino studio is located in the beautiful city of Istanbul and is specializes in industrial and fashion photography. Lavino's team consists of professional photographers, photo stylists, make-up artists, stage designers, professional graphic designers, and advertisers.</p>
-							<p>Our talented staff doesn't simply take pictures but produces works of art. From billboards to product photos, there is no job too big or too small. We bring experience, creativity, and out-of-the-box thinking to every work. </p>
-							<p>Lavino's additional service includes videography and social media marketing. Lavino always takes steps in the direction of artistically providing visual and advertising services to its customers. With proud.</p>
+							<h3 class="text-uppercase">{% trans "We believe in high-end photography" %}</h3>
+							<p>{% trans "Lavino studio is located in the beautiful city of Istanbul and is specializes in industrial and fashion photography. Lavino's team consists of professional photographers, photo stylists, make-up artists, stage designers, professional graphic designers, and advertisers." %}</p>
+							<p>{% trans "Our talented staff doesn't simply take pictures but produces works of art. From billboards to product photos, there is no job too big or too small. We bring experience, creativity, and out-of-the-box thinking to every work." %}</p>
+							<p>{% trans "Lavino's additional service includes videography and social media marketing. Lavino always takes steps in the direction of artistically providing visual and advertising services to its customers. With proud." %}</p>
 						</div>
 					</div>
 				</div>
@@ -132,9 +132,9 @@
 				<div class="row">
 					<div class="col-12 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 offset-sm-0">
 						<div class="section-title text-center wow animate__animated animate__fadeInUp">
-							<h2>our <span>services</span></h2>
-							<p style="margin-bottom:0; font-size:18px;">For some weird and wonderful reason, we really dig photography!</p>
-							<p style="margin-bottom:0; font-size:17px; color:#16bbb4;">We take pride in the quality of our photography and creative services.</p>
+							<h2>{% trans "our" %}<span>{% trans "services" %}</span></h2>
+							<p style="margin-bottom:0; font-size:18px;">{% trans "For some weird and wonderful reason, we really dig photography!" %}</p>
+							<p style="margin-bottom:0; font-size:17px; color:#16bbb4;">{% trans "We take pride in the quality of our photography and creative services." %}</p>
 						</div>
 					</div>
 				</div>
@@ -149,8 +149,8 @@
 										<span class="icon-profile-female"></span>
 									</div>
 									<div class="service__content">
-										<h4>Modeling Portfolio</h4>
-										<p>Female and Male Models, Fitness and Sport, Outfit and Clothing</p>
+										<h4>{% trans "Modeling Portfolio" %}</h4>
+										<p>{% trans "Female and Male Models, Fitness and Sport, Outfit and Clothing" %}</p>
 									</div>
 								</div>
 							</div><!-- END SINGLE SERVICE -->
@@ -162,8 +162,8 @@
 										<span><i class="fal fa-camera-movie"></i></span>
 									</div>
 									<div class="service__content">
-										<h4>Promotional Videos</h4>
-										<p>Creative Video Production, Aerial Drone Video Recording, Events and Conferences</p>
+										<h4>{% trans "Promotional Videos" %}</h4>
+										<p>{% trans "Creative Video Production, Aerial Drone Video Recording, Events and Conferences" %}</p>
 									</div>
 								</div>
 							</div><!-- END SINGLE SERVICE -->
@@ -175,8 +175,8 @@
 										<span class="icon-camera"></span>
 									</div>
 									<div class="service__content">
-										<h4>Commercial</h4>
-										<p>Products, Fashion and Beauty, Jewelry and Corporate Photography</p>
+										<h4>{% trans "Commercial" %}</h4>
+										<p>{% trans "Products, Fashion and Beauty, Jewelry and Corporate Photography" %}</p>
 									</div>
 								</div>
 							</div><!-- END SINGLE SERVICE -->
@@ -188,8 +188,8 @@
 										<span class="icon-printer"></span>
 									</div>
 									<div class="service__content">
-										<h4>Design & Print</h4>
-										<p>Logo Design, Brochure and Posters, Signage and Banners</p>
+										<h4>{% trans "Design & Print" %}</h4>
+										<p>{% trans "Logo Design, Brochure and Posters, Signage and Banners" %}</p>
 									</div>
 								</div>
 							</div><!-- END SINGLE SERVICE -->
@@ -201,8 +201,8 @@
 										<span><i class="fal fa-house"></i></span>
 									</div>
 									<div class="service__content">
-										<h4>Properties</h4>
-										<p>Interior Design Photography, Property Video, Image Editing</p>
+										<h4>{% trans "Properties" %}</h4>
+										<p>{% trans "Interior Design Photography, Property Video, Image Editing" %}</p>
 									</div>
 								</div>
 							</div><!-- END SINGLE SERVICE -->
@@ -214,8 +214,8 @@
 										<span><i class="far fa-bullseye-pointer"></i></span>
 									</div>
 									<div class="service__content">
-										<h4>Digital Marketing</h4>
-										<p>Social Media Content Management, Website Design</p>
+										<h4>{% trans "Digital Marketing" %}</h4>
+										<p>{% trans "Social Media Content Management, Website Design" %}</p>
 									</div>
 								</div>
 							</div><!-- END SINGLE SERVICE -->
@@ -236,9 +236,9 @@
 							<div class="testimonials owl-carousel">
 								<!-- START SINGLE TESTIMONIAL -->
 								<article class="testimonial text-center">
-									<p  class="testimonial__text">The true artist must be able, with the most usual things, to have the most unusual ideas.</p>
+									<p  class="testimonial__text">{% trans "The true artist must be able, with the most usual things, to have the most unusual ideas." %}</p>
 									<div class="testimonial__author">
-										<h5 style="font-size:21px;"><a href="{% url "baseApp:projects" %}">Projects</a></h5>
+										<h5 style="font-size:21px;"><a href="{% url "baseApp:projects" %}"> {% trans "Projects" %}</a></h5>
 									</div>
 								</article><!-- END SINGLE TESTIMONIAL -->
 							</div>

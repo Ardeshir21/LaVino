@@ -3,6 +3,11 @@
 {% load i18n %}
 
 
+{% block head_title %}
+	<title>{{post.title}} - LaVino Mood</title>
+	<meta name="description" content="{{post.shortContent}}">
+{% endblock head_title %}
+
 {% block lang_switcher %}
 <!-- Language Switcher -->
 <div id="lang-switcher" class="col-8 order-1 col-lg-3 order-lg-3 col-md-5 col-sm-6 order-md-2 order-sm-2 line-bottom">
@@ -60,7 +65,7 @@
 								<!-- Categories and Share -->
 								<div class="bp-blog__bottomline">
 									<div class="bp-blog__tags">
-										<h5>Categories:</h5>
+										<h5>{% trans "Categories" %}:</h5>
 										<ul>
 											{% for item in post.categories.all %}
 											<li><a href="{% url "blogApp:category_list" category=item.slug %}">{{item.category}}</a></li>

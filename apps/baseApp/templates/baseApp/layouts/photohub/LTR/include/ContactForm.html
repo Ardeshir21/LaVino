@@ -10,7 +10,7 @@
           <form id="contact-form" method="POST"> {% csrf_token %}
             <div class="row">
               <div class="col-lg-12">
-                <h5 class="contact__form__title">Interested in LaVino Services?</h5>
+                <h5 class="contact__form__title">{% trans "Interested in LaVino Services?" %}"</h5>
               </div>
               <div class="col-lg-6">
                 <div class="single__input">
@@ -46,7 +46,7 @@
                 <div class="single__input contact-button">
                   {{form.captcha}}
                   {{form.captcha.errors}}
-                  <button type="submit" class="pt-button pt-button--theme pt-button--lg" style="margin-top:10px;">Send</button>
+                  <button type="submit" class="pt-button pt-button--theme pt-button--lg" style="margin-top:10px;">{% trans "Send" %}</button>
                 </div>
               </div>
             </div>
