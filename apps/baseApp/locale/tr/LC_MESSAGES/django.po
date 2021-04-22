@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-22 18:33+0300\n"
+"POT-Creation-Date: 2021-04-23 00:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:50
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:50
 msgid "About Us"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:71
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:87
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:71
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:87
 msgid "We believe in high-end photography"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:72
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:88
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:72
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:88
 msgid ""
 "Lavino studio is located in the beautiful city of Istanbul and is "
 "specializes in industrial and fashion photography. Lavino's team consists of "
@@ -36,77 +36,77 @@ msgid ""
 "designers, professional graphic designers, and advertisers."
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:73
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:89
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:73
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:89
 msgid ""
 "Our talented staff doesn't simply take pictures but produces works of art. "
 "From billboards to product photos, there is no job too big or too small. We "
 "bring experience, creativity, and out-of-the-box thinking to every work."
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:74
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:90
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:74
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:90
 msgid ""
 "Lavino's additional service includes videography and social media marketing. "
 "Lavino always takes steps in the direction of artistically providing visual "
 "and advertising services to its customers. With proud."
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:88
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:88
 msgid "Our"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:88
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:88
 msgid "Process"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:103
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:103
 msgid "Meeting and Inquiry"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:104
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:104
 msgid ""
 "You’ll first meet with one of our experienced customer specialists who "
 "understands style, current fashion standards, photo shooting requirements."
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:115
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:115
 msgid "COFFEE"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:116
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:116
 msgid ""
 "Let’s chat over a cup of coffee (or on the phone/Zoom if you’re not in "
 "Turkey) is where we really get deep into the weeds with the project details "
 "and issue our contract."
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:127
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:127
 msgid "Session Time"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:128
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:128
 msgid ""
 "For photo & video clients, we’ll set a date and then have fun in front of "
 "the camera! We want to ensure that you feel comfortable before your portrait "
 "session and have the opportunity to get to know the team behind the lens."
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:139
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:139
 msgid "Design & Refine"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:140
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:140
 msgid ""
 "We’re now ready to build your dreams. We dedicate our 100 percent to your "
 "concern and update with all the process details."
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:151
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:151
 msgid "Reviewing DETAILS"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:152
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:152
 msgid ""
 "When the project is nearing completion, we’ll schedule a final project "
 "review to go over the plan for completing any outstanding details. We are at "
@@ -114,138 +114,134 @@ msgid ""
 "is pixel perfect."
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:163
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:163
 msgid "DELIVERY"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\about_us.html:164
+#: .\templates\baseApp\layouts\photohub\LTR\about_us.html:164
 msgid ""
 "Our goal is to tell your story in the most beautiful, compelling, and “you” "
 "and your organization way possible. We could bring and hand over the project "
 "in printed form or hard copy to the proper recipient or address."
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:81
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:161
+#: .\templates\baseApp\layouts\photohub\LTR\base.html:88
+#: .\templates\baseApp\layouts\photohub\LTR\base.html:168
 msgid "home"
 msgstr "Ana Sayfa"
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:82
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:162
+#: .\templates\baseApp\layouts\photohub\LTR\base.html:89
+#: .\templates\baseApp\layouts\photohub\LTR\base.html:169
 msgid "about us"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:83
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:163
+#: .\templates\baseApp\layouts\photohub\LTR\base.html:90
+#: .\templates\baseApp\layouts\photohub\LTR\base.html:170
 msgid "projects"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:84
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:164
+#: .\templates\baseApp\layouts\photohub\LTR\base.html:91
+#: .\templates\baseApp\layouts\photohub\LTR\base.html:171
 msgid "blog"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:169
+#: .\templates\baseApp\layouts\photohub\LTR\base.html:176
 msgid "Email"
 msgstr "Eposta"
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\base.html:170
+#: .\templates\baseApp\layouts\photohub\LTR\base.html:177
 msgid "Phone"
 msgstr "Telefonlar"
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\include\ContactForm.html:13
+#: .\templates\baseApp\layouts\photohub\LTR\include\ContactForm.html:14
 msgid "Interested in LaVino Services?"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\include\ContactForm.html:49
+#: .\templates\baseApp\layouts\photohub\LTR\include\ContactForm.html:50
 msgid "Send"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:6
-msgid "Home Page"
-msgstr ""
-
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:114
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:114
 msgid "share"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:135
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:135
 msgid "our"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:135
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:135
 msgid "services"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:136
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:136
 msgid "For some weird and wonderful reason, we really dig photography!"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:137
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:137
 msgid "We take pride in the quality of our photography and creative services."
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:152
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:152
 msgid "Modeling Portfolio"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:153
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:153
 msgid "Female and Male Models, Fitness and Sport, Outfit and Clothing"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:165
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:165
 msgid "Promotional Videos"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:166
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:166
 msgid ""
 "Creative Video Production, Aerial Drone Video Recording, Events and "
 "Conferences"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:178
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:178
 msgid "Commercial"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:179
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:179
 msgid "Products, Fashion and Beauty, Jewelry and Corporate Photography"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:191
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:191
 msgid "Design & Print"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:192
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:192
 msgid "Logo Design, Brochure and Posters, Signage and Banners"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:204
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:204
 msgid "Properties"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:205
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:205
 msgid "Interior Design Photography, Property Video, Image Editing"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:217
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:217
 msgid "Digital Marketing"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:218
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:218
 msgid "Social Media Content Management, Website Design"
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:239
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:239
 msgid ""
 "The true artist must be able, with the most usual things, to have the most "
 "unusual ideas."
 msgstr ""
 
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\index.html:241
-#: .\baseApp\templates\baseApp\layouts\photohub\LTR\projects.html:15
+#: .\templates\baseApp\layouts\photohub\LTR\index.html:241
+#: .\templates\baseApp\layouts\photohub\LTR\projects.html:19
 msgid "Projects"
 msgstr ""
 
-#: .\baseApp\views.py:14
+#: .\views.py:14
 msgid "SOMETHING"
 msgstr ""

@@ -1,4 +1,5 @@
 <!-- ##### Not used For loop to customiz each field seperatly. ##### -->
+{% load i18n %}
 
 <!-- START CONTACT WRAP -->
 <section class="contact pb-90 bg--light-grey">
@@ -10,7 +11,7 @@
           <form id="contact-form" method="POST"> {% csrf_token %}
             <div class="row">
               <div class="col-lg-12">
-                <h5 class="contact__form__title">{% trans "Interested in LaVino Services?" %}"</h5>
+                <h5 class="contact__form__title">{% trans "Interested in LaVino Services?" %}</h5>
               </div>
               <div class="col-lg-6">
                 <div class="single__input">

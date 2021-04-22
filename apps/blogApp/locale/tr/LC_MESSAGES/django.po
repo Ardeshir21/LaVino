@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-22 18:33+0300\n"
+"POT-Creation-Date: 2021-04-23 00:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,28 +18,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\blogApp\templates\blogApp\layouts\photohub\LTR\blog-category.html:67
-#: .\blogApp\templates\blogApp\layouts\photohub\LTR\blog.html:66
+#: .\apps\blogApp\templates\blogApp\layouts\photohub\LTR\blog-category.html:72
+#: .\apps\blogApp\templates\blogApp\layouts\photohub\LTR\blog.html:71
 msgid "Read more"
 msgstr ""
 
-#: .\blogApp\templates\blogApp\layouts\photohub\LTR\blog.html:36
+#: .\apps\blogApp\templates\blogApp\layouts\photohub\LTR\blog.html:41
 msgid "Blog Page"
 msgstr ""
 
-#: .\blogApp\templates\blogApp\layouts\photohub\LTR\includes\share-btn.html:4
+#: .\apps\blogApp\templates\blogApp\layouts\photohub\LTR\includes\share-btn.html:4
 msgid "share"
 msgstr ""
 
-#: .\blogApp\templates\blogApp\layouts\photohub\LTR\includes\sidebar.html:8
-#: .\blogApp\templates\blogApp\layouts\photohub\LTR\single-blog.html:63
+#: .\apps\blogApp\templates\blogApp\layouts\photohub\LTR\includes\sidebar.html:8
+#: .\apps\blogApp\templates\blogApp\layouts\photohub\LTR\single-blog.html:68
 msgid "Categories"
 msgstr ""
 
-#: .\blogApp\templates\blogApp\layouts\photohub\LTR\includes\sidebar.html:41
+#: .\apps\blogApp\templates\blogApp\layouts\photohub\LTR\includes\sidebar.html:41
 msgid "Search"
 msgstr ""
 
-#: .\blogApp\views.py:15
+#: .\apps\blogApp\views.py:15
 msgid "SOMETHING"
 msgstr ""
