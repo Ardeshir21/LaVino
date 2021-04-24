@@ -77,8 +77,8 @@ class Project(models.Model):
         self.view += 1
         return super(Project, self).save(*args, **kwargs)
 
-    # def get_absolute_url(self):
-    #     return reverse('baseApp:project', args=(self.id,))
+    def get_absolute_url(self):
+        return reverse('baseApp:project_detail', args=(self.slug,))
 
 class ProjectImages(models.Model):
     project = models.ForeignKey(Project, related_name='images', on_delete=models.CASCADE)

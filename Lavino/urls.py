@@ -25,6 +25,7 @@ urlpatterns = [
     path('AdminPage/', admin.site.urls),
     # This is for Blog Editor in blogApp.models.py
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('robots.txt', include('robots.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
 ]
 

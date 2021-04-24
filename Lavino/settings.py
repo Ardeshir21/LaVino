@@ -67,6 +67,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
+    'django.contrib.sites',
 
     # My APPs
     'apps.baseApp',
@@ -77,6 +79,9 @@ INSTALLED_APPS = [
 
     # Captcha
     'captcha',
+
+    # Robot.txt
+    'robots',
 
     # for models Text editor
     'ckeditor',
@@ -154,6 +159,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+SITE_ID = 1
+
+# Robots.txt setup
+ROBOTS_SITEMAP_URLS = [
+    'https://www.lavinomood.com/lavinoMap.xml',
+]
+ROBOTS_USE_SCHEME_IN_HOST = True
+ROBOTS_USE_HOST = False
+
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
