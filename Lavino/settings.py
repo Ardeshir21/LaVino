@@ -163,7 +163,7 @@ SITE_ID = 1
 
 # Robots.txt setup
 ROBOTS_SITEMAP_URLS = [
-    'https://www.lavinomood.com/lavinoMap.xml',
+    'https://www.lavinomood.com/LavinoMap.xml',
 ]
 ROBOTS_USE_SCHEME_IN_HOST = True
 ROBOTS_USE_HOST = False
