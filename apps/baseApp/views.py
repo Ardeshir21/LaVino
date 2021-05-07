@@ -4,6 +4,7 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext as _
 from django.utils import translation
 from . import models, forms
+from django.conf import settings
 from apps.blogApp import models as blogAppModels
 from django.contrib import messages
 
@@ -11,6 +12,7 @@ from django.contrib import messages
 # Here is the Extra Context ditionary which is used in get_context_data of Views classes
 def get_extra_context():
     extraContext = {
+        'DEBUG_VALUE': settings.DEBUG,
         'from_python': _('SOMETHING'),
         'current_language': translation.get_language(),
         }
@@ -80,7 +82,7 @@ class AboutUsView(generic.edit.FormView):
         # LTR languages
         else:
             messages.add_message(self.request, messages.SUCCESS, 'Your message has been successfully sent.')
-            
+
         # This method is called when valid form data has been POSTed.
         # current_url = resolve(request.path_info).url_name
         form.send_email(current_url=self.request.build_absolute_uri())

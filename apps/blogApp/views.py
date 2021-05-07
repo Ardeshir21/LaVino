@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy, reverse
 from django.utils.translation import gettext as _
 from django.utils import translation
+from django.conf import settings
 from apps.baseApp import models as baseAppModels
 from . import models
 
@@ -12,6 +13,7 @@ from . import models
 # Here is the Extra Context ditionary which is used in get_context_data of Views classes
 def get_extra_context():
     extraContext = {
+        'DEBUG_VALUE': settings.DEBUG,
         'from_python': _('SOMETHING'),
         'current_language': translation.get_language(),
         }
