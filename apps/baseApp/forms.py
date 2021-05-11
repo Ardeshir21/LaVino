@@ -3,28 +3,29 @@ from phonenumber_field.formfields import PhoneNumberField
 from django.core.mail import send_mail
 from captcha.fields import ReCaptchaField
 from captcha.widgets import ReCaptchaV2Invisible
+from django.utils.translation import gettext as _
 
 
 
 class ContactForm(forms.Form):
     captcha = ReCaptchaField(widget=ReCaptchaV2Invisible)
     name = forms.CharField(max_length=100,
-                            widget=forms.TextInput(attrs={'placeholder': 'Your Name*',
+                            widget=forms.TextInput(attrs={'placeholder': _('Your Name*'),
                                                             'class': 'form-control'})
                             )
     message = forms.CharField(max_length=2500,
-                                widget=forms.Textarea(attrs={'placeholder': 'Your Message*',
+                                widget=forms.Textarea(attrs={'placeholder': _('Your Message*'),
                                                                 'class': 'form-control'}))
     client_email = forms.EmailField(
-                                widget=forms.EmailInput(attrs={'placeholder': 'Your Email*',
+                                widget=forms.EmailInput(attrs={'placeholder': _('Your Email*'),
                                                                 'class': 'form-control'})
                                 )
     subject = forms.CharField(max_length=100,
-                            widget=forms.TextInput(attrs={'placeholder': 'Subject*',
+                            widget=forms.TextInput(attrs={'placeholder': _('Subject*'),
                                                             'class': 'form-control'})
                             )
     client_phone = PhoneNumberField(required=False,
-                                    widget=forms.TextInput(attrs={'placeholder': 'Phone Number',
+                                    widget=forms.TextInput(attrs={'placeholder': _('Phone Number'),
                                                                     'class': 'form-control'})
                                     )
 

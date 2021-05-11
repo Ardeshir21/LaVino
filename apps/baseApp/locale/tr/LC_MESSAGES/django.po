@@ -20,12 +20,12 @@ msgstr ""
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:50
 msgid "About Us"
-msgstr ""
+msgstr "Hakkımızda"
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:71
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:87
 msgid "We believe in high-end photography"
-msgstr ""
+msgstr "Kameranızla çektiğiniz görüntü, gerçeklikle yaratmak istediğiniz bir fantezidir."
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:72
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:88
@@ -34,7 +34,7 @@ msgid ""
 "specializes in industrial and fashion photography. Lavino's team consists of "
 "professional photographers, photo stylists, make-up artists, stage "
 "designers, professional graphic designers, and advertisers."
-msgstr ""
+msgstr "Lavino Kompleksi, güzel İstanbul şehrinde bulunmaktadır ve endüstriyel fotoğrafçılık ve modelleme alanında faaliyet göstermektedir. Lavino'nun diğer faaliyetleri arasında fotoğrafçılık, pazarlama ve sosyal medya yönetimi yer almaktadır."
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:73
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:89
@@ -42,7 +42,7 @@ msgid ""
 "Our talented staff doesn't simply take pictures but produces works of art. "
 "From billboards to product photos, there is no job too big or too small. We "
 "bring experience, creativity, and out-of-the-box thinking to every work."
-msgstr ""
+msgstr "Lavino'nun departmanı, profesyonel fotoğrafçılar, makyaj sanatçıları, sahne tasarımcıları ile endüstriyel ve reklam grafik tasarımcılarından oluşan bir ekipten oluşmaktadır."
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:74
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:90
@@ -50,7 +50,7 @@ msgid ""
 "Lavino's additional service includes videography and social media marketing. "
 "Lavino always takes steps in the direction of artistically providing visual "
 "and advertising services to its customers. With proud."
-msgstr ""
+msgstr "Endüstriyel fotoğraf stüdyosu ve özel modelleme yerleri ile tasarım ve kurgu stüdyosu bu koleksiyonun avantajları arasında yer alıyor. Lavino, müşterilerine görsel ve reklam hizmetlerini sanatsal olarak sunma yönünde her zaman yeni bir bakış açısına sahiptir."
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:88
 msgid "Our"
@@ -62,49 +62,49 @@ msgstr ""
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:103
 msgid "Meeting and Inquiry"
-msgstr ""
+msgstr "Toplantı ve randevu"
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:104
 msgid ""
 "You’ll first meet with one of our experienced customer specialists who "
 "understands style, current fashion standards, photo shooting requirements."
-msgstr ""
+msgstr "Öncelikle, stil, güncel moda standartları ve tasarım, fotoğraf ve videografi projelerinin ayrıntıları ve gereksinimleri konusunda bilgili, deneyimli müşteri ilişkileri uzmanlarımızdan biriyle tanışacaksınız."
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:115
 msgid "COFFEE"
-msgstr ""
+msgstr "Kahve Saatinde"
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:116
 msgid ""
 "Let’s chat over a cup of coffee (or on the phone/Zoom if you’re not in "
 "Turkey) is where we really get deep into the weeds with the project details "
 "and issue our contract."
-msgstr ""
+msgstr "Bir fincan kahve veya çay eşliğinde sohbet edelim (veya Türkiye'de değilseniz uygulamalar aracılığıyla resmi bir toplantı yapalım) Burası tam olarak projenin ayrıntılarını derinlemesine araştırdığımız, sorularınızı ve yorumlarınızı dinlediğimiz ve sonunda imzaladığımız yerdir. Sözleşmenizi tanıyoruz"
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:127
 msgid "Session Time"
-msgstr ""
+msgstr "Oturum Süresi"
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:128
 msgid ""
 "For photo & video clients, we’ll set a date and then have fun in front of "
 "the camera! We want to ensure that you feel comfortable before your portrait "
 "session and have the opportunity to get to know the team behind the lens."
-msgstr ""
+msgstr "Fotoğraf ve film projelerinin müşterileri için, birbirimize danışarak bir tarih belirleyip o günü kamera önünde eğlenerek geçiriyoruz! Fotoğraf posterinizin önünde kendinizi rahat hissetmenizi ve lensli kameranın arkasındaki ekip üyeleriyle tanışma fırsatı bulmanızı istiyoruz."
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:139
 msgid "Design & Refine"
-msgstr ""
+msgstr "Tasarım ve Modifikasyon"
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:140
 msgid ""
 "We’re now ready to build your dreams. We dedicate our 100 percent to your "
 "concern and update with all the process details."
-msgstr ""
+msgstr "Artık hayalinizi hazırlamaya ve düzenlemeye hazırız. Çabalarımızın% 100'ünü zihninizdekileri yaratmaya ve düzenlemeye adadık Ve yol boyunca sürecin tüm ayrıntılarından sizi haberdar edeceğiz."
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:151
 msgid "Reviewing DETAILS"
-msgstr ""
+msgstr "DETAYLARI İnceleme"
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:152
 msgid ""
@@ -112,18 +112,18 @@ msgid ""
 "review to go over the plan for completing any outstanding details. We are at "
 "our best when we include your ideas and feedback to ensure the final image "
 "is pixel perfect."
-msgstr ""
+msgstr "Projenin detayları tamamlandığında, projenin son incelemesi için size son halinin bir kopyasını vereceğiz, bunlar hakkında bize puanlarınızı söyleyiniz. Zihinsel ideallerinizin gerçekleştirilmesine ilişkin değerli geri bildirimleriniz, nihai görüntünün tamamlandığından emin olmak için bizim için çok önemlidir."
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:163
 msgid "DELIVERY"
-msgstr ""
+msgstr "Projenin Nihai Teslimi"
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:164
 msgid ""
 "Our goal is to tell your story in the most beautiful, compelling, and “you” "
 "and your organization way possible. We could bring and hand over the project "
 "in printed form or hard copy to the proper recipient or address."
-msgstr ""
+msgstr "Amacımız, hikayenizi en güzel, ilgi çekici ve siz ile şirketinizi mümkün olan en iyi şekilde tasvir etmektir. Artık tüm adımlar tamamlandığına göre, bu harika işbirliğinin sonuçlarını basılı veya dijital içerik olarak seçtiğiniz alıcıya veya adrese sunabiliriz."
 
 #: .\templates\baseApp\layouts\photohub\LTR\base.html:88
 #: .\templates\baseApp\layouts\photohub\LTR\base.html:168
@@ -133,114 +133,114 @@ msgstr "Ana Sayfa"
 #: .\templates\baseApp\layouts\photohub\LTR\base.html:89
 #: .\templates\baseApp\layouts\photohub\LTR\base.html:169
 msgid "about us"
-msgstr ""
+msgstr "Hakkımızda"
 
 #: .\templates\baseApp\layouts\photohub\LTR\base.html:90
 #: .\templates\baseApp\layouts\photohub\LTR\base.html:170
 msgid "projects"
-msgstr ""
+msgstr "Projeler"
 
 #: .\templates\baseApp\layouts\photohub\LTR\base.html:91
 #: .\templates\baseApp\layouts\photohub\LTR\base.html:171
 msgid "blog"
-msgstr ""
+msgstr "Nesne"
 
 #: .\templates\baseApp\layouts\photohub\LTR\base.html:176
 msgid "Email"
-msgstr "Eposta"
+msgstr "e-Posta"
 
 #: .\templates\baseApp\layouts\photohub\LTR\base.html:177
 msgid "Phone"
-msgstr "Telefonlar"
+msgstr "Telefon Görüşmesi"
 
 #: .\templates\baseApp\layouts\photohub\LTR\include\ContactForm.html:14
 msgid "Interested in LaVino Services?"
-msgstr ""
+msgstr "Lavino hizmetleri hakkında daha fazla bilgi için bizimle iletişime geçin"
 
 #: .\templates\baseApp\layouts\photohub\LTR\include\ContactForm.html:50
 msgid "Send"
-msgstr ""
+msgstr "Sunmak"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:114
 msgid "share"
-msgstr ""
+msgstr "Abonelik"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:135
 msgid "our"
-msgstr ""
+msgstr "hizmetleri"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:135
 msgid "services"
-msgstr ""
+msgstr "miz"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:136
 msgid "For some weird and wonderful reason, we really dig photography!"
-msgstr ""
+msgstr "Misyonumuzu müşteri beklentilerinin ötesinde düşünürüz."
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:137
 msgid "We take pride in the quality of our photography and creative services."
-msgstr ""
+msgstr "Fotoğrafçılığımızın ve yaratıcı hizmetlerimizin kalitesiyle gurur duyuyoruz"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:152
 msgid "Modeling Portfolio"
-msgstr ""
+msgstr "Modelleme"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:153
 msgid "Female and Male Models, Fitness and Sport, Outfit and Clothing"
-msgstr ""
+msgstr "Bayanlar ve baylar modelleri, fitness ve spor, moda ve giyim"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:165
 msgid "Promotional Videos"
-msgstr ""
+msgstr "Tanıtım videoları"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:166
 msgid ""
 "Creative Video Production, Aerial Drone Video Recording, Events and "
 "Conferences"
-msgstr ""
+msgstr "Yaratıcı video prodüksiyonu, havadan video kaydı (drone), etkinlikler ve konferanslar"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:178
 msgid "Commercial"
-msgstr ""
+msgstr "Fotoğrafçılık Sanayi"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:179
 msgid "Products, Fashion and Beauty, Jewelry and Corporate Photography"
-msgstr ""
+msgstr "Ürünler, Moda, Takı, Ticari Fotoğrafçılık"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:191
 msgid "Design & Print"
-msgstr ""
+msgstr "Grafik Tasarım ve Baskı"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:192
 msgid "Logo Design, Brochure and Posters, Signage and Banners"
-msgstr ""
+msgstr "Logo Tasarımı, Broşür ve Posterler, Banner Reklamlar"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:204
 msgid "Properties"
-msgstr ""
+msgstr "İnşaat Projeleri"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:205
 msgid "Interior Design Photography, Property Video, Image Editing"
-msgstr ""
+msgstr "İç ve Dış Mekan Fotoğrafçılığı, Mülk Videosu, Fotoğraf Düzenleme"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:217
 msgid "Digital Marketing"
-msgstr ""
+msgstr "Dijital Pazarlama"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:218
 msgid "Social Media Content Management, Website Design"
-msgstr ""
+msgstr "Sosyal Medya İçerik Yönetimi, Web Sitesi Tasarımı"
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:239
 msgid ""
 "The true artist must be able, with the most usual things, to have the most "
 "unusual ideas."
-msgstr ""
+msgstr "Gerçek bir sanatçı, en alışılmadık fikirleri en sıradan şeylerle yaratabilmelidir."
 
 #: .\templates\baseApp\layouts\photohub\LTR\index.html:241
 #: .\templates\baseApp\layouts\photohub\LTR\projects.html:19
 msgid "Projects"
-msgstr ""
+msgstr "Projeler"
 
 #: .\views.py:14
 msgid "SOMETHING"

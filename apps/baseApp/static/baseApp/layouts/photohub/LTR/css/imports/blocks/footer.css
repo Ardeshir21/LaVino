@@ -17,7 +17,7 @@
   align-items: center;
 }
 .footer .footer__copyright {
-  width: 25%;
+  width: 20%;
 }
 .footer .footer__copyright p.footer__copyright__text {
   margin-top: 15px;
@@ -48,7 +48,7 @@
   color: #16bbb4;
 }
 .footer .footer__contact {
-  width: 25%;
+  width: 30%;
   text-align: right;
 }
 .footer .footer__contact ul li {
