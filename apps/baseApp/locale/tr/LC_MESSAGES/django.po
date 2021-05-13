@@ -54,11 +54,11 @@ msgstr "Endüstriyel fotoğraf stüdyosu ve özel modelleme yerleri ile tasarım
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:88
 msgid "Our"
-msgstr ""
+msgstr "Bizimle"
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:88
 msgid "Process"
-msgstr ""
+msgstr "Çalışma"
 
 #: .\templates\baseApp\layouts\photohub\LTR\about_us.html:103
 msgid "Meeting and Inquiry"
