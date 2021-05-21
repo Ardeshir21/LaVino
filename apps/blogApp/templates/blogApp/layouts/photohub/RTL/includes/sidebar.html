@@ -38,9 +38,9 @@
     <div class="sidebar__newsletter sidebar__block">
       <h5 class="sidebar__title text-center">جستجو</h5>
       <div class="sidebar__newsletter__inner">
-        <form action="#">
+        <form action="{% url 'blogApp:search' %}" method="GET">
           <button class="pt-button pt-button--theme" type="submit"><i class="far fa-chevron-left"></i></button>
-          <input type="text" placeholder="کلید واژه...">
+          <input name="s" type="text" placeholder="کلید واژه...">
         </form>
       </div>
     </div>

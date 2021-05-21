@@ -33,12 +33,12 @@
 
 {% block body_content %}
 		<!-- START BREADCRUMB AREA -->
-		<div class="breadcrumb-area" data-black-overlay="7" style="background-image: url({{categoryObject.image.url}});">
+		<div class="breadcrumb-area" data-black-overlay="7" style="background-image: url({{PageBanner.image.url}});">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="pt-breadcrumb text-center ptb-110">
-							<h3>{{categoryObject.category}}</h3>
+							<h3>{{PageTitle}}</h3>
 						</div>
 					</div>
 				</div>
@@ -54,6 +54,11 @@
 					<div class="row">
 						<div class="col-12 col-lg-12">
 							<div class="blog-grid-blogs">
+								<div class="row">
+									<div class="col-12">
+										<h3 style="text-align: center; margin-bottom:15px;">تعداد مقالات: {{resultCount}}</h3>
+									</div>
+								</div>
 								<div class="row">
 									{% for post in allPosts %}
 									<!-- START SINGLE BLOG -->

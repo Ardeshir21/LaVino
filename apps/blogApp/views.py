@@ -5,6 +5,7 @@ from django.urls import reverse_lazy, reverse
 from django.utils.translation import gettext as _
 from django.utils import translation
 from django.conf import settings
+from django.db.models import Q
 from apps.baseApp import models as baseAppModels
 from . import models
 
@@ -113,7 +114,9 @@ class CategoryListView(generic.ListView):
         context['blog_categories'] = models.PostCategories.objects.filter(category_lang=current_lang)
 
         # The category object itself
-        context['categoryObject'] = models.PostCategories.objects.get(slug=self.kwargs['category'])
+        categoryObject = models.PostCategories.objects.get(slug=self.kwargs['category'])
+        context['PageTitle'] = categoryObject.category
+        context['PageBanner'] = categoryObject
 
         # result counte
         context['resultCount'] = len(self.get_queryset())
@@ -168,32 +171,55 @@ class PostDetail(generic.DetailView):
 
         return context
 
-# class PostSearch(generic.ListView):
-#     context_object_name = 'allPosts'
-#     template_name = 'blogApp/search_result.html'
-#     model = models.Post
-#     paginate_by = 8
-#
-#     def get_queryset(self, **kwargs):
-#         result = super(PostSearch, self).get_queryset()
-#
-#         # Get the GET content >>> name='s'
-#         keyword = self.request.GET.get('s')
-#         if not(keyword==None or keyword==''):
-#             # Content Search -- For filtering based on the Text Search
-#             result= result.filter(Q(title__icontains=keyword) | Q(content__icontains=keyword), language='EN', status=True).order_by('-created_on')
-#
-#         return result
-#
-#     def get_context_data(self, **kwargs):
-#         # Call the base implementation first to get a context
-#         context = super().get_context_data(**kwargs)
-#         # Append shared extraContext
-#         context.update(get_extra_context())
-#
-#         # This title is different for this view
-#         context['slideContent'] = baseAppModel.Slide.objects.get(useFor__exact='BLOG_SEARCH', active__exact=True)
-#         context['pageTitle'] = 'SEARCH'
-#         # result counte
-#         context['resultCount'] = len(self.get_queryset())
-#         return context
+class PostSearch(generic.ListView):
+    context_object_name = 'allPosts'
+    model = models.Post
+    paginate_by = 6
+
+    # Select template based on requested language
+    def get_template_names(self):
+        # It must be checked in the method not in attributes
+        current_lang = translation.get_language()
+
+        # RTL languages
+        if current_lang == 'fa':
+            return ["blogApp/layouts/photohub/RTL/blog-category.html"]
+        # LTR languages
+        else:
+            return ["blogApp/layouts/photohub/LTR/blog-category.html"]
+
+    def get_queryset(self, **kwargs):
+        # Get the current language
+        current_lang = translation.get_language()
+        result = super(PostSearch, self).get_queryset()
+
+        # Get the GET content >>> name='s'
+        keyword = self.request.GET.get('s')
+        if not(keyword==None or keyword==''):
+            # Content Search -- For filtering based on the Text Search
+            result= result.filter(Q(title__icontains=keyword) | Q(content__icontains=keyword), language=current_lang, status=True).order_by('-created')
+        else:
+            result= result.filter(language=current_lang, status=True).order_by('-created')
+        return result
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # Append shared extraContext
+        context.update(get_extra_context())
+
+        # It must be checked in the method not in attributes
+        current_lang = translation.get_language()
+        # Categories based on current language Navbar
+        context['blog_categories'] = models.PostCategories.objects.filter(category_lang=current_lang)
+        # Page title instead of category name
+        if current_lang == 'fa':
+            context['PageTitle'] = 'جستجو'
+        else:
+            context['PageTitle'] = 'Search'
+
+        context['PageBanner'] = baseAppModels.Banner.objects.get(useFor__exact='BLOG_SEARCH', active__exact=True)
+
+        # result counte
+        context['resultCount'] = len(self.get_queryset())
+        return context

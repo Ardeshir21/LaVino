@@ -40,8 +40,8 @@
     <div class="sidebar__newsletter sidebar__block">
       <h5 class="sidebar__title text-center">{% trans "Search" %}</h5>
       <div class="sidebar__newsletter__inner">
-        <form action="#">
-          <input type="text" placeholder="Keyword...">
+        <form action="{% url 'blogApp:search' %}" method="GET">
+          <input name='s' type="text" placeholder="Keyword...">
           <button class="pt-button pt-button--theme" type="submit"><i class="far fa-chevron-right"></i></button>
         </form>
       </div>
