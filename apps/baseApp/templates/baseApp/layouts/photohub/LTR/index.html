@@ -48,10 +48,19 @@
 						<div class="col-lg-12">
 							<div class="banner__content text-center">
 								{% if banner.sub_title %}
+									{% if current_lang == "en" %}
 									<h3>{{banner.sub_title}}</h3>
+									{% else %}
+									<h3>{{banner.sub_title_tr}}</h3>
+									{% endif %}
 								{% endif %}
+
 								{% if banner.title %}
+									{% if current_lang == "en" %}
 									<h1>{{banner.title}}</h1>
+									{% else %}
+									<h1>{{banner.title_tr}}</h1>
+									{% endif %}
 								{% endif %}
 							</div>
 						</div>
@@ -109,7 +118,11 @@
 								<a href="{{item.image.url}}"><span class="ti-eye"></span></a>
 							</span> -->
 							<div class="portfolio__content__text">
+								{% if current_lang == "en" %}
 								<h5>{{item.title}}</h5>
+								{% else %}
+								<h5>{{item.title_tr}}</h5>
+								{% endif %}
 								<!-- <div class="share__content__wrap">
 									<a class="share-toggle" href="#"><span class="ti-sharethis"></span> {% trans "share" %}</a>
 									<div class="share__content">

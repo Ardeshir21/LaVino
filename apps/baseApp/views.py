@@ -41,7 +41,8 @@ class IndexView(generic.TemplateView):
         current_lang = translation.get_language()
         # Categories based on current language Navbar
         context['blog_categories'] = blogAppModels.PostCategories.objects.filter(category_lang=current_lang)
-
+        # Current language
+        context['current_lang'] = current_lang
         # Banner
         context['bannerImages'] = models.Banner.objects.filter(useFor__exact='HOME', active__exact=True)
         # Featured images
@@ -121,7 +122,8 @@ class ProjectsView(generic.TemplateView):
         current_lang = translation.get_language()
         # Categories based on current language Navbar
         context['blog_categories'] = blogAppModels.PostCategories.objects.filter(category_lang=current_lang)
-
+        # Current language
+        context['current_lang'] = current_lang
         # Projects
         context['Projects'] = models.Project.objects.filter(active__exact=True)
         return context
@@ -152,6 +154,8 @@ class ProjectDetailView(generic.DetailView):
 
         # It must be checked in the method not in attributes
         current_lang = translation.get_language()
+        # Current language
+        context['current_lang'] = current_lang
         # Categories based on current language Navbar
         context['blog_categories'] = blogAppModels.PostCategories.objects.filter(category_lang=current_lang)
         return context

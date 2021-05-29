@@ -24,9 +24,18 @@
 				<div class="col-lg-12">
 					<div class="ptb-80">
 						<img src="{{project.image_main.url}}" alt="">
+						{% if current_lang == "en" %}
 						<h3 class="mt-20 wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">{{project.title}}</h3>
+						{% else %}
+						<h3 class="mt-20 wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">{{project.title_tr}}</h3>
+						{% endif %}
+
             {% if project.description %}
-						<p class="wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">{{project.description}}</p>
+								{% if current_lang == "en" %}
+								<p class="wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">{{project.description}}</p>
+								{% else %}
+								<p class="wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">{{project.description_tr}}</p>
+								{% endif %}
             {% endif %}
           </div>
 				</div>
