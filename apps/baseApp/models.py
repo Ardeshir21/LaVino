@@ -19,6 +19,8 @@ class Banner(models.Model):
                                 help_text='HOME: 100x60')
     title = models.CharField(max_length=110, null=True, blank=True)
     sub_title = models.CharField(max_length=110, null=True, blank=True)
+    title_tr = models.CharField(max_length=110, null=True, blank=True)
+    sub_title_tr = models.CharField(max_length=110, null=True, blank=True)
     title_fa = models.CharField(max_length=110, null=True, blank=True)
     sub_title_fa = models.CharField(max_length=110, null=True, blank=True)
     description = models.TextField(max_length=200, null=True, blank=True)
@@ -35,6 +37,8 @@ class Banner(models.Model):
 class ProjectCategory(models.Model):
     name = models.CharField(max_length=150, unique=True)
     description = models.CharField(max_length=300, unique=True, null=True, blank=True)
+    name_tr = models.CharField(max_length=150, unique=True, null=True, blank=True)
+    description_tr = models.CharField(max_length=300, unique=True, null=True, blank=True)
     name_fa = models.CharField(max_length=150, unique=True, null=True, blank=True)
     description_fa = models.CharField(max_length=300, unique=True, null=True, blank=True)
 
@@ -44,8 +48,10 @@ class ProjectCategory(models.Model):
 class Project(models.Model):
     category = models.ForeignKey(ProjectCategory, related_name='categories', on_delete=models.CASCADE)
     title = models.CharField(max_length=100, unique=True, null=True, blank=True)
+    title_tr = models.CharField(max_length=100, unique=True, null=True, blank=True)
     title_fa = models.CharField(max_length=100, unique=True, null=True, blank=True)
     description = models.TextField(max_length=500, null=True, blank=True)
+    description_tr = models.TextField(max_length=500, null=True, blank=True)
     description_fa = models.TextField(max_length=500, null=True, blank=True)
     image_thumb = models.ImageField(upload_to='baseApp/projects/', null=True,
                                 help_text='Image 600x700')
@@ -96,6 +102,7 @@ class FeaturedImages(models.Model):
     image = models.ImageField(upload_to='baseApp/featured_images/', null=True,
                                 help_text='Image 1600x1100')
     title = models.CharField(max_length=100, unique=True, null=True, blank=True)
+    title_tr = models.CharField(max_length=100, unique=True, null=True, blank=True)
     title_fa = models.CharField(max_length=100, unique=True, null=True, blank=True)
     display_order = models.PositiveIntegerField(null=True, blank=True)
     active = models.BooleanField(choices=YES_NO_CHOICES, default=True)
