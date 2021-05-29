@@ -25,9 +25,13 @@
 					<div class="ptb-80">
 						<img src="{{project.image_main.url}}" alt="">
 						{% if current_lang == "en" %}
-						<h3 class="mt-20 wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">{{project.title}}</h3>
+							{% if project.title %}
+							<h3 class="mt-20 wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">{{project.title}}</h3>
+							{% endif %}
 						{% else %}
-						<h3 class="mt-20 wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">{{project.title_tr}}</h3>
+							{% if project.title_tr %}
+							<h3 class="mt-20 wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">{{project.title_tr}}</h3>
+							{% endif %}
 						{% endif %}
 
 
