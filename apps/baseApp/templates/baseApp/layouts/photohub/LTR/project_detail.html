@@ -30,13 +30,16 @@
 						<h3 class="mt-20 wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">{{project.title_tr}}</h3>
 						{% endif %}
 
-            {% if project.description %}
+
 								{% if current_lang == "en" %}
-								<p class="wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">{{project.description}}</p>
+									{% if project.description %}
+									<p class="wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">{{project.description}}</p>
+									{% endif %}
 								{% else %}
-								<p class="wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">{{project.description_tr}}</p>
-								{% endif %}
-            {% endif %}
+									{% if project.description_tr %}
+									<p class="wow animate__animated animate__fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">{{project.description_tr}}</p>
+									{% endif %}
+            		{% endif %}
           </div>
 				</div>
 			</div>
