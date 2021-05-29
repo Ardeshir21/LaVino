@@ -59,13 +59,16 @@
 									{% endif %}
 
 
-								{% if banner.title %}
+
 									{% if current_lang == "en" %}
-									<h1>{{banner.title}}</h1>
+										{% if banner.title %}
+										<h1>{{banner.title}}</h1>
+										{% endif %}
 									{% else %}
-									<h1>{{banner.title_tr}}</h1>
+										{% if banner.title_tr %}
+										<h1>{{banner.title_tr}}</h1>
+										{% endif %}
 									{% endif %}
-								{% endif %}
 							</div>
 						</div>
 					</div>
