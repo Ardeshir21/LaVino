@@ -126,9 +126,13 @@
 							</span> -->
 							<div class="portfolio__content__text">
 								{% if current_lang == "en" %}
-								<h5>{{item.title}}</h5>
+									{% if item.title %}
+									<h5>{{item.title}}</h5>
+									{% endif %}
 								{% else %}
-								<h5>{{item.title_tr}}</h5>
+									{% if item.title_tr %}
+									<h5>{{item.title_tr}}</h5>
+									{% endif %}
 								{% endif %}
 								<!-- <div class="share__content__wrap">
 									<a class="share-toggle" href="#"><span class="ti-sharethis"></span> {% trans "share" %}</a>
