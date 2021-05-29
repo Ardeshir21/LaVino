@@ -27,8 +27,10 @@
                       </a>
                     </div>
                     <div class="con">
+											{% if project.title_fa %}
                       <h5><a href="{% url "baseApp:project_detail" slug=project.slug %}">{{project.title_fa}}</a></h5> <a href="{% url "baseApp:project_detail" slug=project.slug %}"><i class="fa fa-long-arrow-left"></i></a>
-                    </div>
+											{% endif %}
+									  </div>
                  </div>
              </div>
              {% endfor %}
