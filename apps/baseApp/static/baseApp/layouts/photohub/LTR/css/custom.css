@@ -53,6 +53,23 @@
 #instagram-footer {
   display: none;
 }
+.process .process__single .process__single__content .backlink-refer,
+.process .process__single .process__single__content .backlink-refer {
+  font-size: 22px;
+  font-weight: 400;
+  color: inherit;
+}
+
+.bp-blog .bp-blog__content .backlink-refer {
+  font-size: 17px;
+  margin-bottom: 38px;
+  line-height: 28px;
+  text-indent: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: inherit;
+}
+
 /* ------------------------ FOR MOBILE SIZE ----------------------------------- */
 @media only screen and (max-width: 575px) {
   #mobile-lang {
