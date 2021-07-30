@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-23 00:35+0300\n"
+"POT-Creation-Date: 2021-07-30 16:41+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\apps\blogApp\templates\blogApp\layouts\photohub\LTR\blog-category.html:72
+#: .\apps\blogApp\templates\blogApp\layouts\photohub\LTR\blog-category.html:56
+msgid "Posts Found"
+msgstr ""
+
+#: .\apps\blogApp\templates\blogApp\layouts\photohub\LTR\blog-category.html:77
 #: .\apps\blogApp\templates\blogApp\layouts\photohub\LTR\blog.html:71
 msgid "Read more"
 msgstr ""
@@ -40,6 +44,6 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: .\apps\blogApp\views.py:15
+#: .\apps\blogApp\views.py:18
 msgid "SOMETHING"
 msgstr ""
